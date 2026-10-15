@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="worst-game-jam"
-run/main_scene="uid://byxukcmo6hsh0"
+run/main_scene="uid://jh3t4yr34o1m"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

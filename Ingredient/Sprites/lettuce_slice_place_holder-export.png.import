@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1ner5a1yvyn6"
-path="res://.godot/imported/tomato_slice_place_holder.png-874b5a04154aa30416c4d8bddf51f85d.ctex"
+uid="uid://dtr8r25jglwsk"
+path="res://.godot/imported/lettuce_slice_place_holder-export.png-4c45e329a1dbd2e2893d81bb4390dc85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tomato_slice_place_holder.png"
-dest_files=["res://.godot/imported/tomato_slice_place_holder.png-874b5a04154aa30416c4d8bddf51f85d.ctex"]
+source_file="res://Ingredient/Sprites/lettuce_slice_place_holder-export.png"
+dest_files=["res://.godot/imported/lettuce_slice_place_holder-export.png-4c45e329a1dbd2e2893d81bb4390dc85.ctex"]
 
 [params]
 

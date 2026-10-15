@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://jh3t4yr34o1m"]
+
+[ext_resource type="Script" uid="uid://b7urk6ov580nb" path="res://Game/Scripts/game.gd" id="1_hn7vc"]
+[ext_resource type="PackedScene" uid="uid://xi6d3fo12v13" path="res://Ingredient/Scenes/Burger.tscn" id="2_8se0m"]
+[ext_resource type="PackedScene" uid="uid://kiifyhjtyhnv" path="res://Ingredient/Scenes/IngredientContainer.tscn" id="3_0648w"]
+[ext_resource type="Resource" uid="uid://l30mj7v8h2hh" path="res://Ingredient/Resources/tomato.tres" id="4_7uvsw"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="4_xa23u"]
+
+[node name="Game" type="Node2D" unique_id=1152207749]
+script = ExtResource("1_hn7vc")
+
+[node name="Burger" parent="." unique_id=1648165308 instance=ExtResource("2_8se0m")]
+modulate = Color(1, 0.33333337, 0, 1)
+offset_left = 702.0
+offset_top = 232.0
+offset_right = 702.0
+offset_bottom = 232.0
+
+[node name="IngredientContainer2" parent="." unique_id=1418665786 instance=ExtResource("3_0648w")]
+modulate = Color(0.44266665, 1, 0.24000001, 1)
+offset_left = 232.0
+offset_top = 36.0
+offset_right = 232.0
+offset_bottom = 36.0
+ingredient = ExtResource("4_xa23u")
+
+[node name="IngredientContainer" parent="." unique_id=529592985 instance=ExtResource("3_0648w")]
+modulate = Color(1, 0.13999999, 0.13999999, 1)
+offset_left = 39.0
+offset_top = 35.0
+offset_right = 39.0
+offset_bottom = 35.0
+ingredient = ExtResource("4_7uvsw")

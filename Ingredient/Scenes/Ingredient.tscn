@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dsixv5wrs0l8k"]
+
+[ext_resource type="Script" uid="uid://co4bmxdjwtxc0" path="res://Ingredient/Scripts/ingredient.gd" id="1_2byfg"]
+
+[node name="Ingredient" type="Node2D" unique_id=1609194331]
+script = ExtResource("1_2byfg")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1196128779]

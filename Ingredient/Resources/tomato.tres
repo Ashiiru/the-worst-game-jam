@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://l30mj7v8h2hh"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_sule1"]
+[ext_resource type="Texture2D" uid="uid://c1ner5a1yvyn6" path="res://Ingredient/Sprites/tomato_slice_place_holder.png" id="2_5p83a"]
+
+[resource]
+script = ExtResource("1_sule1")
+sprite = ExtResource("2_5p83a")
+name = "Tomato"
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

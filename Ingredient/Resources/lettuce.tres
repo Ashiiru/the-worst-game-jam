@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://eiiy8osg4lxs"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_uoe3c"]
+[ext_resource type="Texture2D" uid="uid://dtr8r25jglwsk" path="res://Ingredient/Sprites/lettuce_slice_place_holder-export.png" id="2_phtlb"]
+
+[resource]
+script = ExtResource("1_uoe3c")
+sprite = ExtResource("2_phtlb")
+name = "Lettuce"
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"
