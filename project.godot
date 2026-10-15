@@ -21,10 +21,6 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 
-[global_group]
-
-draggable="Se um elemento do jogo estiver neste grupo significa que podemos arrastá-lo"
-
 [input]
 
 mouse_botao_esq={

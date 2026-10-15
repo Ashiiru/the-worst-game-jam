@@ -9,7 +9,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var ingrediente = get_global_position()
 	var mouse_pos = get_global_mouse_position()
 	if Input.is_action_pressed("mouse_botao_esq") and dentro_do_ingrediente == true:
 		print("click nas coordenadas :" , mouse_pos)
