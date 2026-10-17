@@ -1,5 +1,5 @@
 class_name IngredientContainer
-extends Control
+extends PanelContainer
 
 signal selected
 

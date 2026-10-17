@@ -9,5 +9,5 @@ extends Node2D
 func _ready() -> void:
 	sprite.texture = ingredient_resource.sprite
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	self.position = get_global_mouse_position()

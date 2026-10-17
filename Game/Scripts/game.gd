@@ -7,6 +7,9 @@ extends Node2D
 @onready var screen_swapper_main: ScreenSwapper = $HUD/ScreenSwapperMain
 @onready var screen_swapper_assembly: ScreenSwapper = $HUD/ScreenSwapperAssembly
 
+@onready var dialogue_box: DialogueBox = $World/DialogueBox
+
+
 @onready var burger: Burger = $World/Burger
 @onready var ingredient_container: IngredientContainer = $World/IngredientContainer
 @onready var ingredient_container_2: IngredientContainer = $World/IngredientContainer2
@@ -15,6 +18,8 @@ extends Node2D
 
 var selected_ingredient : Ingredient = null
 
+var current_client : Client = null
+	
 
 func _ready() -> void:
 	screen_swapper_main.selected.connect(_on_screen_swapper_selected)
@@ -24,6 +29,23 @@ func _ready() -> void:
 	ingredient_container.selected.connect(_on_ingredient_selected)
 	ingredient_container_2.selected.connect(_on_ingredient_selected)
 	
+	add_client()
+	
+
+func add_client() -> void:
+	#TODO: missing code to pick out a random client
+	var new_client : Client = preload("res://Client/Scenes/Client.tscn").instantiate()
+	new_client.client_resource = preload("res://Client/Resources/test_client.tres")
+	current_client = new_client
+	#TODO: adding needs to place it in the right layer
+	world.add_child(new_client)
+	display_client_dialogue()
+
+
+func display_client_dialogue() -> void:
+	#TODO: missing cypher system
+	dialogue_box.store_dialogue(current_client.client_resource.dialogue)
+
 
 func _on_screen_swapper_selected(location : String) -> void:
 	var new_location : Vector2 = game_camera.positions.get(location)

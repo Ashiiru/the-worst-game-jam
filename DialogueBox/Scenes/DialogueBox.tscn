@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b7t5ejnhabcsv"]
+
+[ext_resource type="Script" uid="uid://2bau0ii0kegw" path="res://DialogueBox/Scripts/dialogue_box.gd" id="1_qbo1a"]
+
+[node name="DialogueBox" type="PanelContainer" unique_id=1237435382]
+custom_minimum_size = Vector2(400, 200)
+offset_right = 1.0
+script = ExtResource("1_qbo1a")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1558019663]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="RichTextLabel" parent="Margin" unique_id=1528819320]
+layout_mode = 2
+bbcode_enabled = true
+text = "Text"
+
+[node name="Button" type="Button" parent="." unique_id=1280547294]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

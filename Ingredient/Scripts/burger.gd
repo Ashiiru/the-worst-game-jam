@@ -1,5 +1,5 @@
 class_name Burger
-extends Control
+extends PanelContainer
 
 signal selected
 

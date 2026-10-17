@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientResource" format=3 uid="uid://b2un21tgl0b0r"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_jdrky"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_res.gd" id="2_gprsu"]
+[ext_resource type="Texture2D" uid="uid://bckhpvamcai7l" path="res://Client/Sprites/silly_small.png" id="3_gprsu"]
+
+[resource]
+script = ExtResource("2_gprsu")
+sprite = ExtResource("3_gprsu")
+name = "Silly V"
+species = 1
+dialogue = Array[String](["Hello World!", "I want a burguer!"])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

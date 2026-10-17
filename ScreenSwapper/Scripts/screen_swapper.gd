@@ -1,5 +1,5 @@
 class_name ScreenSwapper
-extends Control
+extends PanelContainer
 
 @onready var label: Label = $Label
 
