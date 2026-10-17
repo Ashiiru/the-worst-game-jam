@@ -3,26 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://bkaisaovyo2jy" path="res://icon.svg" id="1_kxdkg"]
 [ext_resource type="Script" uid="uid://cv112d34d3jac" path="res://Ingredient/Scripts/ingredient_container.gd" id="1_v5tdq"]
 
-[node name="IngredientContainer" type="Control" unique_id=1418665786]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="IngredientContainer" type="PanelContainer" unique_id=642096802]
+offset_right = 128.0
+offset_bottom = 128.0
 script = ExtResource("1_v5tdq")
 
-[node name="Container" type="PanelContainer" parent="." unique_id=1009217896]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Sprite" type="TextureRect" parent="Container" unique_id=1883770254]
+[node name="Sprite" type="TextureRect" parent="." unique_id=1883770254]
 layout_mode = 2
 texture = ExtResource("1_kxdkg")
 
-[node name="Button" type="Button" parent="Container" unique_id=1344540147]
+[node name="Button" type="Button" parent="." unique_id=1344540147]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[connection signal="pressed" from="Container/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

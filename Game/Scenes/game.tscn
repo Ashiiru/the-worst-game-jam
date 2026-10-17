@@ -2,32 +2,74 @@
 
 [ext_resource type="Script" uid="uid://b7urk6ov580nb" path="res://Game/Scripts/game.gd" id="1_hn7vc"]
 [ext_resource type="PackedScene" uid="uid://xi6d3fo12v13" path="res://Ingredient/Scenes/Burger.tscn" id="2_8se0m"]
+[ext_resource type="Script" uid="uid://bcvx3rlifb5k2" path="res://Camera/game_camera.gd" id="2_crbfv"]
 [ext_resource type="PackedScene" uid="uid://kiifyhjtyhnv" path="res://Ingredient/Scenes/IngredientContainer.tscn" id="3_0648w"]
+[ext_resource type="Texture2D" uid="uid://dde3vh6b46o3g" path="res://Game/Sprites/dinner_temp.png" id="3_mye37"]
 [ext_resource type="Resource" uid="uid://l30mj7v8h2hh" path="res://Ingredient/Resources/tomato.tres" id="4_7uvsw"]
 [ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="4_xa23u"]
+[ext_resource type="PackedScene" uid="uid://dmbgx7ed2hr33" path="res://ScreenSwapper/Scenes/ScreenSwapper.tscn" id="8_f7b1t"]
 
 [node name="Game" type="Node2D" unique_id=1152207749]
 script = ExtResource("1_hn7vc")
 
-[node name="Burger" parent="." unique_id=1648165308 instance=ExtResource("2_8se0m")]
-modulate = Color(1, 0.33333337, 0, 1)
-offset_left = 702.0
-offset_top = 232.0
-offset_right = 702.0
-offset_bottom = 232.0
+[node name="World" type="CanvasLayer" parent="." unique_id=1594894232]
+follow_viewport_enabled = true
 
-[node name="IngredientContainer2" parent="." unique_id=1418665786 instance=ExtResource("3_0648w")]
+[node name="GameCamera" type="Camera2D" parent="World" unique_id=323325541]
+offset = Vector2(320, 180)
+script = ExtResource("2_crbfv")
+
+[node name="MainBackground" type="Sprite2D" parent="World" unique_id=1473482328]
+position = Vector2(320, 180)
+scale = Vector2(1, 1.125)
+texture = ExtResource("3_mye37")
+
+[node name="Burger" parent="World" unique_id=1648165308 instance=ExtResource("2_8se0m")]
+modulate = Color(1, 0.33333337, 0, 1)
+offset_left = 485.0
+offset_top = 522.0
+offset_right = 613.0
+offset_bottom = 650.0
+
+[node name="IngredientContainer2" parent="World" unique_id=1418665786 instance=ExtResource("3_0648w")]
 modulate = Color(0.44266665, 1, 0.24000001, 1)
-offset_left = 232.0
-offset_top = 36.0
-offset_right = 232.0
-offset_bottom = 36.0
+offset_left = 184.0
+offset_top = 384.0
+offset_right = 312.0
+offset_bottom = 512.0
 ingredient = ExtResource("4_xa23u")
 
-[node name="IngredientContainer" parent="." unique_id=529592985 instance=ExtResource("3_0648w")]
+[node name="IngredientContainer" parent="World" unique_id=529592985 instance=ExtResource("3_0648w")]
 modulate = Color(1, 0.13999999, 0.13999999, 1)
-offset_left = 39.0
-offset_top = 35.0
-offset_right = 39.0
-offset_bottom = 35.0
+offset_left = 27.0
+offset_top = 385.0
+offset_right = 155.0
+offset_bottom = 513.0
 ingredient = ExtResource("4_7uvsw")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=5070933]
+
+[node name="ScreenSwapperMain" parent="HUD" unique_id=1269757669 instance=ExtResource("8_f7b1t")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.5
+offset_top = 10.0
+offset_right = 16.5
+offset_bottom = 33.0
+grow_horizontal = 2
+title = "Main"
+
+[node name="ScreenSwapperAssembly" parent="HUD" unique_id=1738721261 instance=ExtResource("8_f7b1t")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -16.5
+offset_top = -33.0
+offset_right = 16.5
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+title = "Assembly"

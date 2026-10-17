@@ -16,8 +16,8 @@ func add_ingredient(ingredient : IngredientRes) -> void:
 	print_ingredients()
 
 func pop_ingredient() -> IngredientRes:
-	return ingredients.pop_back()
 	print_ingredients()
+	return ingredients.pop_back()
 
 func _on_button_pressed() -> void:
 	print("burger pressed")

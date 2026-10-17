@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dmbgx7ed2hr33"]
+
+[ext_resource type="Script" uid="uid://1l6k7xil6ci6" path="res://ScreenSwapper/Scripts/screen_swapper.gd" id="1_3x65k"]
+
+[node name="ScreenSwapper" type="PanelContainer" unique_id=1269757669]
+offset_right = 33.0
+offset_bottom = 23.0
+script = ExtResource("1_3x65k")
+
+[node name="Label" type="Label" parent="." unique_id=1932314748]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1767801115]
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

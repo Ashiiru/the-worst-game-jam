@@ -3,26 +3,17 @@
 [ext_resource type="Script" uid="uid://bgkfpoq2elneu" path="res://Ingredient/Scripts/burger.gd" id="1_t5338"]
 [ext_resource type="Texture2D" uid="uid://bkaisaovyo2jy" path="res://icon.svg" id="2_1u2po"]
 
-[node name="Burger" type="Control" unique_id=1648165308]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Burger" type="PanelContainer" unique_id=557410048]
+offset_right = 128.0
+offset_bottom = 128.0
 script = ExtResource("1_t5338")
 
-[node name="Container" type="PanelContainer" parent="." unique_id=1275660362]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="Container" unique_id=248361465]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=248361465]
 layout_mode = 2
 texture = ExtResource("2_1u2po")
 
-[node name="Button" type="Button" parent="Container" unique_id=522341921]
+[node name="Button" type="Button" parent="." unique_id=522341921]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[connection signal="pressed" from="Container/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
