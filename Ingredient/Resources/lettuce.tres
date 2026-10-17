@@ -7,4 +7,5 @@
 script = ExtResource("1_uoe3c")
 sprite = ExtResource("2_phtlb")
 name = "Lettuce"
+cost = 0.1
 metadata/_custom_type_script = "uid://dmrp27rksh8s1"

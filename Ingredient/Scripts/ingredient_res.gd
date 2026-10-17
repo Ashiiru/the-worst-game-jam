@@ -3,3 +3,4 @@ extends Resource
 
 @export var sprite : Texture2D
 @export var name : String
+@export var cost : float

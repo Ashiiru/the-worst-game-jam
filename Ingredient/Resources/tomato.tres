@@ -7,4 +7,5 @@
 script = ExtResource("1_sule1")
 sprite = ExtResource("2_5p83a")
 name = "Tomato"
+cost = 0.2
 metadata/_custom_type_script = "uid://dmrp27rksh8s1"

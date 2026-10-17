@@ -8,6 +8,9 @@
 [ext_resource type="Resource" uid="uid://l30mj7v8h2hh" path="res://Ingredient/Resources/tomato.tres" id="4_7uvsw"]
 [ext_resource type="PackedScene" uid="uid://b7t5ejnhabcsv" path="res://DialogueBox/Scenes/DialogueBox.tscn" id="4_s1wwj"]
 [ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="4_xa23u"]
+[ext_resource type="PackedScene" uid="uid://cca67gw1n6xvn" path="res://Client/Scenes/Client.tscn" id="5_6vecx"]
+[ext_resource type="PackedScene" uid="uid://dypumwf8iopct" path="res://Register/Scenes/Register.tscn" id="5_tsnoo"]
+[ext_resource type="PackedScene" uid="uid://dvg6wyyk2pxrm" path="res://OrderBell/Scenes/OrderBell.tscn" id="7_7bp3t"]
 [ext_resource type="PackedScene" uid="uid://dmbgx7ed2hr33" path="res://ScreenSwapper/Scenes/ScreenSwapper.tscn" id="8_f7b1t"]
 
 [node name="Game" type="Node2D" unique_id=1152207749]
@@ -30,6 +33,20 @@ offset_left = 219.0
 offset_top = 38.0
 offset_right = 619.0
 offset_bottom = 238.0
+
+[node name="Client" parent="World" unique_id=1362351619 instance=ExtResource("5_6vecx")]
+
+[node name="Register" parent="World" unique_id=1478358835 instance=ExtResource("5_tsnoo")]
+offset_left = 12.0
+offset_top = 259.0
+offset_right = 82.0
+offset_bottom = 329.0
+
+[node name="OrderBell" parent="World" unique_id=1559986288 instance=ExtResource("7_7bp3t")]
+offset_left = 85.0
+offset_top = 286.0
+offset_right = 135.0
+offset_bottom = 336.0
 
 [node name="Burger" parent="World" unique_id=1648165308 instance=ExtResource("2_8se0m")]
 modulate = Color(1, 0.33333337, 0, 1)

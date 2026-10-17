@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dvg6wyyk2pxrm"]
+
+[ext_resource type="Script" uid="uid://mnsrwkj4cwui" path="res://OrderBell/Scripts/order_bell.gd" id="1_dqoms"]
+[ext_resource type="Texture2D" uid="uid://yql5avrginsr" path="res://OrderBell/Sprites/bell_temp.png" id="1_kq6iy"]
+
+[node name="OrderBell" type="PanelContainer" unique_id=1559986288]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 50)
+script = ExtResource("1_dqoms")
+
+[node name="Srpite" type="TextureRect" parent="." unique_id=501307611]
+layout_mode = 2
+texture = ExtResource("1_kq6iy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="." unique_id=113198623]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

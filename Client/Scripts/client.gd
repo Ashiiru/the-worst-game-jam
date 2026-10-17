@@ -6,5 +6,6 @@ extends Node2D
 @export var client_resource : ClientResource
 
 
-func _ready() -> void:
+func update_resource(new_res : ClientResource) -> void:
+	client_resource = new_res
 	sprite.texture = client_resource.sprite
