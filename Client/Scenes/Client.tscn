@@ -7,6 +7,5 @@
 script = ExtResource("1_nppyt")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=108372022]
-position = Vector2(140, 180)
 scale = Vector2(2, 2)
 texture = ExtResource("2_icrag")

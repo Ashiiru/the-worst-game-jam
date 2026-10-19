@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_jdrky"]
 [ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_res.gd" id="2_gprsu"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="2_wbark"]
+[ext_resource type="Resource" uid="uid://l30mj7v8h2hh" path="res://Ingredient/Resources/tomato.tres" id="3_e4f7x"]
 [ext_resource type="Texture2D" uid="uid://bckhpvamcai7l" path="res://Client/Sprites/silly_small.png" id="3_gprsu"]
 
 [resource]
@@ -9,7 +11,8 @@ script = ExtResource("2_gprsu")
 sprite = ExtResource("3_gprsu")
 name = "Silly V"
 species = 1
-dialogue = Array[String](["Hello World!", "I want a burguer!"])
+dialogue = Array[String](["Hello World!", "I want lettuce lettuce tomato lettuce"])
+order = Array[ExtResource("1_jdrky")]([ExtResource("2_wbark"), ExtResource("2_wbark"), ExtResource("3_e4f7x"), ExtResource("2_wbark")])
 patience = 60.0
 dialogue_perfect = "Perfect!!!"
 dialogue_good = "Good!"

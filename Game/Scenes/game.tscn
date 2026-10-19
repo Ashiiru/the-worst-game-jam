@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dypumwf8iopct" path="res://Register/Scenes/Register.tscn" id="5_tsnoo"]
 [ext_resource type="PackedScene" uid="uid://dvg6wyyk2pxrm" path="res://OrderBell/Scenes/OrderBell.tscn" id="7_7bp3t"]
 [ext_resource type="PackedScene" uid="uid://dmbgx7ed2hr33" path="res://ScreenSwapper/Scenes/ScreenSwapper.tscn" id="8_f7b1t"]
+[ext_resource type="PackedScene" uid="uid://bhapfduxdbot8" path="res://GameTimer/Scenes/GameTimer.tscn" id="8_nuvqv"]
 
 [node name="Game" type="Node2D" unique_id=1152207749]
 script = ExtResource("1_hn7vc")
@@ -29,12 +30,13 @@ scale = Vector2(1, 1.125)
 texture = ExtResource("3_mye37")
 
 [node name="DialogueBox" parent="World" unique_id=1237435382 instance=ExtResource("4_s1wwj")]
-offset_left = 219.0
+offset_left = 200.0
 offset_top = 38.0
-offset_right = 619.0
+offset_right = 550.0001
 offset_bottom = 238.0
 
 [node name="Client" parent="World" unique_id=1362351619 instance=ExtResource("5_6vecx")]
+position = Vector2(89, 157)
 
 [node name="Register" parent="World" unique_id=1478358835 instance=ExtResource("5_tsnoo")]
 offset_left = 12.0
@@ -47,6 +49,16 @@ offset_left = 85.0
 offset_top = 286.0
 offset_right = 135.0
 offset_bottom = 336.0
+
+[node name="GameTimer" parent="World" unique_id=315946774 instance=ExtResource("8_nuvqv")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -135.0
+offset_top = -5.0
+offset_right = -5.0
+offset_bottom = 122.0
+grow_horizontal = 0
 
 [node name="Burger" parent="World" unique_id=1648165308 instance=ExtResource("2_8se0m")]
 modulate = Color(1, 0.33333337, 0, 1)

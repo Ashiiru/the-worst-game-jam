@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://2bau0ii0kegw" path="res://DialogueBox/Scripts/dialogue_box.gd" id="1_qbo1a"]
 
 [node name="DialogueBox" type="PanelContainer" unique_id=1237435382]
-custom_minimum_size = Vector2(400, 200)
+custom_minimum_size = Vector2(350, 200)
 offset_right = 1.0
 script = ExtResource("1_qbo1a")
 

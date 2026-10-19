@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bhapfduxdbot8"]
+
+[ext_resource type="Script" uid="uid://dlpm7ox6ng3vx" path="res://GameTimer/Scripts/game_timer.gd" id="1_4nn05"]
+[ext_resource type="Texture2D" uid="uid://3uufokukf3lw" path="res://GameTimer/Sprites/clock.png" id="2_3nr6y"]
+[ext_resource type="Texture2D" uid="uid://b1ffqrshctfeq" path="res://GameTimer/Sprites/faces.png" id="3_mh8jq"]
+[ext_resource type="Texture2D" uid="uid://denqib0w1qe5q" path="res://GameTimer/Sprites/ufo.png" id="4_xpah0"]
+
+[node name="GameTimer" type="PanelContainer" unique_id=315946774]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(125, 100)
+offset_right = 130.0
+offset_bottom = 127.0
+script = ExtResource("1_4nn05")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=494241991]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_3nr6y")
+centered = false
+
+[node name="Face" type="Sprite2D" parent="." unique_id=42267958]
+position = Vector2(36, 70)
+scale = Vector2(0.25277773, 0.25277773)
+texture = ExtResource("3_mh8jq")
+hframes = 3
+
+[node name="Ship" type="Sprite2D" parent="." unique_id=27714281]
+position = Vector2(30, 45.195)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("4_xpah0")
+centered = false
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1338131222]
+layout_mode = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 61
+theme_override_constants/margin_right = 44
+theme_override_constants/margin_bottom = 49
+
+[node name="Text" type="RichTextLabel" parent="MarginContainer" unique_id=273438129]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "120.45"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ClientTimer" type="Timer" parent="." unique_id=926553483]
+one_shot = true
+
+[node name="DayTimer" type="Timer" parent="." unique_id=1851013745]
+one_shot = true
+
+[connection signal="timeout" from="ClientTimer" to="." method="_on_client_timer_timeout"]
+[connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
