@@ -51,25 +51,45 @@ func begin_day() -> void:
 
 func begin_order() -> void:
 	add_client()
-	display_client_dialogue()
+	emote_client("idle")
 	start_client_timer()
-	
+
 
 func add_client() -> void:
 	#TODO: missing code to pick out a random client
 	client.update_resource(preload("res://Client/Resources/test_client.tres"))
 
 
-func display_client_dialogue() -> void:
+func emote_client(emotion : String = "idle") -> void:
+	var dialogue : Array[String]
+	match emotion:
+		"idle": 
+			dialogue = client.client_resource.dialogue
+			client.emote("idle")
+		"happy":
+			dialogue = [client.client_resource.dialogue_perfect]
+			client.emote("order_happy")
+		"neutral":
+			dialogue = [client.client_resource.dialogue_okay]
+			client.emote("order_neutral")
+		"angry":
+			dialogue = [client.client_resource.dialogue_bad]
+			client.emote("order_angry")
+		"timeout":
+			dialogue = [client.client_resource.dialogue_timeout]
+			client.emote("order_angry")
+	display_client_dialogue(dialogue)
+
+
+func display_client_dialogue(dialogue : Array[String]) -> void:
 	#TODO: missing cypher system
-	dialogue_box.store_dialogue(client.client_resource.dialogue)
+	dialogue_box.store_dialogue(dialogue)
 
 
 func start_client_timer() -> void:
 	#TODO: calculate initial client patience and start timer with that value
 	client_patience = client.client_resource.patience
 	game_timer.start_client_timer(client_patience)
-	pass
 
 
 func _on_screen_swapper_selected(location : String) -> void:
@@ -114,9 +134,13 @@ func rate_order() -> Vector2:
 		score += min(remaining_objective.get(k), remaining_construction.get(k, 0))
 		errors += int(difference)
 	
+	print("score is " + str(score))
+	print("perfect score is: " + str(perfect_score))
+	
 	#too many missed or extra ingredients results in instant fail
 	if errors > max_errors:
-		return Vector2(0, perfect_score)
+		print("too many errors, socre is 0")
+		return Vector2(0.0,perfect_score)
 	
 	#rate time, if more than half the time is taken the score is penalized
 	var curr_time : float = game_timer.client_timer.time_left
@@ -128,11 +152,35 @@ func rate_order() -> Vector2:
 
 
 func _on_order_bell_selected() -> void:
-	#TODO only submit order if there is a burger built and if client is ordering
-	#TODO award player money and call next client
-	print(rate_order())
+	if not (game_timer.client_timer.time_left > 0.0 and burger.ingredients.size() > 0):
+		return
+	submit_order()
+
+
+func submit_order() -> void:
+	var scores : Vector2 = rate_order()
+	var score : float = scores.x
+	var perfect_score : float = scores.y
+	print("final score " + str(score))
+	
+	pay_order(score)
+	
+	var correctness : float = score / perfect_score
+	if correctness == 1.0:
+		emote_client("happy")
+	elif correctness > 0.0:
+		emote_client("neutral")
+	else:
+		emote_client("angry")
+	
+	game_timer.client_timer.stop()
 	burger.ingredients.clear()
 
+
+func pay_order(score : float) -> void:
+	#TODO money calculation from score
+	add_cash(snapped(score, .1))
+	
 
 func select_ingredient(ingredientres : IngredientRes) -> void:
 	var new_ingredient : Ingredient = preload("res://Ingredient/Scenes/Ingredient.tscn").instantiate()

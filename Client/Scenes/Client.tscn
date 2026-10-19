@@ -1,11 +1,124 @@
 [gd_scene format=3 uid="uid://cca67gw1n6xvn"]
 
 [ext_resource type="Script" uid="uid://dhpfjkf72q3b1" path="res://Client/Scripts/client.gd" id="1_nppyt"]
-[ext_resource type="Texture2D" uid="uid://bckhpvamcai7l" path="res://Client/Sprites/silly_small.png" id="2_icrag"]
+[ext_resource type="Texture2D" uid="uid://csu2lbtfsnce0" path="res://Client/Sprites/alien_1_sheet.png" id="2_icrag"]
+
+[sub_resource type="Animation" id="Animation_icrag"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_jo114"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 1.1, 1.0, 0.9]
+}
+
+[sub_resource type="Animation" id="Animation_gkaly"]
+resource_name = "angry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_tw17m"]
+resource_name = "order_happy"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_3mkcd"]
+resource_name = "order_neutral"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gkaly"]
+_data = {
+&"RESET": SubResource("Animation_icrag"),
+&"idle": SubResource("Animation_jo114"),
+&"order_angry": SubResource("Animation_gkaly"),
+&"order_happy": SubResource("Animation_tw17m"),
+&"order_neutral": SubResource("Animation_3mkcd")
+}
 
 [node name="Client" type="Node2D" unique_id=1362351619]
 script = ExtResource("1_nppyt")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=108372022]
-scale = Vector2(2, 2)
 texture = ExtResource("2_icrag")
+hframes = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=520043592]
+libraries/ = SubResource("AnimationLibrary_gkaly")

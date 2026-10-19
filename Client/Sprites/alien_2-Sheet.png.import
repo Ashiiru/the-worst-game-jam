@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csu2lbtfsnce0"
-path="res://.godot/imported/alien_1_sheet.png-be34e9dff8394cdfbac63d2a449a8717.ctex"
+uid="uid://dkvi0wtoqtsrf"
+path="res://.godot/imported/alien_2-Sheet.png-9bf7248b119398dbfa928a9a66c518a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/Sprites/aliens/alien_1_sheet.png"
-dest_files=["res://.godot/imported/alien_1_sheet.png-be34e9dff8394cdfbac63d2a449a8717.ctex"]
+source_file="res://Client/Sprites/alien_2-Sheet.png"
+dest_files=["res://.godot/imported/alien_2-Sheet.png-9bf7248b119398dbfa928a9a66c518a5.ctex"]
 
 [params]
 

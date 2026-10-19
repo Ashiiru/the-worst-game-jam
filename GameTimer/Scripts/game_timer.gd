@@ -43,6 +43,7 @@ func start_client_timer(time : float) -> void:
 	client_timer.start(max_client_timer)
 	face.visible = true
 
+#TODO order needs to be discarded when client timer ends
 func _on_client_timer_timeout() -> void:
 	client_timeout.emit()
 	face.visible = false
