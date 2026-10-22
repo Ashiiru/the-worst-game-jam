@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cca67gw1n6xvn" path="res://Client/Scenes/Client.tscn" id="5_6vecx"]
 [ext_resource type="PackedScene" uid="uid://dypumwf8iopct" path="res://Register/Scenes/Register.tscn" id="5_tsnoo"]
 [ext_resource type="PackedScene" uid="uid://dvg6wyyk2pxrm" path="res://OrderBell/Scenes/OrderBell.tscn" id="7_7bp3t"]
+[ext_resource type="PackedScene" uid="uid://bcofhrjgn0nhn" path="res://Translator/Scenes/Translator.tscn" id="7_7c4of"]
 [ext_resource type="PackedScene" uid="uid://dmbgx7ed2hr33" path="res://ScreenSwapper/Scenes/ScreenSwapper.tscn" id="8_f7b1t"]
 [ext_resource type="PackedScene" uid="uid://bhapfduxdbot8" path="res://GameTimer/Scenes/GameTimer.tscn" id="8_nuvqv"]
 [ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="10_4vuux"]
@@ -45,6 +46,12 @@ offset_left = 12.0
 offset_top = 259.0
 offset_right = 82.0
 offset_bottom = 329.0
+
+[node name="Translator" parent="World" unique_id=1866283832 instance=ExtResource("7_7c4of")]
+offset_left = 500.0
+offset_top = 190.0
+offset_right = 630.0
+offset_bottom = 320.0
 
 [node name="OrderBell" parent="World" unique_id=1559986288 instance=ExtResource("7_7bp3t")]
 offset_left = 85.0

@@ -14,6 +14,7 @@ extends Node2D
 
 @onready var register: Register = $World/Register
 @onready var order_bell: OrderBell = $World/OrderBell
+@onready var translator: Translator = $World/Translator
 
 @onready var burger: Burger = $World/Burger
 @onready var grill: Grill = $World/Grill
@@ -22,6 +23,7 @@ extends Node2D
 @onready var ingredient_container_2: IngredientContainer = $World/IngredientContainer2
 @onready var ingredient_container_3: IngredientContainer = $World/IngredientContainer3
 
+var run_seed : Array[int] = []
 
 var cash : float = 0.0
 var selected_ingredient : Ingredient = null
@@ -30,7 +32,6 @@ var day_time : float = 120.0
 var client_patience : float = 0.0
 
 var max_errors : int = 2
-var max_grill : int = 1
 
 var day_timer : float = 0.0
 
@@ -40,6 +41,7 @@ func _ready() -> void:
 	screen_swapper_assembly.selected.connect(_on_screen_swapper_selected)
 	
 	order_bell.selected.connect(_on_order_bell_selected)
+	translator.selected.connect(_on_translator_selected)
 	
 	burger.selected.connect(_on_burger_selected)
 	grill.selected.connect(_on_grill_selected)
@@ -47,9 +49,16 @@ func _ready() -> void:
 	ingredient_container_2.selected.connect(_on_ingredient_selected)
 	ingredient_container_3.selected.connect(_on_ingredient_selected)
 	
+	begin_run()
 	begin_day()
 	add_client()
 	begin_order()
+
+
+func begin_run() -> void:
+	for species in Species.Species:
+		run_seed.append(randi_range(1, 9999))
+
 
 func begin_day() -> void:
 	game_timer.start_day_timer(day_time)
@@ -68,6 +77,7 @@ func add_client() -> void:
 
 func emote_client(emotion : String = "idle") -> void:
 	var dialogue : Array[String]
+	var client_species : Species.Species = client.client_resource.species
 	match emotion:
 		"idle": 
 			dialogue = client.client_resource.dialogue
@@ -84,12 +94,40 @@ func emote_client(emotion : String = "idle") -> void:
 		"timeout":
 			dialogue = [client.client_resource.dialogue_timeout]
 			client.emote("order_angry")
-	display_client_dialogue(dialogue)
-
-
-func display_client_dialogue(dialogue : Array[String]) -> void:
-	#TODO: missing cypher system
+	if not translator.translating and client_species != Species.Species.HUMAN:
+		dialogue = encrypt_dialogue(dialogue, client_species)
 	dialogue_box.store_dialogue(dialogue)
+	
+
+func encrypt_dialogue(dialogue : Array[String], species : Species.Species) -> Array[String]:
+	for d in range(dialogue.size()):
+		for c in range(dialogue[d].length()):
+			dialogue[d][c] = char(ord(dialogue[d][c]) + run_seed[species])
+	return dialogue
+
+
+func translate_dialogue(dialogue : Array[String], species : Species.Species) -> Array[String]:
+	for d in range(dialogue.size()):
+		for c in range(dialogue[d].length()):
+			dialogue[d][c] = char(ord(dialogue[d][c]) - run_seed[species])
+	return dialogue
+
+
+func _on_translator_selected() -> void:
+	var client_species : Species.Species = client.client_resource.species
+	if game_timer.client_timer.time_left > 0 and client_species != Species.Species.HUMAN:
+		var dialogue : Array[String] = dialogue_box.stored_dialogue
+		if translator.online:
+			if translator.translating:
+				dialogue_box.edit_dialogue(encrypt_dialogue(dialogue, client_species))
+			else:
+				dialogue_box.edit_dialogue(translate_dialogue(dialogue, client_species))
+			translator.translating = !translator.translating
+		elif translator.charges > 0:
+			translator.turn_on()
+			dialogue_box.edit_dialogue(translate_dialogue(dialogue, client_species))
+		else:
+			pass
 
 
 func start_client_timer() -> void:
@@ -222,7 +260,7 @@ func _on_burger_selected() -> void:
 
 
 func _on_grill_selected() -> void:
-	if selected_ingredient and grill.ingredient_container.get_child_count() < max_grill:
+	if selected_ingredient and grill.ingredient_container.get_child_count() < 1:
 		grill.add_ingredient(selected_ingredient)
 		clear_selected_ingredient()
 	elif grill.ingredient_container.get_child_count() > 0:

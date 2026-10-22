@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bcofhrjgn0nhn"]
+
+[ext_resource type="Script" uid="uid://cw843cwoxy2ju" path="res://Translator/Scripts/translator.gd" id="1_cydqm"]
+[ext_resource type="Texture2D" uid="uid://dv5lsd13h22jk" path="res://Translator/Sprites/translator.png" id="2_qwqvm"]
+
+[node name="Translator" type="PanelContainer" unique_id=1866283832]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(130, 130)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cydqm")
+
+[node name="Sprite" type="TextureRect" parent="." unique_id=823986036]
+layout_mode = 2
+texture = ExtResource("2_qwqvm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="." unique_id=202481412]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

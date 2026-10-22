@@ -12,6 +12,10 @@ func store_dialogue(dialogue : Array[String]) -> void:
 	display_dialogue()
 
 
+func edit_dialogue(dialogue : Array[String]) -> void:
+	stored_dialogue = dialogue
+	display_dialogue()
+
 func display_dialogue() -> void:
 	label.text = stored_dialogue[curr_dialogue]
 

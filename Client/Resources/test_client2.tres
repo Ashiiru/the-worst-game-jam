@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ClientResource" format=3 uid="uid://ds2q1x500vpub"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_euvbh"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_res.gd" id="2_firen"]
+[ext_resource type="Texture2D" uid="uid://dkvi0wtoqtsrf" path="res://Client/Sprites/alien_2-Sheet.png" id="3_firen"]
+
+[resource]
+script = ExtResource("2_firen")
+sprite = ExtResource("3_firen")
+name = "Big Green"
+species = 1
+dialogue = Array[String](["I want green green lettuce. 3 of them."])
+patience = 45.0
+dialogue_perfect = "I am green for an AMAZING reason"
+dialogue_okay = "Green"
+dialogue_bad = "Not green enough."
+dialogue_timeout = "Too long."
+metadata/_custom_type_script = "uid://coil2gln6wkbt"
