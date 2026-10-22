@@ -16,8 +16,11 @@ extends Node2D
 @onready var order_bell: OrderBell = $World/OrderBell
 
 @onready var burger: Burger = $World/Burger
+@onready var grill: Grill = $World/Grill
+
 @onready var ingredient_container: IngredientContainer = $World/IngredientContainer
 @onready var ingredient_container_2: IngredientContainer = $World/IngredientContainer2
+@onready var ingredient_container_3: IngredientContainer = $World/IngredientContainer3
 
 
 var cash : float = 0.0
@@ -27,6 +30,7 @@ var day_time : float = 120.0
 var client_patience : float = 0.0
 
 var max_errors : int = 2
+var max_grill : int = 1
 
 var day_timer : float = 0.0
 
@@ -38,8 +42,10 @@ func _ready() -> void:
 	order_bell.selected.connect(_on_order_bell_selected)
 	
 	burger.selected.connect(_on_burger_selected)
+	grill.selected.connect(_on_grill_selected)
 	ingredient_container.selected.connect(_on_ingredient_selected)
 	ingredient_container_2.selected.connect(_on_ingredient_selected)
+	ingredient_container_3.selected.connect(_on_ingredient_selected)
 	
 	begin_day()
 	add_client()
@@ -174,7 +180,7 @@ func submit_order() -> void:
 		emote_client("angry")
 	
 	game_timer.client_timer.stop()
-	burger.ingredients.clear()
+	burger.clear_ingredients()
 
 
 func pay_order(score : float) -> void:
@@ -187,6 +193,7 @@ func select_ingredient(ingredientres : IngredientRes) -> void:
 	new_ingredient.ingredient_resource = ingredientres
 	selected_ingredient = new_ingredient
 	world.add_child(selected_ingredient)
+	selected_ingredient.hold()
 	add_cash(-selected_ingredient.ingredient_resource.cost)
 	
 
@@ -208,7 +215,15 @@ func _on_ingredient_selected(ingredientres : IngredientRes) -> void:
 
 func _on_burger_selected() -> void:
 	if selected_ingredient:
-		burger.add_ingredient(selected_ingredient.ingredient_resource)
+		burger.add_ingredient(selected_ingredient)
 		clear_selected_ingredient()
 	elif burger.ingredients.size() > 0:
 		select_ingredient(burger.pop_ingredient())
+
+
+func _on_grill_selected() -> void:
+	if selected_ingredient and grill.ingredient_container.get_child_count() < max_grill:
+		grill.add_ingredient(selected_ingredient)
+		clear_selected_ingredient()
+	elif grill.ingredient_container.get_child_count() > 0:
+		select_ingredient(grill.pop_ingredient())

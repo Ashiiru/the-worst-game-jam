@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://l30mj7v8h2hh"]
+
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="1_enm3a"]
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_kqjoi"]
+[ext_resource type="Texture2D" uid="uid://hk2nnx2f6nc0" path="res://Ingredient/Sprites/burger_raw.png" id="2_enm3a"]
+
+[resource]
+script = ExtResource("1_kqjoi")
+sprite = ExtResource("2_enm3a")
+name = "Meat Patty"
+cost = 0.3
+cooks_into = ExtResource("1_enm3a")
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

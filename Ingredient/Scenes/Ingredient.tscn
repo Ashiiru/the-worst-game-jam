@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://dsixv5wrs0l8k"]
 
 [ext_resource type="Script" uid="uid://co4bmxdjwtxc0" path="res://Ingredient/Scripts/ingredient.gd" id="1_2byfg"]
+[ext_resource type="Texture2D" uid="uid://hk2nnx2f6nc0" path="res://Ingredient/Sprites/burger_raw.png" id="2_6y2h2"]
 
-[node name="Ingredient" type="Node2D" unique_id=1609194331]
+[node name="Ingredient" type="TextureRect" unique_id=267573398]
+custom_minimum_size = Vector2(50, 50)
+mouse_filter = 2
+texture = ExtResource("2_6y2h2")
+expand_mode = 1
+stretch_mode = 5
 script = ExtResource("1_2byfg")
 
-[node name="Sprite" type="Sprite2D" parent="." unique_id=1196128779]
+[node name="CookTimer" type="Timer" parent="." unique_id=1543188942]
+one_shot = true
+
+[connection signal="timeout" from="CookTimer" to="." method="_on_cook_timer_timeout"]

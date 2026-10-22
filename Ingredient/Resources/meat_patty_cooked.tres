@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://3mn6rsf0v3ly"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_buej8"]
+[ext_resource type="Texture2D" uid="uid://dvujrde1klpl8" path="res://Ingredient/Sprites/burger_cooked.png" id="2_7rc0h"]
+
+[resource]
+script = ExtResource("1_buej8")
+sprite = ExtResource("2_7rc0h")
+name = "Cooked Meat Patty"
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

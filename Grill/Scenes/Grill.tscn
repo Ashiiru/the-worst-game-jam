@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bg7w6q3yn2kbo"]
+
+[ext_resource type="Script" uid="uid://b3f7dsv1fxibq" path="res://Grill/Scripts/grill.gd" id="1_mqsd3"]
+
+[node name="Grill" type="PanelContainer" unique_id=1713246566]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_mqsd3")
+
+[node name="IngredientContainer" type="HBoxContainer" parent="." unique_id=986765524]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=1767152539]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

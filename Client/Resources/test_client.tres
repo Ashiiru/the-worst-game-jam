@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_jdrky"]
 [ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_res.gd" id="2_gprsu"]
 [ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="2_wbark"]
-[ext_resource type="Resource" uid="uid://l30mj7v8h2hh" path="res://Ingredient/Resources/tomato.tres" id="3_e4f7x"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_wbark"]
 [ext_resource type="Texture2D" uid="uid://csu2lbtfsnce0" path="res://Client/Sprites/alien_1_sheet.png" id="5_wbark"]
 
 [resource]
@@ -11,8 +11,8 @@ script = ExtResource("2_gprsu")
 sprite = ExtResource("5_wbark")
 name = "Silly Orange"
 species = 1
-dialogue = Array[String](["Hello World!", "I want lettuce lettuce tomato lettuce"])
-order = Array[ExtResource("1_jdrky")]([ExtResource("2_wbark"), ExtResource("2_wbark"), ExtResource("3_e4f7x"), ExtResource("2_wbark")])
+dialogue = Array[String](["Hello World!", "I want lettuce lettuce cooked patty lettuce"])
+order = Array[ExtResource("1_jdrky")]([ExtResource("2_wbark"), ExtResource("2_wbark"), ExtResource("3_wbark"), ExtResource("2_wbark")])
 patience = 60.0
 dialogue_perfect = "Perfect!!!"
 dialogue_okay = "That's okay, thank you!"

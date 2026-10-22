@@ -3,19 +3,39 @@ extends PanelContainer
 
 signal selected
 
-var ingredients : Array[IngredientRes] = []
+@onready var ingredient_container: VBoxContainer = $IngredientContainer
 
+var ingredients : Array[IngredientRes] = []
+var has_bread : bool = false
 
 #debug
 func print_ingredients() -> void:
 	for i in ingredients:
 		print(i.name)
 
-func add_ingredient(ingredient : IngredientRes) -> void:
-	ingredients.append(ingredient)
-
+func add_ingredient(ingredient : Ingredient) -> void:
+	ingredients.append(ingredient.ingredient_resource)
+	var i : Ingredient = ingredient.duplicate()
+	ingredient_container.add_child(i)
+	if i.ingredient_resource.name == "Bread":
+		if has_bread:
+			i.texture = preload("res://Ingredient/Sprites/top_bun.png")
+		has_bread = true
+	i.z_index += ingredients.size()
+	ingredient_container.move_child(i, 0)
+		
 func pop_ingredient() -> IngredientRes:
-	return ingredients.pop_back()
+	var i : IngredientRes = ingredients.pop_back()
+	if i.name == "Bread":
+		has_bread = false
+	ingredient_container.get_child(0).queue_free()
+	return i
 
+func clear_ingredients() -> void:
+	ingredients.clear()
+	has_bread = false
+	for child in ingredient_container.get_children():
+		child.queue_free()
+		
 func _on_button_pressed() -> void:
 	selected.emit()

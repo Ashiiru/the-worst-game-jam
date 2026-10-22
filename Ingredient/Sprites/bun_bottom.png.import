@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1ner5a1yvyn6"
-path="res://.godot/imported/tomato_slice_place_holder.png-29fa3d530bb94b0e0d3b184d72d79a56.ctex"
+uid="uid://c86h8apg1tilp"
+path="res://.godot/imported/bun_bottom.png-0018b7bf4c3ea07277b2349e139a407e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ingredient/Sprites/tomato_slice_place_holder.png"
-dest_files=["res://.godot/imported/tomato_slice_place_holder.png-29fa3d530bb94b0e0d3b184d72d79a56.ctex"]
+source_file="res://Ingredient/Sprites/bun_bottom.png"
+dest_files=["res://.godot/imported/bun_bottom.png-0018b7bf4c3ea07277b2349e139a407e.ctex"]
 
 [params]
 

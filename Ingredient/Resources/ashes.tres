@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://cjxm43bcd47jx"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_b8jq3"]
+[ext_resource type="Texture2D" uid="uid://dtpit8pioceuh" path="res://Ingredient/Sprites/burned_food.png" id="2_f7iy5"]
+
+[resource]
+script = ExtResource("1_b8jq3")
+sprite = ExtResource("2_f7iy5")
+name = "Ashes"
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"
