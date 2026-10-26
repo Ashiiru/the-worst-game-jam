@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dde3vh6b46o3g"
-path="res://.godot/imported/dinner_temp.png-d2cd121a8304ec82261ef2ac1679cd3c.ctex"
+uid="uid://bemjayar35eo0"
+path="res://.godot/imported/space.png-1347742b9384b3b5b93bc90b5d52441e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/Sprites/dinner_temp.png"
-dest_files=["res://.godot/imported/dinner_temp.png-d2cd121a8304ec82261ef2ac1679cd3c.ctex"]
+source_file="res://Game/Sprites/space.png"
+dest_files=["res://.godot/imported/space.png-1347742b9384b3b5b93bc90b5d52441e.ctex"]
 
 [params]
 

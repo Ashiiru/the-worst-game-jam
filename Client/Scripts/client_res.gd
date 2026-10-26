@@ -6,9 +6,9 @@ extends Resource
 
 #Every species of client except for Human has its own language, at the start of a run
 #they are generated based on a cypher and remain consistent
-@export var species : Species.Species
+@export var species : Enumerates.Species
 
-@export_multiline var dialogue : Array[String]
+@export_multiline var dialogue : String
 
 @export var order : Array[IngredientRes]
 

@@ -5,10 +5,10 @@ extends PanelContainer
 
 signal selected
 
-@export var title : String = "Test"
+@export var location : Enumerates.Locations
 
 func _ready() -> void:
-	label.text = title
+	label.text = Enumerates.Locations.find_key(location)
 
 func _on_button_pressed() -> void:
-	selected.emit(title)
+	selected.emit(location)

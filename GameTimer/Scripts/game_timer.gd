@@ -12,6 +12,8 @@ signal day_timeout
 @onready var client_timer: Timer = $ClientTimer
 @onready var day_timer: Timer = $DayTimer
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 const ship_start : float = 31.0
 const ship_end : float = 83.0
 
@@ -51,3 +53,10 @@ func _on_client_timer_timeout() -> void:
 
 func _on_day_timer_timeout() -> void:
 	day_timeout.emit()
+
+
+func animate_appear() -> void:
+	animation_player.play("appear")
+	
+func animate_disappear() -> void:
+	animation_player.play_backwards("appear")

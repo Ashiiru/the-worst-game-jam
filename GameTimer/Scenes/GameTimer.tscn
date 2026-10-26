@@ -5,11 +5,46 @@
 [ext_resource type="Texture2D" uid="uid://b1ffqrshctfeq" path="res://GameTimer/Sprites/faces.png" id="3_mh8jq"]
 [ext_resource type="Texture2D" uid="uid://denqib0w1qe5q" path="res://GameTimer/Sprites/ufo.png" id="4_xpah0"]
 
+[sub_resource type="Animation" id="Animation_4nn05"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_3nr6y"]
+resource_name = "appear"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-300, -0.25, 0, 0.25, 0, 0, -0.3795104, 14, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mh8jq"]
+_data = {
+&"RESET": SubResource("Animation_4nn05"),
+&"appear": SubResource("Animation_3nr6y")
+}
+
 [node name="GameTimer" type="PanelContainer" unique_id=315946774]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(125, 100)
 offset_right = 130.0
-offset_bottom = 127.0
+offset_bottom = 127.000084
 script = ExtResource("1_4nn05")
 
 [node name="Body" type="Sprite2D" parent="." unique_id=494241991]
@@ -40,7 +75,7 @@ theme_override_constants/margin_bottom = 49
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
-text = "120.45"
+text = "0.0"
 horizontal_alignment = 2
 vertical_alignment = 1
 
@@ -49,6 +84,9 @@ one_shot = true
 
 [node name="DayTimer" type="Timer" parent="." unique_id=1851013745]
 one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=326143149]
+libraries/ = SubResource("AnimationLibrary_mh8jq")
 
 [connection signal="timeout" from="ClientTimer" to="." method="_on_client_timer_timeout"]
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]

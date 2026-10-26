@@ -6,10 +6,15 @@ extends Node2D
 
 @export var client_resource : ClientResource
 
-
 func update_resource(new_res : ClientResource) -> void:
 	client_resource = new_res
 	sprite.texture = client_resource.sprite
 
 func emote(anim : String) -> void:
 	animation_player.play(anim)
+
+func animate_appear() -> void:
+	animation_player.play("appear")
+
+func animate_disappear() -> void:
+	animation_player.play_backwards("appear")

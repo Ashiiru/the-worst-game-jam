@@ -2,12 +2,14 @@ class_name Game
 extends Node2D
 
 @onready var world: CanvasLayer = $World
+@onready var animation_player: AnimationPlayer = $World/AnimationPlayer
 
 @onready var game_camera: GameCamera = $World/GameCamera
 @onready var game_timer: GameTimer = $World/GameTimer
 
 @onready var screen_swapper_main: ScreenSwapper = $HUD/ScreenSwapperMain
 @onready var screen_swapper_assembly: ScreenSwapper = $HUD/ScreenSwapperAssembly
+@onready var input_blocker: ColorRect = $HUD/InputBlocker
 
 @onready var client: Client = $World/Client
 @onready var dialogue_box: DialogueBox = $World/DialogueBox
@@ -23,12 +25,23 @@ extends Node2D
 @onready var ingredient_container_2: IngredientContainer = $World/IngredientContainer2
 @onready var ingredient_container_3: IngredientContainer = $World/IngredientContainer3
 
+@onready var receipt: Receipt = $World/Receipt
+
 var run_seed : Array[int] = []
+var day : int = 1
+
+var day_quota : float = 0.0
+var day_expenses : float = 0.0
+var day_revenue : float = 0.0
+var day_perfect_orders : int = 0
+var day_missed_orders : int = 0
+
+var run_clients : Array[ClientResource]
 
 var cash : float = 0.0
 var selected_ingredient : Ingredient = null
 
-var day_time : float = 120.0
+var day_time : float = 30.0
 var client_patience : float = 0.0
 
 var max_errors : int = 2
@@ -51,81 +64,87 @@ func _ready() -> void:
 	
 	begin_run()
 	begin_day()
-	add_client()
-	begin_order()
 
 
 func begin_run() -> void:
-	for species in Species.Species:
-		run_seed.append(randi_range(1, 9999))
+	for species in Enumerates.Species:
+		run_seed.append(randi())
+	
+	#TODO: Missing code to load all clients
+	run_clients = [preload("res://Client/Resources/test_client.tres"), preload("res://Client/Resources/test_client2.tres")]
 
 
 func begin_day() -> void:
+	day += 1
 	game_timer.start_day_timer(day_time)
 	
-
-func begin_order() -> void:
-	add_client()
-	emote_client("idle")
-	start_client_timer()
-
+	#TODO: Calculate day quota
+	
+	animation_player.play("day_start")
+	
 
 func add_client() -> void:
-	#TODO: missing code to pick out a random client
-	client.update_resource(preload("res://Client/Resources/test_client.tres"))
+	if translator.online:
+		translator.turn_off()
+	
+	#TODO: missing code to pick out clients according to the day of the run
+	client.update_resource(run_clients.pop_at(randi_range(0, run_clients.size() - 1)))
+	animation_player.play("order_start")
 
 
+#Can only be called by animations
 func emote_client(emotion : String = "idle") -> void:
-	var dialogue : Array[String]
-	var client_species : Species.Species = client.client_resource.species
+	var dialogue : String
 	match emotion:
 		"idle": 
 			dialogue = client.client_resource.dialogue
 			client.emote("idle")
 		"happy":
-			dialogue = [client.client_resource.dialogue_perfect]
+			dialogue = client.client_resource.dialogue_perfect
 			client.emote("order_happy")
 		"neutral":
-			dialogue = [client.client_resource.dialogue_okay]
+			dialogue = client.client_resource.dialogue_okay
 			client.emote("order_neutral")
 		"angry":
-			dialogue = [client.client_resource.dialogue_bad]
+			dialogue = client.client_resource.dialogue_bad
 			client.emote("order_angry")
 		"timeout":
-			dialogue = [client.client_resource.dialogue_timeout]
+			dialogue = client.client_resource.dialogue_timeout
 			client.emote("order_angry")
-	if not translator.translating and client_species != Species.Species.HUMAN:
-		dialogue = encrypt_dialogue(dialogue, client_species)
-	dialogue_box.store_dialogue(dialogue)
-	
+	if not translator.translating and client.client_resource.species != Enumerates.Species.HUMAN:
+		dialogue_box.stored_translated = dialogue
+		dialogue = encrypt_dialogue(dialogue)
+	dialogue_box.stored_dialogue = dialogue
+	dialogue_box.display_stored_dialogue()
+	if animation_player.assigned_animation != "day_end":
+		animation_player.pause()
+	await dialogue_box.display_dialogue_animated()
+	if animation_player.assigned_animation != "day_end":
+		animation_player.play()
 
-func encrypt_dialogue(dialogue : Array[String], species : Species.Species) -> Array[String]:
-	for d in range(dialogue.size()):
-		for c in range(dialogue[d].length()):
-			dialogue[d][c] = char(ord(dialogue[d][c]) + run_seed[species])
-	return dialogue
 
-
-func translate_dialogue(dialogue : Array[String], species : Species.Species) -> Array[String]:
-	for d in range(dialogue.size()):
-		for c in range(dialogue[d].length()):
-			dialogue[d][c] = char(ord(dialogue[d][c]) - run_seed[species])
+func encrypt_dialogue(dialogue : String) -> String:
+	dialogue = dialogue.capitalize()
+	for c in range(dialogue.length()):
+		if dialogue[c] != " ":
+			var new_unicode = ord(dialogue[c]) + run_seed[client.client_resource.species]
+			new_unicode = 65 + (new_unicode % 25)
+			dialogue[c] = char(new_unicode)
+	dialogue = "[font=" + Enumerates.get_species_font_path(client.client_resource.species) + "]" + dialogue + "[/font]"
 	return dialogue
 
 
 func _on_translator_selected() -> void:
-	var client_species : Species.Species = client.client_resource.species
-	if game_timer.client_timer.time_left > 0 and client_species != Species.Species.HUMAN:
-		var dialogue : Array[String] = dialogue_box.stored_dialogue
+	if game_timer.client_timer.time_left > 0 and client.client_resource.species != Enumerates.Species.HUMAN:
 		if translator.online:
 			if translator.translating:
-				dialogue_box.edit_dialogue(encrypt_dialogue(dialogue, client_species))
+				dialogue_box.display_stored_dialogue()
 			else:
-				dialogue_box.edit_dialogue(translate_dialogue(dialogue, client_species))
+				dialogue_box.display_translated_dialogue()
 			translator.translating = !translator.translating
 		elif translator.charges > 0:
 			translator.turn_on()
-			dialogue_box.edit_dialogue(translate_dialogue(dialogue, client_species))
+			dialogue_box.display_translated_dialogue()
 		else:
 			pass
 
@@ -136,15 +155,26 @@ func start_client_timer() -> void:
 	game_timer.start_client_timer(client_patience)
 
 
-func _on_screen_swapper_selected(location : String) -> void:
-	var new_location : Vector2 = game_camera.positions.get(location)
-	if new_location != null:
-		game_camera.move_to(new_location)
+func _on_screen_swapper_selected(location : Enumerates.Locations) -> void:
+	move_camera_to(location)
+
+func move_camera_to(location : Enumerates.Locations) -> void:
+	match location:
+		Enumerates.Locations.MAIN:
+			screen_swapper_main.visible = false
+			screen_swapper_assembly.visible = true
+		Enumerates.Locations.ASSEMBLY:
+			screen_swapper_assembly.visible = false
+			screen_swapper_main.visible = true
+	game_camera.move_to(location)
 
 
 func add_cash(amount : float) -> void:
 	cash += amount
 	register.set_cash(cash)
+	var popup : CashPopUp = preload("res://CashPopUp/Scenes/CashPupUp.tscn").instantiate()
+	popup.value = amount
+	world.add_child(popup)
 
 
 #returns the order's score and the max score it could have been worth
@@ -153,12 +183,16 @@ func rate_order() -> Vector2:
 	var construction : Array[IngredientRes] = burger.ingredients.duplicate()
 	var perfect_score : float = objective.size() * 2.0
 	var score : float = 0.0
+	var curr_time : float = game_timer.client_timer.time_left
 	
 	var remaining_objective : Dictionary
 	var remaining_construction : Dictionary
 	var correct : bool = false
 	
 	var errors : int = 0
+	
+	if curr_time == 0.0:
+		return Vector2(-1.0, perfect_score)
 	
 	#rate matching ingredients and double points for order accuracy
 	for i in range(max(len(objective), len(construction))):
@@ -187,7 +221,6 @@ func rate_order() -> Vector2:
 		return Vector2(0.0,perfect_score)
 	
 	#rate time, if more than half the time is taken the score is penalized
-	var curr_time : float = game_timer.client_timer.time_left
 	if curr_time < client_patience / 2.0:
 		score = score * curr_time / client_patience
 		print("time penalty " + str(curr_time/client_patience))
@@ -198,8 +231,25 @@ func rate_order() -> Vector2:
 func _on_order_bell_selected() -> void:
 	if not (game_timer.client_timer.time_left > 0.0 and burger.ingredients.size() > 0):
 		return
-	submit_order()
+	animation_player.play("order_end")
 
+
+func _on_game_timer_client_timeout() -> void:
+	animation_player.play("order_end")
+
+
+func _on_game_timer_day_timeout() -> void:
+	game_timer.client_timer.stop()
+	receipt.set_receipt(day, cash, day_perfect_orders, day_missed_orders, day_revenue, day_expenses, day_quota)
+	animation_player.play("day_end")
+
+func submit_quota() -> void:
+	cash -= day_quota
+	if cash < 0.0:
+		animation_player.play("run_game_over")
+	else:
+		animation_player.play("run_day_pass")
+		
 
 func submit_order() -> void:
 	var scores : Vector2 = rate_order()
@@ -212,10 +262,15 @@ func submit_order() -> void:
 	var correctness : float = score / perfect_score
 	if correctness == 1.0:
 		emote_client("happy")
+		day_perfect_orders += 1
 	elif correctness > 0.0:
 		emote_client("neutral")
-	else:
+	elif correctness == 0.0:
 		emote_client("angry")
+		day_missed_orders += 1
+	else:
+		emote_client("timeout")
+		day_missed_orders += 1
 	
 	game_timer.client_timer.stop()
 	burger.clear_ingredients()
@@ -223,7 +278,9 @@ func submit_order() -> void:
 
 func pay_order(score : float) -> void:
 	#TODO money calculation from score
-	add_cash(snapped(score, .1))
+	var pay : float = max(0.0, snapped(score, .1))
+	day_revenue += pay
+	add_cash(pay)
 	
 
 func select_ingredient(ingredientres : IngredientRes) -> void:
@@ -232,8 +289,7 @@ func select_ingredient(ingredientres : IngredientRes) -> void:
 	selected_ingredient = new_ingredient
 	world.add_child(selected_ingredient)
 	selected_ingredient.hold()
-	add_cash(-selected_ingredient.ingredient_resource.cost)
-	
+
 
 func clear_selected_ingredient() -> void:
 	selected_ingredient.queue_free()
@@ -243,12 +299,20 @@ func clear_selected_ingredient() -> void:
 func _on_ingredient_selected(ingredientres : IngredientRes) -> void:
 	if selected_ingredient:
 		if not (ingredientres.name == selected_ingredient.ingredient_resource.name):
+			add_cash(selected_ingredient.ingredient_resource.cost)
+			day_expenses -= selected_ingredient.ingredient_resource.cost
 			clear_selected_ingredient()
 			select_ingredient(ingredientres)
+			add_cash(-selected_ingredient.ingredient_resource.cost)
+			day_expenses += selected_ingredient.ingredient_resource.cost
 		else:
+			add_cash(selected_ingredient.ingredient_resource.cost)
+			day_expenses -= selected_ingredient.ingredient_resource.cost
 			clear_selected_ingredient()
 	else:
 		select_ingredient(ingredientres)
+		add_cash(-selected_ingredient.ingredient_resource.cost)
+		day_expenses += selected_ingredient.ingredient_resource.cost
 
 
 func _on_burger_selected() -> void:
@@ -263,5 +327,18 @@ func _on_grill_selected() -> void:
 	if selected_ingredient and grill.ingredient_container.get_child_count() < 1:
 		grill.add_ingredient(selected_ingredient)
 		clear_selected_ingredient()
+	elif selected_ingredient:
+		var temp : Ingredient = selected_ingredient.duplicate()
+		clear_selected_ingredient()
+		select_ingredient(grill.pop_ingredient())
+		grill.add_ingredient(temp)
 	elif grill.ingredient_container.get_child_count() > 0:
 		select_ingredient(grill.pop_ingredient())
+
+
+func _on_continue_button_pressed() -> void:
+	animation_player.play("shop_start")
+
+
+func _on_next_day_button_pressed() -> void:
+	animation_player.play("shop_end")

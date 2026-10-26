@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://0hcafgbo2uoy"]
+
+[ext_resource type="FontFile" uid="uid://cblgswdibpohb" path="res://TextFonts/SplendidN.ttf" id="1_p2m4h"]
+[ext_resource type="Script" uid="uid://c5s16d0633h2i" path="res://CashPopUp/Scripts/cash_pop_up.gd" id="2_3m5kj"]
+
+[node name="CashPopUp" type="Label" unique_id=1137262390]
+offset_right = 9.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_p2m4h")
+theme_override_font_sizes/font_size = 16
+text = "0.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_3m5kj")

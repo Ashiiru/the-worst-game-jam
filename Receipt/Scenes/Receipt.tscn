@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://fx2vlufrha5k"]
+
+[ext_resource type="Script" uid="uid://dfdtrxl7oeupe" path="res://Receipt/Scripts/receipt.gd" id="1_gn725"]
+[ext_resource type="Texture2D" uid="uid://by75cadlxq2xo" path="res://Receipt/Sprites/receipt.png" id="2_21x5c"]
+[ext_resource type="FontFile" uid="uid://cblgswdibpohb" path="res://TextFonts/SplendidN.ttf" id="3_21x5c"]
+
+[sub_resource type="Animation" id="Animation_21x5c"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_4olpw"]
+resource_name = "appear"
+length = 2.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-300, 0, 0, 0.08166667, -33.333336, -200, -0.048333332, -50, 0, 0, -200, -0.09166666, -33.333332, 0, 0, -100, -0.085, -33.333332, 0, 0, -100, -0.06999999, -16.666666, 0, 0, -4, -0.063333355, -16.666666, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_glrl7"]
+_data = {
+&"RESET": SubResource("Animation_21x5c"),
+&"appear": SubResource("Animation_4olpw")
+}
+
+[node name="Receipt" type="PanelContainer" unique_id=1721701008]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(175, 300)
+offset_right = 175.0
+offset_bottom = 300.0
+script = ExtResource("1_gn725")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=221592466]
+layout_mode = 2
+texture = ExtResource("2_21x5c")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=447036838]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=820896307]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2" unique_id=1225662154]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1186231500]
+custom_minimum_size = Vector2(16, 18)
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer" unique_id=2049192358]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Day 1 Results"
+horizontal_alignment = 1
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1738426367]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="StaringCash" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer6" unique_id=111330468]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Cash"
+
+[node name="StartingCashValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer6" unique_id=288669883]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.87, 0.87, 0.87, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "0.00$"
+horizontal_alignment = 2
+
+[node name="MarginContainer7" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=480013954]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="PerfectOrders" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer7" unique_id=704139450]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Perfect Orders"
+
+[node name="PerfectOrdersValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer7" unique_id=2071405003]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.87, 0.87, 0.87, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "0"
+horizontal_alignment = 2
+
+[node name="MarginContainer8" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=290924088]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="MissedOrders" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer8" unique_id=380496399]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Missed Orders"
+
+[node name="MissedOrdersValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer8" unique_id=101270681]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.87, 0.87, 0.87, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "0"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1291099958]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="Revenue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer2" unique_id=2109735558]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Revenue"
+
+[node name="RevenueValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer2" unique_id=610894647]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.623, 0.87, 0.164, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "+0.00$"
+horizontal_alignment = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1422033300]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="Expenses" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer3" unique_id=783301526]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Expenses"
+
+[node name="ExpensesValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer3" unique_id=931654919]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "-0.00$"
+horizontal_alignment = 2
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=764332538]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="Quota" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer4" unique_id=1093376976]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Quota"
+
+[node name="QuotaValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer4" unique_id=1079469889]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "-0.00$"
+horizontal_alignment = 2
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=295415760]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="Remaining" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer5" unique_id=418551178]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "Remaining"
+
+[node name="RemainingValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/VBoxContainer/MarginContainer5" unique_id=121584297]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.623, 0.87, 0.164, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "0.00$"
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2" unique_id=797833865]
+custom_minimum_size = Vector2(16, 18)
+layout_mode = 2
+
+[node name="Result" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/MarginContainer" unique_id=1691760729]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("3_21x5c")
+text = "RESULTS"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=75016889]
+libraries/ = SubResource("AnimationLibrary_glrl7")
