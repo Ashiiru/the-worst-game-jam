@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://b4btui3tenx3d"]
+
+[ext_resource type="Resource" uid="uid://baubeckkuuvos" path="res://Ingredient/Resources/bacon_cooked.tres" id="1_3e84q"]
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_kl85f"]
+[ext_resource type="Texture2D" uid="uid://c4udkqpxfpxnd" path="res://Ingredient/Sprites/bacon_raw.png" id="3_r5mna"]
+
+[resource]
+script = ExtResource("1_kl85f")
+sprite = ExtResource("3_r5mna")
+name = "Bacon"
+cost = 0.4
+cooks_into = ExtResource("1_3e84q")
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

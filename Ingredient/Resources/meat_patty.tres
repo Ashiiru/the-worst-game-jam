@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_kqjoi")
 sprite = ExtResource("2_enm3a")
-name = "Meat Patty"
-cost = 0.3
+name = "Burger Patty"
+cost = 0.6
 cooks_into = ExtResource("1_enm3a")
 metadata/_custom_type_script = "uid://dmrp27rksh8s1"

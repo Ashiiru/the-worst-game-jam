@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://d0x1wu0t0nfe4"]
+
+[ext_resource type="Texture2D" uid="uid://ct3rvpin3ho4h" path="res://Ingredient/Sprites/bottle_ketchup_upside_down.png" id="1_lo27f"]
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_ohav0"]
+[ext_resource type="Texture2D" uid="uid://c17f3t8fiujut" path="res://Ingredient/Sprites/ketchup.png" id="3_ulvl4"]
+
+[resource]
+script = ExtResource("1_ohav0")
+sprite = ExtResource("3_ulvl4")
+holding_sprite = ExtResource("1_lo27f")
+name = "Ketchup"
+cost = 0.05
+cook_time = 3.0
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

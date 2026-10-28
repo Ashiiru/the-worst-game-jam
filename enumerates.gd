@@ -7,7 +7,7 @@ static func get_species_font_path(species : Species) -> String:
 		Species.GLORPI:
 			return "res://TextFonts/Alien_lines_1.9.ttf"
 		Species.CONSTRUCT:
-			return "res://TextFonts/minecraft-enchantment.ttf"
+			return "res://TextFonts/Monocracy Cuts and Clips.ttf"
 		_:
 			return "res://TextFonts/SplendidN.ttf"
 

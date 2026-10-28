@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://3vdqwxhpxx7"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_wp4lx"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_l6ay0"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_m8sd1"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_ewrrr"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_4j46i"]
+[ext_resource type="Resource" uid="uid://cno474sdj7kd7" path="res://Ingredient/Resources/onions.tres" id="5_2ajo7"]
+
+[resource]
+script = ExtResource("2_l6ay0")
+species = 1
+dialogue = "Good morning or afternoon! I'd like a cheeseburger with onions, thank you!"
+order = Array[ExtResource("1_wp4lx")]([ExtResource("2_m8sd1"), ExtResource("3_ewrrr"), ExtResource("4_4j46i"), ExtResource("5_2ajo7"), ExtResource("2_m8sd1")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

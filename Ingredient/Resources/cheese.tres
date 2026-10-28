@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://bhjin5fwfic0w"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_3spwn"]
+[ext_resource type="Texture2D" uid="uid://u4volyttvqfc" path="res://Ingredient/Sprites/cheese.png" id="2_qhtdc"]
+
+[resource]
+script = ExtResource("1_3spwn")
+sprite = ExtResource("2_qhtdc")
+name = "Cheese"
+cost = 0.3
+cook_time = 5.0
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

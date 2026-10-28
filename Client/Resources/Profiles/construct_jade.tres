@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://beh33yfp5xm32"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_4b1rt"]
+[ext_resource type="Texture2D" uid="uid://eqave6877uwc" path="res://Client/Sprites/construct_jade.png" id="2_78ht1"]
+
+[resource]
+script = ExtResource("1_4b1rt")
+sprite = ExtResource("2_78ht1")
+species = 2
+dialogue_perfect = "Oh darling, now this is fine dining."
+dialogue_okay = "Fine, this will do."
+dialogue_bad = "Absolutely horrid, darling."
+dialogue_timeout = "I've got far grander activities to tend to."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

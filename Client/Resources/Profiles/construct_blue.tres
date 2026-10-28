@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://bbf6eqlxpufiy"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_jerrx"]
+[ext_resource type="Texture2D" uid="uid://byfu3e7ms0lip" path="res://Client/Sprites/construct_blue.png" id="2_l6qqr"]
+
+[resource]
+script = ExtResource("1_jerrx")
+sprite = ExtResource("2_l6qqr")
+species = 2
+dialogue_perfect = "Praised be this day."
+dialogue_okay = "I shall tolerate this offering."
+dialogue_bad = "What an insulting excuse of a meal."
+dialogue_timeout = "My patience is finite."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

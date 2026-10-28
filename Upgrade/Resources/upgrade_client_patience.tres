@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeClientPatience" format=3 uid="uid://b0upmct7vgpsm"]
+
+[ext_resource type="Script" uid="uid://cwqb2750yrm2q" path="res://Upgrade/Scripts/upgrade_client_patience.gd" id="1_qgifp"]
+[ext_resource type="Texture2D" uid="uid://wka4c4qo5my7" path="res://Upgrade/Sprites/jammie_dodger.png" id="2_nkiyl"]
+
+[resource]
+script = ExtResource("1_qgifp")
+sprite = ExtResource("2_nkiyl")
+name = "Jammy Dodger"
+descripion = "With a cookie as sweet as this one, you'll be on your way to conquer all the clients' hearts! Maybe they'll even wait around a little longer just to watch you cook!"
+cost = 10.0
+metadata/_custom_type_script = "uid://cwqb2750yrm2q"

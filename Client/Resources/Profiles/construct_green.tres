@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://cajrppbgyh80w"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_wubp0"]
+[ext_resource type="Texture2D" uid="uid://cblcim5golcwp" path="res://Client/Sprites/construct_green.png" id="2_e8qvs"]
+
+[resource]
+script = ExtResource("1_wubp0")
+sprite = ExtResource("2_e8qvs")
+name = "Big Green"
+species = 2
+dialogue_perfect = "Thank you, kindly."
+dialogue_okay = "An acceptable outcome."
+dialogue_bad = "Humans are so unreliable."
+dialogue_timeout = "I am beyond this ceaseless waiting."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

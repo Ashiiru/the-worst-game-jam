@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://brunhvbtgv1n4"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_6i8vm"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_uc1gw"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_wu25w"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_e82bl"]
+[ext_resource type="Resource" uid="uid://cno474sdj7kd7" path="res://Ingredient/Resources/onions.tres" id="4_t1f04"]
+
+[resource]
+script = ExtResource("2_uc1gw")
+species = 1
+dialogue = "I want the iconic Saturn burger! Three onion rings on top of my patty! Raw!"
+order = Array[ExtResource("1_6i8vm")]([ExtResource("2_wu25w"), ExtResource("3_e82bl"), ExtResource("4_t1f04"), ExtResource("4_t1f04"), ExtResource("4_t1f04"), ExtResource("2_wu25w")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

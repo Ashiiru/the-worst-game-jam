@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://cxt7dojmdk3kt"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_wdnx6"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_7ahu6"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="3_u5cct"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="4_h6mmn"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="5_gniw0"]
+
+[resource]
+script = ExtResource("5_gniw0")
+species = 2
+dialogue = "Constructs are beyond violence, I want all the green vegetables in my burger, pickles first. And none of that horrid meat."
+order = Array[ExtResource("1_wdnx6")]([ExtResource("2_7ahu6"), ExtResource("3_u5cct"), ExtResource("4_h6mmn"), ExtResource("2_7ahu6")])
+patience = 60.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

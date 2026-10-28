@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://152vouks80kk"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_veted"]
+[ext_resource type="Texture2D" uid="uid://3s640kww7jcg" path="res://Client/Sprites/construct_cyan.png" id="2_wsmwb"]
+
+[resource]
+script = ExtResource("1_veted")
+sprite = ExtResource("2_wsmwb")
+species = 2
+dialogue_perfect = "Your kitchen is a canvas, and this meal is a masterpiece."
+dialogue_okay = "An honest attempt at artistry."
+dialogue_bad = "It lacks soul."
+dialogue_timeout = "Perhaps art should be rushed..."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

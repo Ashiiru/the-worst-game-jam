@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://doo6uilrv38sy"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_cdihn"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_qm2gh"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_yklt3"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="4_r5pe0"]
+
+[resource]
+script = ExtResource("4_r5pe0")
+species = 1
+dialogue = "I want a double decker burger. Make it simple, just meat and buns!"
+order = Array[ExtResource("1_cdihn")]([ExtResource("2_qm2gh"), ExtResource("3_yklt3"), ExtResource("2_qm2gh"), ExtResource("3_yklt3"), ExtResource("2_qm2gh")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

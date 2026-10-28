@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://cno474sdj7kd7"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_lrmif"]
+[ext_resource type="Resource" uid="uid://c23lg5npt5slu" path="res://Ingredient/Resources/onions_cooked.tres" id="1_qn63n"]
+[ext_resource type="Texture2D" uid="uid://bimmd4p2of8qo" path="res://Ingredient/Sprites/onions.png" id="3_0cgox"]
+
+[resource]
+script = ExtResource("1_lrmif")
+sprite = ExtResource("3_0cgox")
+name = "Onions"
+cost = 0.15
+cooks_into = ExtResource("1_qn63n")
+cook_time = 5.0
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

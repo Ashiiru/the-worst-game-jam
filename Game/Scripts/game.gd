@@ -25,10 +25,19 @@ extends Node2D
 @onready var ingredient_container_2: IngredientContainer = $World/IngredientContainer2
 @onready var ingredient_container_3: IngredientContainer = $World/IngredientContainer3
 
+@onready var upgrade_displays : Array[UpgradeDisplay] = [$World/UpgradeDisplay1,$World/UpgradeDisplay2, $World/UpgradeDisplay3, $World/UpgradeDisplay4]
+
 @onready var receipt: Receipt = $World/Receipt
 
+@onready var upgrades: ResourcePreloader = $Upgrades
+
+#Its very important that client orders follow the naming convention of having the day the order is meant
+#to appear on as the first character of their key in this node
+@onready var client_orders: ResourcePreloader = $ClientOrders
+@onready var client_profiles: ResourcePreloader = $ClientProfiles
+
 var run_seed : Array[int] = []
-var day : int = 1
+var day : int = 0
 
 var day_quota : float = 0.0
 var day_expenses : float = 0.0
@@ -36,17 +45,16 @@ var day_revenue : float = 0.0
 var day_perfect_orders : int = 0
 var day_missed_orders : int = 0
 
-var run_clients : Array[ClientResource]
-
 var cash : float = 0.0
 var selected_ingredient : Ingredient = null
 
-var day_time : float = 30.0
+var day_time : float = 70.0
 var client_patience : float = 0.0
 
 var max_errors : int = 2
 
-var day_timer : float = 0.0
+#upgrade related variables
+var upgrade_patience_multiplier : float = 1.0
 
 
 func _ready() -> void:
@@ -62,6 +70,9 @@ func _ready() -> void:
 	ingredient_container_2.selected.connect(_on_ingredient_selected)
 	ingredient_container_3.selected.connect(_on_ingredient_selected)
 	
+	for display in upgrade_displays:
+		display.selected.connect(_on_upgrade_selected)
+	
 	begin_run()
 	begin_day()
 
@@ -69,9 +80,6 @@ func _ready() -> void:
 func begin_run() -> void:
 	for species in Enumerates.Species:
 		run_seed.append(randi())
-	
-	#TODO: Missing code to load all clients
-	run_clients = [preload("res://Client/Resources/test_client.tres"), preload("res://Client/Resources/test_client2.tres")]
 
 
 func begin_day() -> void:
@@ -79,6 +87,7 @@ func begin_day() -> void:
 	game_timer.start_day_timer(day_time)
 	
 	#TODO: Calculate day quota
+	register.set_quota(day_quota)
 	
 	animation_player.play("day_start")
 	
@@ -87,8 +96,27 @@ func add_client() -> void:
 	if translator.online:
 		translator.turn_off()
 	
-	#TODO: missing code to pick out clients according to the day of the run
-	client.update_resource(run_clients.pop_at(randi_range(0, run_clients.size() - 1)))
+	var orders : PackedStringArray = client_orders.get_resource_list()
+	var i : int = 0
+	for o in orders:
+		if int(o[0]) > day:
+			break
+		i += 1
+	var client_order : ClientOrder = client_orders.get_resource(orders.get(randi_range(0, i)))
+	i = 0
+	var profiles : PackedStringArray = client_profiles.get_resource_list()
+	var j : int = 0
+	var found : bool = false
+	for p in profiles:
+		if p.contains(str(Enumerates.Species.find_key(client_order.species)).to_lower()):
+			found = true
+			j += 1
+		else:
+			if found:
+				break
+			i += 1
+	var client_profile : ClientProfile = client_profiles.get_resource(profiles.get(randi_range(i, i + j - 1)))
+	client.update_client(client_profile, client_order)
 	animation_player.play("order_start")
 
 
@@ -97,21 +125,21 @@ func emote_client(emotion : String = "idle") -> void:
 	var dialogue : String
 	match emotion:
 		"idle": 
-			dialogue = client.client_resource.dialogue
+			dialogue = client.client_order.dialogue
 			client.emote("idle")
 		"happy":
-			dialogue = client.client_resource.dialogue_perfect
+			dialogue = client.client_profile.dialogue_perfect
 			client.emote("order_happy")
 		"neutral":
-			dialogue = client.client_resource.dialogue_okay
+			dialogue = client.client_profile.dialogue_okay
 			client.emote("order_neutral")
 		"angry":
-			dialogue = client.client_resource.dialogue_bad
+			dialogue = client.client_profile.dialogue_bad
 			client.emote("order_angry")
 		"timeout":
-			dialogue = client.client_resource.dialogue_timeout
+			dialogue = client.client_profile.dialogue_timeout
 			client.emote("order_angry")
-	if not translator.translating and client.client_resource.species != Enumerates.Species.HUMAN:
+	if not translator.translating and client.client_order.species != Enumerates.Species.HUMAN:
 		dialogue_box.stored_translated = dialogue
 		dialogue = encrypt_dialogue(dialogue)
 	dialogue_box.stored_dialogue = dialogue
@@ -127,15 +155,15 @@ func encrypt_dialogue(dialogue : String) -> String:
 	dialogue = dialogue.capitalize()
 	for c in range(dialogue.length()):
 		if dialogue[c] != " ":
-			var new_unicode = ord(dialogue[c]) + run_seed[client.client_resource.species]
+			var new_unicode = ord(dialogue[c]) + run_seed[client.client_order.species]
 			new_unicode = 65 + (new_unicode % 25)
 			dialogue[c] = char(new_unicode)
-	dialogue = "[font=" + Enumerates.get_species_font_path(client.client_resource.species) + "]" + dialogue + "[/font]"
+	dialogue = "[font=" + Enumerates.get_species_font_path(client.client_order.species) + "]" + dialogue + "[/font]"
 	return dialogue
 
 
 func _on_translator_selected() -> void:
-	if game_timer.client_timer.time_left > 0 and client.client_resource.species != Enumerates.Species.HUMAN:
+	if game_timer.client_timer.time_left > 0 and client.client_order.species != Enumerates.Species.HUMAN:
 		if translator.online:
 			if translator.translating:
 				dialogue_box.display_stored_dialogue()
@@ -151,7 +179,7 @@ func _on_translator_selected() -> void:
 
 func start_client_timer() -> void:
 	#TODO: calculate initial client patience and start timer with that value
-	client_patience = client.client_resource.patience
+	client_patience = client.client_order.patience
 	game_timer.start_client_timer(client_patience)
 
 
@@ -170,6 +198,8 @@ func move_camera_to(location : Enumerates.Locations) -> void:
 
 
 func add_cash(amount : float) -> void:
+	if amount == 0.0:
+		return
 	cash += amount
 	register.set_cash(cash)
 	var popup : CashPopUp = preload("res://CashPopUp/Scenes/CashPupUp.tscn").instantiate()
@@ -179,7 +209,7 @@ func add_cash(amount : float) -> void:
 
 #returns the order's score and the max score it could have been worth
 func rate_order() -> Vector2:
-	var objective : Array[IngredientRes] = client.client_resource.order.duplicate()
+	var objective : Array[IngredientRes] = client.client_order.order.duplicate()
 	var construction : Array[IngredientRes] = burger.ingredients.duplicate()
 	var perfect_score : float = objective.size() * 2.0
 	var score : float = 0.0
@@ -339,6 +369,17 @@ func _on_grill_selected() -> void:
 func _on_continue_button_pressed() -> void:
 	animation_player.play("shop_start")
 
+
+func add_shop() -> void:
+	var upgrade_names : PackedStringArray = upgrades.get_resource_list()
+	for display in upgrade_displays:
+		display.update_upgrade(upgrades.get_resource(upgrade_names[randi_range(0, upgrade_names.size() - 1)]))
+
+func _on_upgrade_selected(upgrade_display : UpgradeDisplay) -> void:
+	if cash >= upgrade_display.upgrade.cost:
+		upgrade_display.buy(self)
+	else:
+		pass
 
 func _on_next_day_button_pressed() -> void:
 	animation_player.play("shop_end")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://cjyaex8bnqc10"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_isy8r"]
+[ext_resource type="Texture2D" uid="uid://v85v8xbwjkr0" path="res://Client/Sprites/glorpi_ploingo.png" id="2_b7437"]
+
+[resource]
+script = ExtResource("1_isy8r")
+sprite = ExtResource("2_b7437")
+name = "Ploingo"
+species = 1
+dialogue_perfect = "Just what I wanted."
+dialogue_okay = "Thanks."
+dialogue_bad = "Damn."
+dialogue_timeout = "I have work to do."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

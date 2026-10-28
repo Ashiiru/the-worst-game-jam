@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://c23lg5npt5slu"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_eeal3"]
+[ext_resource type="Texture2D" uid="uid://b8l5ugskjslhh" path="res://Ingredient/Sprites/onions_cooked.png" id="2_rjsko"]
+
+[resource]
+script = ExtResource("1_eeal3")
+sprite = ExtResource("2_rjsko")
+name = "Caramelized Onions"
+cook_time = 5.0
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

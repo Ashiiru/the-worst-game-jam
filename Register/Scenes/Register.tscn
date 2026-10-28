@@ -1,23 +1,46 @@
 [gd_scene format=3 uid="uid://dypumwf8iopct"]
 
-[ext_resource type="Texture2D" uid="uid://qrb1ru6h61jx" path="res://Register/Sprites/register_temp.png" id="1_7gq7w"]
 [ext_resource type="Script" uid="uid://5gxy6r73osnm" path="res://Register/Scripts/register.gd" id="1_kcl0h"]
+[ext_resource type="FontFile" uid="uid://dwu238kren3w1" path="res://TextFonts/W95FA.otf" id="2_kcl0h"]
 
 [node name="Register" type="PanelContainer" unique_id=1478358835]
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(70, 70)
+custom_minimum_size = Vector2(80, 30)
 offset_right = 1.0
-offset_bottom = 23.0
 script = ExtResource("1_kcl0h")
 
-[node name="Sprite" type="TextureRect" parent="." unique_id=1176846643]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1755606983]
 layout_mode = 2
-texture = ExtResource("1_7gq7w")
-expand_mode = 1
-stretch_mode = 4
+theme_override_constants/separation = -7
 
-[node name="Label" type="RichTextLabel" parent="." unique_id=983333945]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2011581889]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_constants/margin_left = -80
+theme_override_constants/margin_right = -80
+
+[node name="CashLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer" unique_id=983333945]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.8980392, 0.8, 0.12941177, 1)
+theme_override_fonts/normal_font = ExtResource("2_kcl0h")
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "0.00$"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=2084270871]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/margin_left = -80
+theme_override_constants/margin_right = -80
+
+[node name="QuotaLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer2" unique_id=454676749]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_fonts/normal_font = ExtResource("2_kcl0h")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Quota: 0.00$"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://dtipnmpb3ptt"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_mn5ll"]
+[ext_resource type="Texture2D" uid="uid://dxdjw2niranaj" path="res://Ingredient/Sprites/bottle_mayo_upside_down.png" id="1_v8e4f"]
+[ext_resource type="Texture2D" uid="uid://cgxvqhe7ulnhc" path="res://Ingredient/Sprites/mayo.png" id="3_piceu"]
+
+[resource]
+script = ExtResource("1_mn5ll")
+sprite = ExtResource("3_piceu")
+holding_sprite = ExtResource("1_v8e4f")
+name = "Mayo"
+cost = 0.05
+cook_time = 3.0
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

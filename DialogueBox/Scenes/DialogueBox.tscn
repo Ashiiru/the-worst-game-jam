@@ -3,9 +3,23 @@
 [ext_resource type="Script" uid="uid://2bau0ii0kegw" path="res://DialogueBox/Scripts/dialogue_box.gd" id="1_qbo1a"]
 [ext_resource type="FontFile" uid="uid://cblgswdibpohb" path="res://TextFonts/SplendidN.ttf" id="2_mgxy0"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgxy0"]
+bg_color = Color(0.62335503, 0.87, 0.1653, 0.4627451)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.25908002, 0.091800004, 0.51, 0)
+border_blend = true
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 10
+
 [node name="DialogueBox" type="PanelContainer" unique_id=1237435382]
 custom_minimum_size = Vector2(280, 200)
 offset_right = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mgxy0")
 script = ExtResource("1_qbo1a")
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=1558019663]
@@ -17,8 +31,10 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="RichTextLabel" parent="Margin" unique_id=1528819320]
 layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("2_mgxy0")
 bbcode_enabled = true
+text = "hello"
 
 [node name="Button" type="Button" parent="." unique_id=1280547294]
 self_modulate = Color(1, 1, 1, 0)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bvtee12j5i177"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_7x6sw"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_7dlve"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_ax08w"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="3_qdd3u"]
+
+[resource]
+script = ExtResource("2_7dlve")
+species = 2
+dialogue = "Inferior lifeforms ask for no pickles. I ask for a sandwich pickles only."
+order = Array[ExtResource("1_7x6sw")]([ExtResource("2_ax08w"), ExtResource("3_qdd3u"), ExtResource("2_ax08w")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://d3g2h2r6l8a6b"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_dfyxh"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_ms4j0"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_wj5ki"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_frq7i"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="5_qfcv1"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="6_g5e1a"]
+
+[resource]
+script = ExtResource("6_g5e1a")
+species = 1
+dialogue = "Hello, I'd like a cheeseburger with pickles!"
+order = Array[ExtResource("1_dfyxh")]([ExtResource("2_ms4j0"), ExtResource("3_wj5ki"), ExtResource("4_frq7i"), ExtResource("5_qfcv1"), ExtResource("2_ms4j0")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

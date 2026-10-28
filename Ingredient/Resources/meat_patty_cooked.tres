@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_buej8")
 sprite = ExtResource("2_7rc0h")
-name = "Cooked Meat Patty"
+name = "Grilled Burger"
+cook_time = 5.0
 metadata/_custom_type_script = "uid://dmrp27rksh8s1"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://dmpglw5dq8xvk"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_le6h6"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_7lstl"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_gq176"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_g6qve"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_x3d1g"]
+
+[resource]
+script = ExtResource("2_gq176")
+species = 1
+dialogue = "Cheeseburger!!"
+order = Array[ExtResource("1_le6h6")]([ExtResource("2_7lstl"), ExtResource("3_g6qve"), ExtResource("4_x3d1g"), ExtResource("2_7lstl")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

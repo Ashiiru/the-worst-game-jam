@@ -14,12 +14,36 @@
 [ext_resource type="Texture2D" uid="uid://38gc7ub4wfue" path="res://Game/Sprites/diner_main.png" id="5_tyrie"]
 [ext_resource type="PackedScene" uid="uid://dvg6wyyk2pxrm" path="res://OrderBell/Scenes/OrderBell.tscn" id="7_7bp3t"]
 [ext_resource type="PackedScene" uid="uid://bcofhrjgn0nhn" path="res://Translator/Scenes/Translator.tscn" id="7_7c4of"]
+[ext_resource type="Texture2D" uid="uid://bgsevi6t6i1wh" path="res://Game/Sprites/counter.png" id="8_4h8sl"]
 [ext_resource type="PackedScene" uid="uid://dmbgx7ed2hr33" path="res://ScreenSwapper/Scenes/ScreenSwapper.tscn" id="8_f7b1t"]
 [ext_resource type="PackedScene" uid="uid://bhapfduxdbot8" path="res://GameTimer/Scenes/GameTimer.tscn" id="8_nuvqv"]
 [ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="10_4vuux"]
 [ext_resource type="PackedScene" uid="uid://bg7w6q3yn2kbo" path="res://Grill/Scenes/Grill.tscn" id="12_mr6as"]
 [ext_resource type="PackedScene" uid="uid://fx2vlufrha5k" path="res://Receipt/Scenes/Receipt.tscn" id="17_bal17"]
 [ext_resource type="PackedScene" uid="uid://xbd536860m3x" path="res://Door/Scenes/Door.tscn" id="17_k6nfy"]
+[ext_resource type="PackedScene" uid="uid://bewoxbeblt124" path="res://Upgrade/Scenes/UpgradeDisplay.tscn" id="19_bxfm2"]
+[ext_resource type="Resource" uid="uid://cxt7dojmdk3kt" path="res://Client/Resources/Orders/3construct1.tres" id="22_he1k8"]
+[ext_resource type="Resource" uid="uid://2esqoplsu7w1" path="res://Upgrade/Resources/upgrade_translator_uses.tres" id="22_hi30p"]
+[ext_resource type="Resource" uid="uid://b0upmct7vgpsm" path="res://Upgrade/Resources/upgrade_client_patience.tres" id="22_idvqa"]
+[ext_resource type="Resource" uid="uid://cajrppbgyh80w" path="res://Client/Resources/Profiles/construct_green.tres" id="22_opxns"]
+[ext_resource type="Resource" uid="uid://b3bf6t3dtlwll" path="res://Client/Resources/Orders/1glorpi2.tres" id="23_572oi"]
+[ext_resource type="Resource" uid="uid://b7agwwesbyu5i" path="res://Client/Resources/Profiles/glorpi_sumol.tres" id="23_he1k8"]
+[ext_resource type="Resource" uid="uid://7dp8scsgaeen" path="res://Client/Resources/Orders/1glorpi1.tres" id="23_wwslj"]
+[ext_resource type="Resource" uid="uid://brunhvbtgv1n4" path="res://Client/Resources/Orders/1glorpi3.tres" id="24_8srii"]
+[ext_resource type="Resource" uid="uid://dmpglw5dq8xvk" path="res://Client/Resources/Orders/1glorpi4.tres" id="25_hjvjr"]
+[ext_resource type="Resource" uid="uid://8vqqgulgxpmg" path="res://Client/Resources/Profiles/glorpi_aval.tres" id="26_8srii"]
+[ext_resource type="Resource" uid="uid://doo6uilrv38sy" path="res://Client/Resources/Orders/1glorpi5.tres" id="26_p6li4"]
+[ext_resource type="Resource" uid="uid://dclgyc1nuprhw" path="res://Client/Resources/Orders/1glorpi6.tres" id="27_04prp"]
+[ext_resource type="Resource" uid="uid://cjyaex8bnqc10" path="res://Client/Resources/Profiles/glorpi_ploingo.tres" id="27_hjvjr"]
+[ext_resource type="Resource" uid="uid://d3g2h2r6l8a6b" path="res://Client/Resources/Orders/2glorpi1.tres" id="27_t4ufd"]
+[ext_resource type="Resource" uid="uid://3vdqwxhpxx7" path="res://Client/Resources/Orders/2glorpi2.tres" id="28_04prp"]
+[ext_resource type="Resource" uid="uid://y1ilmkfonwmn" path="res://Client/Resources/Orders/4glorpi1.tres" id="30_j81tf"]
+[ext_resource type="Resource" uid="uid://bvtee12j5i177" path="res://Client/Resources/Orders/3construct2.tres" id="31_04prp"]
+[ext_resource type="Resource" uid="uid://cq2rx1p8hq2w0" path="res://Client/Resources/Orders/3construct3.tres" id="32_j81tf"]
+[ext_resource type="Resource" uid="uid://bbf6eqlxpufiy" path="res://Client/Resources/Profiles/construct_blue.tres" id="34_bxfm2"]
+[ext_resource type="Resource" uid="uid://beh33yfp5xm32" path="res://Client/Resources/Profiles/construct_jade.tres" id="36_hi30p"]
+[ext_resource type="Resource" uid="uid://bbsa8sduh2mlm" path="res://Client/Resources/Profiles/construct_orange.tres" id="37_idvqa"]
+[ext_resource type="Resource" uid="uid://p7v8l757easg" path="res://Client/Resources/Profiles/construct_yellow.tres" id="38_4h8sl"]
 
 [sub_resource type="Animation" id="Animation_7c4of"]
 length = 0.001
@@ -730,6 +754,17 @@ tracks/4/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k6nfy"]
 _data = {
@@ -777,40 +812,47 @@ position = Vector2(320, 180)
 texture = ExtResource("5_tyrie")
 
 [node name="DialogueBox" parent="World" unique_id=1237435382 instance=ExtResource("4_s1wwj")]
-offset_left = 174.0
+offset_left = 195.0
 offset_top = 37.0
-offset_right = 454.0
+offset_right = 535.0
 offset_bottom = 237.0
 
 [node name="Client" parent="World" unique_id=1362351619 instance=ExtResource("5_6vecx")]
-position = Vector2(89, 157)
+position = Vector2(118, 360)
+
+[node name="Counter" type="Sprite2D" parent="World" unique_id=149324698]
+texture = ExtResource("8_4h8sl")
+centered = false
 
 [node name="Register" parent="World" unique_id=1478358835 instance=ExtResource("5_tsnoo")]
-offset_left = 12.0
-offset_top = 259.0
-offset_right = 82.0
-offset_bottom = 329.0
+offset_left = 14.0
+offset_top = 209.99998
+offset_right = 94.0
+offset_bottom = 279.99997
+rotation = -0.10052187
 
 [node name="Translator" parent="World" unique_id=1866283832 instance=ExtResource("7_7c4of")]
-offset_left = 503.0
-offset_top = 204.0
-offset_right = 603.0
-offset_bottom = 304.0
+offset_left = 488.00003
+offset_top = 148.0
+offset_right = 618.0
+offset_bottom = 278.0
+scale = Vector2(1.3539027, 1.3539027)
 
 [node name="OrderBell" parent="World" unique_id=1559986288 instance=ExtResource("7_7bp3t")]
-offset_left = 85.0
-offset_top = 286.0
-offset_right = 135.0
-offset_bottom = 336.0
+offset_left = 138.0
+offset_top = 270.0
+offset_right = 188.0
+offset_bottom = 320.0
 
 [node name="GameTimer" parent="World" unique_id=315946774 instance=ExtResource("8_nuvqv")]
 visible = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -135.0
-offset_right = -5.0
+offset_left = -102.34497
+offset_right = 27.654724
 grow_horizontal = 0
+scale = Vector2(0.7521392, 0.7521392)
 
 [node name="IngredientContainer3" parent="World" unique_id=642096802 instance=ExtResource("3_0648w")]
 modulate = Color(1, 0.7421667, 0.089999974, 1)
@@ -907,6 +949,30 @@ position = Vector2(960, 180)
 scale = Vector2(1, 1.265625)
 texture = ExtResource("4_gsb0v")
 
+[node name="UpgradeDisplay1" parent="World" unique_id=1941398382 instance=ExtResource("19_bxfm2")]
+offset_left = 685.0
+offset_top = 120.0
+offset_right = 755.0
+offset_bottom = 190.0
+
+[node name="UpgradeDisplay2" parent="World" unique_id=1669657028 instance=ExtResource("19_bxfm2")]
+offset_left = 765.0
+offset_top = 215.0
+offset_right = 835.0
+offset_bottom = 285.0
+
+[node name="UpgradeDisplay3" parent="World" unique_id=1565885369 instance=ExtResource("19_bxfm2")]
+offset_left = 836.0
+offset_top = 139.0
+offset_right = 906.0
+offset_bottom = 209.0
+
+[node name="UpgradeDisplay4" parent="World" unique_id=1084097500 instance=ExtResource("19_bxfm2")]
+offset_left = 931.0
+offset_top = 219.0
+offset_right = 1001.0
+offset_bottom = 289.0
+
 [node name="NextDayButton" type="PanelContainer" parent="World" unique_id=550308248]
 offset_left = 1146.0
 offset_top = 300.0
@@ -955,6 +1021,15 @@ offset_bottom = 360.0
 color = Color(0, 0, 0, 0)
 
 [node name="Door" parent="HUD" unique_id=476817178 instance=ExtResource("17_k6nfy")]
+
+[node name="Upgrades" type="ResourcePreloader" parent="." unique_id=1685719351]
+resources = [PackedStringArray("upgrade_client_patience", "upgrade_translator_uses"), [ExtResource("22_idvqa"), ExtResource("22_hi30p")]]
+
+[node name="ClientOrders" type="ResourcePreloader" parent="." unique_id=506222972]
+resources = [PackedStringArray("1glorpi1", "1glorpi2", "1glorpi3", "1glorpi4", "1glorpi5", "1glorpi6", "2glorpi1", "2glorpi2", "3construct1", "3construct2", "3construct3", "4glorpi1"), [ExtResource("23_wwslj"), ExtResource("23_572oi"), ExtResource("24_8srii"), ExtResource("25_hjvjr"), ExtResource("26_p6li4"), ExtResource("27_04prp"), ExtResource("27_t4ufd"), ExtResource("28_04prp"), ExtResource("22_he1k8"), ExtResource("31_04prp"), ExtResource("32_j81tf"), ExtResource("30_j81tf")]]
+
+[node name="ClientProfiles" type="ResourcePreloader" parent="." unique_id=177094820]
+resources = [PackedStringArray("construct_blue", "construct_green", "construct_jade", "construct_orange", "construct_yellow", "glorpi_aval", "glorpi_ploingo", "glorpi_sumol"), [ExtResource("34_bxfm2"), ExtResource("22_opxns"), ExtResource("36_hi30p"), ExtResource("37_idvqa"), ExtResource("38_4h8sl"), ExtResource("26_8srii"), ExtResource("27_hjvjr"), ExtResource("23_he1k8")]]
 
 [connection signal="client_timeout" from="World/GameTimer" to="." method="_on_game_timer_client_timeout"]
 [connection signal="day_timeout" from="World/GameTimer" to="." method="_on_game_timer_day_timeout"]

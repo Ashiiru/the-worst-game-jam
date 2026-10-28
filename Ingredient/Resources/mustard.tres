@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://6d114kjvbt63"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_2gjsd"]
+[ext_resource type="Texture2D" uid="uid://b70rrur2vo57r" path="res://Ingredient/Sprites/bottle_mustard_upside_down.png" id="1_eqeod"]
+[ext_resource type="Texture2D" uid="uid://dbq60whfg5vm2" path="res://Ingredient/Sprites/mustard.png" id="3_6ovor"]
+
+[resource]
+script = ExtResource("1_2gjsd")
+sprite = ExtResource("3_6ovor")
+holding_sprite = ExtResource("1_eqeod")
+name = "Mustard"
+cost = 0.05
+cook_time = 3.0
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

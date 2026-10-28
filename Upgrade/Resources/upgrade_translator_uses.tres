@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeTranslatorUses" format=3 uid="uid://2esqoplsu7w1"]
+
+[ext_resource type="Script" uid="uid://cpuya8rgsaa42" path="res://Upgrade/Scripts/upgrade_translator_uses.gd" id="1_iyygk"]
+[ext_resource type="Texture2D" uid="uid://d2ifnh502aa3l" path="res://Upgrade/Sprites/traveller_cookie.png" id="2_oqmp7"]
+
+[resource]
+script = ExtResource("1_iyygk")
+sprite = ExtResource("2_oqmp7")
+name = "Traveller Cookie"
+descripion = "A well worn traveller gave me this one. Said it had crossed the world, and some extra language barriers too!"
+cost = 15.0
+metadata/_custom_type_script = "uid://cpuya8rgsaa42"

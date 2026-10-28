@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://7dp8scsgaeen"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_hgp8b"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_0t4p2"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_05wr3"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_y628y"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="4_dah4f"]
+
+[resource]
+script = ExtResource("2_0t4p2")
+species = 1
+dialogue = "I'd like a beef burger with lettuce on top please!"
+order = Array[ExtResource("1_hgp8b")]([ExtResource("2_05wr3"), ExtResource("3_y628y"), ExtResource("4_dah4f"), ExtResource("2_05wr3")])
+patience = 60.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

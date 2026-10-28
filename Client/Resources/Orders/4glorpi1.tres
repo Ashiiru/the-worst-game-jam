@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://y1ilmkfonwmn"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_w04ni"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_sjybv"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_migbd"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="4_brrrl"]
+
+[resource]
+script = ExtResource("4_brrrl")
+species = 1
+dialogue = "I've got this crazy idea for a burger: three floors and its all just beef! You gotta make it!"
+order = Array[ExtResource("1_w04ni")]([ExtResource("2_sjybv"), ExtResource("3_migbd"), ExtResource("2_sjybv"), ExtResource("3_migbd"), ExtResource("2_sjybv"), ExtResource("3_migbd"), ExtResource("2_sjybv")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

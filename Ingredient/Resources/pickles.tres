@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://dafl51q4k3k78"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_tj28y"]
+[ext_resource type="Texture2D" uid="uid://byik3qfbvskib" path="res://Ingredient/Sprites/pickles.png" id="2_xofnc"]
+
+[resource]
+script = ExtResource("1_tj28y")
+sprite = ExtResource("2_xofnc")
+name = "Pickles"
+cost = 0.2
+metadata/_custom_type_script = "uid://dmrp27rksh8s1"

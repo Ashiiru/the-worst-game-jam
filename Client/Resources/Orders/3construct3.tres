@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://cq2rx1p8hq2w0"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_p3w6s"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_mtmsi"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_pcqco"]
+[ext_resource type="Resource" uid="uid://cno474sdj7kd7" path="res://Ingredient/Resources/onions.tres" id="3_rymny"]
+
+[resource]
+script = ExtResource("2_mtmsi")
+species = 2
+dialogue = "My heightened senses demand for no less than two floors of onions in any sandwich."
+order = Array[ExtResource("1_p3w6s")]([ExtResource("2_pcqco"), ExtResource("3_rymny"), ExtResource("2_pcqco"), ExtResource("3_rymny")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

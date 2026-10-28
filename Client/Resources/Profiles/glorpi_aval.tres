@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://8vqqgulgxpmg"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_jb5q3"]
+[ext_resource type="Texture2D" uid="uid://c0dq6oy2hknhn" path="res://Client/Sprites/glorpi_aval.png" id="2_jdjji"]
+
+[resource]
+script = ExtResource("1_jb5q3")
+sprite = ExtResource("2_jdjji")
+name = "Aval"
+species = 1
+dialogue_perfect = "This is like, perfect!"
+dialogue_okay = "Like, thank you, I guess?"
+dialogue_bad = "You guys are totally getting a one star review."
+dialogue_timeout = "Ugh, I'm like over this waiting!"
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://b7agwwesbyu5i"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_mug5q"]
+[ext_resource type="Texture2D" uid="uid://cgqp33sern2ey" path="res://Client/Sprites/glorpi_silly_orange.png" id="2_5sbgt"]
+
+[resource]
+script = ExtResource("1_mug5q")
+sprite = ExtResource("2_5sbgt")
+name = "Sumol"
+species = 1
+dialogue_perfect = "Thank you!!"
+dialogue_okay = "That's okay, thank you!"
+dialogue_bad = "Oh..."
+dialogue_timeout = "I'm tired of waiting..."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

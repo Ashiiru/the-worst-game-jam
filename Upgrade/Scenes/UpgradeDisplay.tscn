@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bewoxbeblt124"]
+
+[ext_resource type="Script" uid="uid://cftcxgyr6dgpt" path="res://Upgrade/Scripts/upgrade_display.gd" id="1_reb41"]
+[ext_resource type="Texture2D" uid="uid://wka4c4qo5my7" path="res://Upgrade/Sprites/jammie_dodger.png" id="2_mlhob"]
+[ext_resource type="FontFile" uid="uid://cblgswdibpohb" path="res://TextFonts/SplendidN.ttf" id="3_8hf2g"]
+
+[node name="UpgradeDisplay" type="PanelContainer" unique_id=1941398382]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(70, 70)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_reb41")
+
+[node name="Sprite" type="TextureRect" parent="." unique_id=2072218498]
+layout_mode = 2
+texture = ExtResource("2_mlhob")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="." unique_id=731351614]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1919795316]
+layout_mode = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = -10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1662212001]
+layout_mode = 2
+theme_override_constants/separation = -4
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=402558929]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/margin_left = -50
+theme_override_constants/margin_right = -50
+
+[node name="NameLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1929379265]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("3_8hf2g")
+theme_override_font_sizes/normal_font_size = 15
+text = "Jammy Dodger"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=345052107]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="PriceLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=2024967272]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.623, 0.87, 0.164, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("3_8hf2g")
+text = "30.0$"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
