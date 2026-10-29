@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bxbsegnm4yqcc"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_n21gq"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_opmri"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_rotix"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="3_al5ry"]
+
+[resource]
+script = ExtResource("2_rotix")
+species = 2
+dialogue = "I'm not like other, lesser, lifeforms who like sandwiches with everything on them. I eat burgers with tomato only, no meat."
+order = Array[ExtResource("1_n21gq")]([ExtResource("2_opmri"), ExtResource("3_al5ry"), ExtResource("2_opmri")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://b7urk6ov580nb" path="res://Game/Scripts/game.gd" id="1_hn7vc"]
 [ext_resource type="PackedScene" uid="uid://xi6d3fo12v13" path="res://Ingredient/Scenes/Burger.tscn" id="2_8se0m"]
 [ext_resource type="Script" uid="uid://bcvx3rlifb5k2" path="res://Camera/game_camera.gd" id="2_crbfv"]
+[ext_resource type="Texture2D" uid="uid://dsd685hugbhqk" path="res://Game/Sprites/nana_end_of_day.png" id="2_hi30p"]
 [ext_resource type="PackedScene" uid="uid://kiifyhjtyhnv" path="res://Ingredient/Scenes/IngredientContainer.tscn" id="3_0648w"]
+[ext_resource type="Texture2D" uid="uid://23lrgycl4hm" path="res://Game/Sprites/nana_end_of_day_dark.png" id="3_idvqa"]
 [ext_resource type="Shader" uid="uid://ck7e7wijca3yk" path="res://Shaders/infinite_scroll.gdshader" id="3_seuk0"]
 [ext_resource type="Resource" uid="uid://l30mj7v8h2hh" path="res://Ingredient/Resources/meat_patty.tres" id="4_7uvsw"]
 [ext_resource type="Texture2D" uid="uid://bemjayar35eo0" path="res://Game/Sprites/space.png" id="4_gsb0v"]
@@ -17,33 +19,41 @@
 [ext_resource type="Texture2D" uid="uid://bgsevi6t6i1wh" path="res://Game/Sprites/counter.png" id="8_4h8sl"]
 [ext_resource type="PackedScene" uid="uid://dmbgx7ed2hr33" path="res://ScreenSwapper/Scenes/ScreenSwapper.tscn" id="8_f7b1t"]
 [ext_resource type="PackedScene" uid="uid://bhapfduxdbot8" path="res://GameTimer/Scenes/GameTimer.tscn" id="8_nuvqv"]
-[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="10_4vuux"]
 [ext_resource type="PackedScene" uid="uid://bg7w6q3yn2kbo" path="res://Grill/Scenes/Grill.tscn" id="12_mr6as"]
+[ext_resource type="Texture2D" uid="uid://dymcc1y51seqj" path="res://Game/Sprites/kitchen_background.png" id="17_6ihbm"]
 [ext_resource type="PackedScene" uid="uid://fx2vlufrha5k" path="res://Receipt/Scenes/Receipt.tscn" id="17_bal17"]
 [ext_resource type="PackedScene" uid="uid://xbd536860m3x" path="res://Door/Scenes/Door.tscn" id="17_k6nfy"]
+[ext_resource type="Texture2D" uid="uid://2rfwyyrmi4sy" path="res://Ingredient/Sprites/food_box_onion.png" id="18_te4p3"]
 [ext_resource type="PackedScene" uid="uid://bewoxbeblt124" path="res://Upgrade/Scenes/UpgradeDisplay.tscn" id="19_bxfm2"]
-[ext_resource type="Resource" uid="uid://cxt7dojmdk3kt" path="res://Client/Resources/Orders/3construct1.tres" id="22_he1k8"]
+[ext_resource type="Resource" uid="uid://cno474sdj7kd7" path="res://Ingredient/Resources/onions.tres" id="19_rbkfh"]
+[ext_resource type="Texture2D" uid="uid://b0crc3jeemdx4" path="res://Ingredient/Sprites/food_box_cheese.png" id="21_06yal"]
+[ext_resource type="Resource" uid="uid://co0vc5urrryf2" path="res://Client/Resources/Profiles/nana.tres" id="21_vw07w"]
 [ext_resource type="Resource" uid="uid://2esqoplsu7w1" path="res://Upgrade/Resources/upgrade_translator_uses.tres" id="22_hi30p"]
 [ext_resource type="Resource" uid="uid://b0upmct7vgpsm" path="res://Upgrade/Resources/upgrade_client_patience.tres" id="22_idvqa"]
-[ext_resource type="Resource" uid="uid://cajrppbgyh80w" path="res://Client/Resources/Profiles/construct_green.tres" id="22_opxns"]
-[ext_resource type="Resource" uid="uid://b3bf6t3dtlwll" path="res://Client/Resources/Orders/1glorpi2.tres" id="23_572oi"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="22_qtirl"]
+[ext_resource type="Texture2D" uid="uid://bld3i08jlxjre" path="res://Ingredient/Sprites/food_box_tomato.png" id="23_6ihbm"]
 [ext_resource type="Resource" uid="uid://b7agwwesbyu5i" path="res://Client/Resources/Profiles/glorpi_sumol.tres" id="23_he1k8"]
 [ext_resource type="Resource" uid="uid://7dp8scsgaeen" path="res://Client/Resources/Orders/1glorpi1.tres" id="23_wwslj"]
-[ext_resource type="Resource" uid="uid://brunhvbtgv1n4" path="res://Client/Resources/Orders/1glorpi3.tres" id="24_8srii"]
-[ext_resource type="Resource" uid="uid://dmpglw5dq8xvk" path="res://Client/Resources/Orders/1glorpi4.tres" id="25_hjvjr"]
-[ext_resource type="Resource" uid="uid://8vqqgulgxpmg" path="res://Client/Resources/Profiles/glorpi_aval.tres" id="26_8srii"]
-[ext_resource type="Resource" uid="uid://doo6uilrv38sy" path="res://Client/Resources/Orders/1glorpi5.tres" id="26_p6li4"]
-[ext_resource type="Resource" uid="uid://dclgyc1nuprhw" path="res://Client/Resources/Orders/1glorpi6.tres" id="27_04prp"]
-[ext_resource type="Resource" uid="uid://cjyaex8bnqc10" path="res://Client/Resources/Profiles/glorpi_ploingo.tres" id="27_hjvjr"]
-[ext_resource type="Resource" uid="uid://d3g2h2r6l8a6b" path="res://Client/Resources/Orders/2glorpi1.tres" id="27_t4ufd"]
-[ext_resource type="Resource" uid="uid://3vdqwxhpxx7" path="res://Client/Resources/Orders/2glorpi2.tres" id="28_04prp"]
-[ext_resource type="Resource" uid="uid://y1ilmkfonwmn" path="res://Client/Resources/Orders/4glorpi1.tres" id="30_j81tf"]
-[ext_resource type="Resource" uid="uid://bvtee12j5i177" path="res://Client/Resources/Orders/3construct2.tres" id="31_04prp"]
-[ext_resource type="Resource" uid="uid://cq2rx1p8hq2w0" path="res://Client/Resources/Orders/3construct3.tres" id="32_j81tf"]
-[ext_resource type="Resource" uid="uid://bbf6eqlxpufiy" path="res://Client/Resources/Profiles/construct_blue.tres" id="34_bxfm2"]
-[ext_resource type="Resource" uid="uid://beh33yfp5xm32" path="res://Client/Resources/Profiles/construct_jade.tres" id="36_hi30p"]
-[ext_resource type="Resource" uid="uid://bbsa8sduh2mlm" path="res://Client/Resources/Profiles/construct_orange.tres" id="37_idvqa"]
-[ext_resource type="Resource" uid="uid://p7v8l757easg" path="res://Client/Resources/Profiles/construct_yellow.tres" id="38_4h8sl"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="24_1jydm"]
+[ext_resource type="Resource" uid="uid://bebggwg23brah" path="res://Upgrade/Resources/upgrade_daytime.tres" id="24_u4ehh"]
+[ext_resource type="Texture2D" uid="uid://bv8jmcs3i0ebb" path="res://Ingredient/Sprites/food_box_pickles.png" id="25_jralb"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="26_ja53t"]
+[ext_resource type="Texture2D" uid="uid://c6aeobpv1ryfd" path="res://Ingredient/Sprites/bottle_ketchup.png" id="27_bxo41"]
+[ext_resource type="Texture2D" uid="uid://mvv4xpqjl3ia" path="res://Game/Sprites/menu_art.png" id="27_idvqa"]
+[ext_resource type="Resource" uid="uid://d0x1wu0t0nfe4" path="res://Ingredient/Resources/ketchup.tres" id="28_waags"]
+[ext_resource type="Texture2D" uid="uid://tpd8ndnkcfi7" path="res://Ingredient/Sprites/bottle_mustard.png" id="29_luu1a"]
+[ext_resource type="Resource" uid="uid://6d114kjvbt63" path="res://Ingredient/Resources/mustard.tres" id="30_48ff0"]
+[ext_resource type="Texture2D" uid="uid://cp8aaur6ikdwm" path="res://Ingredient/Sprites/bottle_mayo.png" id="31_2i8j5"]
+[ext_resource type="Resource" uid="uid://dtipnmpb3ptt" path="res://Ingredient/Resources/mayo.tres" id="32_nx85f"]
+[ext_resource type="Texture2D" uid="uid://cgfwm57e6ba1g" path="res://Ingredient/Sprites/food_box_patty.png" id="33_o1pwe"]
+[ext_resource type="Texture2D" uid="uid://d8567pejwmok" path="res://Ingredient/Sprites/food_box_bacon.png" id="35_o83k3"]
+[ext_resource type="Resource" uid="uid://b4btui3tenx3d" path="res://Ingredient/Resources/bacon.tres" id="36_2po3c"]
+[ext_resource type="Texture2D" uid="uid://keh75rurdpma" path="res://Ingredient/Sprites/bread_bag.png" id="38_1jydm"]
+[ext_resource type="Texture2D" uid="uid://dk2o6anqn6xmt" path="res://Ingredient/Sprites/plate.png" id="38_06yal"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="39_1jydm"]
+[ext_resource type="Texture2D" uid="uid://dx174wyt3blfc" path="res://Game/Sprites/bin.png" id="40_qtirl"]
+[ext_resource type="Texture2D" uid="uid://dd1dsugu3y4te" path="res://Game/Sprites/shop_background.png" id="41_rbkfh"]
+[ext_resource type="Texture2D" uid="uid://cfc6xkatff71f" path="res://Game/Sprites/table_shop.png" id="44_06yal"]
 
 [sub_resource type="Animation" id="Animation_7c4of"]
 length = 0.001
@@ -178,6 +188,30 @@ tracks/10/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("World/NanaDialogueBox:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("World/HouseBackground:texture")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_hi30p")]
 }
 
 [sub_resource type="Animation" id="Animation_seuk0"]
@@ -320,6 +354,18 @@ tracks/9/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("World/HouseBackground:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_hi30p")]
+}
 
 [sub_resource type="Animation" id="Animation_k6nfy"]
 resource_name = "day_start"
@@ -407,7 +453,7 @@ tracks/6/path = NodePath("HUD/Door")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -469,7 +515,7 @@ tracks/2/path = NodePath("World/Client")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.6),
+"times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -483,7 +529,7 @@ tracks/3/path = NodePath("World/Client:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.6),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -495,7 +541,7 @@ tracks/4/path = NodePath("World/DialogueBox:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.6),
+"times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -589,6 +635,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_tyrie"]
 resource_name = "run_game_over"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -596,7 +643,7 @@ tracks/0/path = NodePath("World/GameOverRestartButton:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -608,10 +655,22 @@ tracks/1/path = NodePath("World/GameOverMenuButton:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("World/HouseBackground:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_idvqa"), ExtResource("2_hi30p"), ExtResource("3_idvqa"), ExtResource("2_hi30p"), ExtResource("3_idvqa"), ExtResource("2_hi30p"), ExtResource("3_idvqa")]
 }
 
 [sub_resource type="Animation" id="Animation_ofkml"]
@@ -761,9 +820,44 @@ tracks/5/path = NodePath(".")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
+"times": PackedFloat32Array(1.53, 2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"scale_quota"
+}, {
+"args": [],
+"method": &"add_shop"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("World/Nana")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"animate_appear"
+}, {
+"args": ["idle"],
+"method": &"emote"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("World/NanaDialogueBox:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k6nfy"]
@@ -787,6 +881,74 @@ shader_parameter/repeat_x = 1.0
 shader_parameter/repeat_y = 1.0
 shader_parameter/row_offset = 1.0
 shader_parameter/texture_to_scroll = ExtResource("4_gsb0v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48uvx"]
+resource_local_to_scene = true
+texture = ExtResource("18_te4p3")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_56wl4"]
+load_path = "res://.godot/imported/food_box_lettuce.png-95993cfe58f385ffbb6eac2d9927f132.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mryf4"]
+resource_local_to_scene = true
+texture = SubResource("CompressedTexture2D_56wl4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k8f6"]
+resource_local_to_scene = true
+texture = ExtResource("21_06yal")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_te4p3"]
+resource_local_to_scene = true
+texture = ExtResource("23_6ihbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbkfh"]
+resource_local_to_scene = true
+texture = ExtResource("25_jralb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06yal"]
+resource_local_to_scene = true
+texture = ExtResource("27_bxo41")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtirl"]
+resource_local_to_scene = true
+texture = ExtResource("29_luu1a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ja53t"]
+resource_local_to_scene = true
+texture = ExtResource("31_2i8j5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxo41"]
+resource_local_to_scene = true
+texture = ExtResource("33_o1pwe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_waags"]
+resource_local_to_scene = true
+texture = ExtResource("35_o83k3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_luu1a"]
+resource_local_to_scene = true
+texture = ExtResource("38_1jydm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jralb"]
+texture = ExtResource("38_06yal")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30t1u"]
+texture = ExtResource("40_qtirl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ihbm"]
+texture = ExtResource("44_06yal")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qtirl"]
+load_path = "res://.godot/imported/pda.png-8e6584184fb3972bc4e6cac20c50a16f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1jydm"]
+texture = SubResource("CompressedTexture2D_qtirl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4h8sl"]
+texture = ExtResource("4_gsb0v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hi30p"]
+texture = ExtResource("27_idvqa")
 
 [node name="Game" type="Node2D" unique_id=1152207749]
 script = ExtResource("1_hn7vc")
@@ -812,13 +974,16 @@ position = Vector2(320, 180)
 texture = ExtResource("5_tyrie")
 
 [node name="DialogueBox" parent="World" unique_id=1237435382 instance=ExtResource("4_s1wwj")]
-offset_left = 195.0
-offset_top = 37.0
-offset_right = 535.0
-offset_bottom = 237.0
+offset_left = 178.0
+offset_top = 42.0
+offset_right = 478.0
+offset_bottom = 142.0
+min_size = Vector2(350, 150)
 
 [node name="Client" parent="World" unique_id=1362351619 instance=ExtResource("5_6vecx")]
 position = Vector2(118, 360)
+client_profile = ExtResource("23_he1k8")
+client_order = ExtResource("23_wwslj")
 
 [node name="Counter" type="Sprite2D" parent="World" unique_id=149324698]
 texture = ExtResource("8_4h8sl")
@@ -832,11 +997,10 @@ offset_bottom = 279.99997
 rotation = -0.10052187
 
 [node name="Translator" parent="World" unique_id=1866283832 instance=ExtResource("7_7c4of")]
-offset_left = 488.00003
-offset_top = 148.0
-offset_right = 618.0
-offset_bottom = 278.0
-scale = Vector2(1.3539027, 1.3539027)
+offset_left = 507.0
+offset_top = 163.0
+offset_right = 637.0
+offset_bottom = 313.0
 
 [node name="OrderBell" parent="World" unique_id=1559986288 instance=ExtResource("7_7bp3t")]
 offset_left = 138.0
@@ -854,51 +1018,168 @@ offset_right = 27.654724
 grow_horizontal = 0
 scale = Vector2(0.7521392, 0.7521392)
 
-[node name="IngredientContainer3" parent="World" unique_id=642096802 instance=ExtResource("3_0648w")]
-modulate = Color(1, 0.7421667, 0.089999974, 1)
-offset_left = 334.0
-offset_top = 383.0
-offset_right = 462.0
-offset_bottom = 511.0
-ingredient = ExtResource("10_4vuux")
+[node name="KitchenBackground" type="Sprite2D" parent="World" unique_id=66370319]
+z_index = -1
+position = Vector2(320, 540)
+texture = ExtResource("17_6ihbm")
 
-[node name="IngredientContainer2" parent="World" unique_id=1418665786 instance=ExtResource("3_0648w")]
-modulate = Color(0.44266665, 1, 0.24000001, 1)
-offset_left = 181.0
-offset_top = 385.0
-offset_right = 309.0
-offset_bottom = 513.0
+[node name="IngredientGrid1" type="PanelContainer" parent="World" unique_id=2032345735]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 9.0
+offset_top = 379.0
+offset_right = 507.0
+offset_bottom = 469.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="World/IngredientGrid1" unique_id=1767980072]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="IngredientContainerOnion" parent="World/IngredientGrid1/HBoxContainer" unique_id=642096802 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(110, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_48uvx")
+ingredient = ExtResource("19_rbkfh")
+
+[node name="IngredientContainerLettuce" parent="World/IngredientGrid1/HBoxContainer" unique_id=529592985 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(110, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mryf4")
 ingredient = ExtResource("4_xa23u")
 
-[node name="IngredientContainer" parent="World" unique_id=529592985 instance=ExtResource("3_0648w")]
-modulate = Color(1, 0.13999999, 0.13999999, 1)
-offset_left = 27.0
-offset_top = 385.0
-offset_right = 155.0
-offset_bottom = 513.0
+[node name="IngredientContainerCheese" parent="World/IngredientGrid1/HBoxContainer" unique_id=1992550632 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(110, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1k8f6")
+ingredient = ExtResource("22_qtirl")
+
+[node name="IngredientContainerTomato" parent="World/IngredientGrid1/HBoxContainer" unique_id=1246679934 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(110, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_te4p3")
+ingredient = ExtResource("24_1jydm")
+
+[node name="IngredientContainerPickles" parent="World/IngredientGrid1/HBoxContainer" unique_id=1677002960 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rbkfh")
+ingredient = ExtResource("26_ja53t")
+
+[node name="IngredientGrid2" type="PanelContainer" parent="World" unique_id=2147454348]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 579.0
+offset_top = 370.0
+offset_right = 609.0
+offset_bottom = 510.0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="World/IngredientGrid2" unique_id=356298480]
+layout_mode = 2
+theme_override_constants/separation = -20
+
+[node name="IngredientContainerKetchup" parent="World/IngredientGrid2/HBoxContainer" unique_id=653962837 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(30, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_06yal")
+ingredient = ExtResource("28_waags")
+
+[node name="IngredientContainerMustard" parent="World/IngredientGrid2/HBoxContainer" unique_id=92609192 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(30, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qtirl")
+ingredient = ExtResource("30_48ff0")
+
+[node name="IngredientContainerMayo" parent="World/IngredientGrid2/HBoxContainer" unique_id=578369276 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(30, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ja53t")
+ingredient = ExtResource("32_nx85f")
+
+[node name="IngredientGrid3" type="PanelContainer" parent="World" unique_id=1656407332]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 180.0
+offset_top = 492.0
+offset_right = 404.0
+offset_bottom = 612.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="World/IngredientGrid3" unique_id=956935151]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="IngredientContainerPatty" parent="World/IngredientGrid3/HBoxContainer" unique_id=722422692 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(110, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bxo41")
 ingredient = ExtResource("4_7uvsw")
 
-[node name="Grill" parent="World" unique_id=1713246566 instance=ExtResource("12_mr6as")]
-offset_left = 34.0
-offset_top = 549.0
-offset_right = 84.0
-offset_bottom = 599.0
+[node name="IngredientContainerBacon" parent="World/IngredientGrid3/HBoxContainer" unique_id=953223088 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(110, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_waags")
+ingredient = ExtResource("36_2po3c")
 
-[node name="Burger" parent="World" unique_id=1648165308 instance=ExtResource("2_8se0m")]
-offset_left = 473.0
-offset_top = 557.0
-offset_right = 601.0
-offset_bottom = 685.0
+[node name="IngredientContainerBread" parent="World" unique_id=1804355321 instance=ExtResource("3_0648w")]
+custom_minimum_size = Vector2(90, 100)
+offset_left = 308.0
+offset_top = 604.0
+offset_right = 398.0
+offset_bottom = 704.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_luu1a")
+ingredient = ExtResource("39_1jydm")
+
+[node name="Grill" parent="World" unique_id=1713246566 instance=ExtResource("12_mr6as")]
+offset_left = 23.0
+offset_top = 546.0
+offset_right = 163.0
+offset_bottom = 686.0
+
+[node name="PlateContainer" type="PanelContainer" parent="World" unique_id=1119321164]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(110, 110)
+anchors_preset = -1
+offset_left = 416.0
+offset_top = 528.0
+offset_right = 556.0
+offset_bottom = 692.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="World/PlateContainer" unique_id=959779333]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = -46
+alignment = 2
+
+[node name="Burger" parent="World/PlateContainer/VBoxContainer" unique_id=1648165308 instance=ExtResource("2_8se0m")]
+y_sort_enabled = true
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+
+[node name="Plate" type="PanelContainer" parent="World/PlateContainer/VBoxContainer" unique_id=1850684507]
+z_index = -1
+custom_minimum_size = Vector2(140, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jralb")
+
+[node name="Bin" type="PanelContainer" parent="World" unique_id=1693181956]
+offset_left = 580.0
+offset_top = 550.0
+offset_right = 640.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_30t1u")
+
+[node name="BinButton" type="Button" parent="World/Bin" unique_id=566594448]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 
 [node name="HouseBackground" type="Sprite2D" parent="World" unique_id=1974230140]
-modulate = Color(1, 0.44, 0.44, 1)
 position = Vector2(-320, 180)
-scale = Vector2(1, 1.125)
-texture = ExtResource("4_gsb0v")
+texture = ExtResource("2_hi30p")
 
 [node name="Receipt" parent="World" unique_id=1721701008 instance=ExtResource("17_bal17")]
-offset_left = -620.0
-offset_right = -445.0
+offset_left = -630.0
+offset_right = -455.0
 
 [node name="ContinueButton" type="PanelContainer" parent="World" unique_id=287790277]
 visible = false
@@ -944,34 +1225,67 @@ layout_mode = 2
 text = "Main Menu"
 
 [node name="ShopBackground" type="Sprite2D" parent="World" unique_id=292907242]
-modulate = Color(0.44, 0.9813334, 1, 1)
 position = Vector2(960, 180)
-scale = Vector2(1, 1.265625)
-texture = ExtResource("4_gsb0v")
+texture = ExtResource("41_rbkfh")
 
 [node name="UpgradeDisplay1" parent="World" unique_id=1941398382 instance=ExtResource("19_bxfm2")]
-offset_left = 685.0
-offset_top = 120.0
-offset_right = 755.0
-offset_bottom = 190.0
+offset_left = 690.0
+offset_top = 24.0
+offset_right = 760.0
+offset_bottom = 94.0
 
 [node name="UpgradeDisplay2" parent="World" unique_id=1669657028 instance=ExtResource("19_bxfm2")]
-offset_left = 765.0
-offset_top = 215.0
-offset_right = 835.0
-offset_bottom = 285.0
+offset_left = 691.0
+offset_top = 115.0
+offset_right = 761.0
+offset_bottom = 185.0
 
 [node name="UpgradeDisplay3" parent="World" unique_id=1565885369 instance=ExtResource("19_bxfm2")]
-offset_left = 836.0
-offset_top = 139.0
-offset_right = 906.0
-offset_bottom = 209.0
+offset_left = 797.0
+offset_top = 53.0
+offset_right = 867.0
+offset_bottom = 123.0
 
 [node name="UpgradeDisplay4" parent="World" unique_id=1084097500 instance=ExtResource("19_bxfm2")]
-offset_left = 931.0
-offset_top = 219.0
-offset_right = 1001.0
-offset_bottom = 289.0
+offset_left = 797.0
+offset_top = 159.0
+offset_right = 867.0
+offset_bottom = 229.0
+
+[node name="NanaDialogueBox" parent="World" unique_id=502058158 instance=ExtResource("4_s1wwj")]
+offset_left = 930.0
+offset_top = 43.0
+offset_right = 1230.0
+offset_bottom = 143.0
+min_size = Vector2(190, 180)
+
+[node name="Nana" parent="World" unique_id=2133159325 instance=ExtResource("5_6vecx")]
+position = Vector2(1200, 360)
+client_profile = ExtResource("21_vw07w")
+client_order = ExtResource("23_wwslj")
+
+[node name="Table" type="PanelContainer" parent="World" unique_id=103034465]
+offset_left = 640.00006
+offset_right = 680.00006
+offset_bottom = 40.0
+scale = Vector2(16.000683, 9.000305)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ihbm")
+
+[node name="RegisterBase" type="PanelContainer" parent="World" unique_id=1069662764]
+offset_left = 640.00006
+offset_top = 280.00003
+offset_right = 680.00006
+offset_bottom = 320.00003
+scale = Vector2(3.424195, 2)
+theme_override_styles/panel = SubResource("StyleBoxTexture_1jydm")
+
+[node name="ShopRegister" parent="World" unique_id=1908217225 instance=ExtResource("5_tsnoo")]
+offset_left = 692.0
+offset_top = 297.0
+offset_right = 772.0
+offset_bottom = 366.99997
+scale = Vector2(0.6, 0.6)
 
 [node name="NextDayButton" type="PanelContainer" parent="World" unique_id=550308248]
 offset_left = 1146.0
@@ -1014,6 +1328,78 @@ grow_horizontal = 2
 grow_vertical = 0
 location = 1
 
+[node name="MainMenu" type="PanelContainer" parent="HUD" unique_id=555996375]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpaceBackground" type="PanelContainer" parent="HUD/MainMenu" unique_id=1869595863]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4h8sl")
+
+[node name="MenuBackground" type="PanelContainer" parent="HUD/MainMenu" unique_id=1843259405]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hi30p")
+
+[node name="ButtonsMargin" type="MarginContainer" parent="HUD/MainMenu" unique_id=1825289274]
+layout_mode = 2
+theme_override_constants/margin_left = 58
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 395
+theme_override_constants/margin_bottom = 0
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="HUD/MainMenu/ButtonsMargin" unique_id=876447737]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="StartGameButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=661774290]
+layout_mode = 2
+
+[node name="StartGameButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/StartGameButton" unique_id=526225437]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/StartGameButton" unique_id=625693190]
+layout_mode = 2
+text = "Play"
+horizontal_alignment = 1
+
+[node name="TutorialButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=1986647812]
+layout_mode = 2
+
+[node name="StartGameButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/TutorialButton" unique_id=878184149]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/TutorialButton" unique_id=1894276024]
+layout_mode = 2
+text = "Tutorial"
+horizontal_alignment = 1
+
+[node name="OptionsButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=1494846111]
+layout_mode = 2
+
+[node name="OptionsButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/OptionsButton" unique_id=317737141]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/OptionsButton" unique_id=1308936344]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+
+[node name="CreditsButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=374912778]
+layout_mode = 2
+
+[node name="CreditsButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/CreditsButton" unique_id=1324344233]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/CreditsButton" unique_id=533309791]
+layout_mode = 2
+text = "Credits"
+horizontal_alignment = 1
+
 [node name="InputBlocker" type="ColorRect" parent="HUD" unique_id=474389153]
 visible = false
 offset_right = 640.0
@@ -1023,15 +1409,16 @@ color = Color(0, 0, 0, 0)
 [node name="Door" parent="HUD" unique_id=476817178 instance=ExtResource("17_k6nfy")]
 
 [node name="Upgrades" type="ResourcePreloader" parent="." unique_id=1685719351]
-resources = [PackedStringArray("upgrade_client_patience", "upgrade_translator_uses"), [ExtResource("22_idvqa"), ExtResource("22_hi30p")]]
+resources = [PackedStringArray("upgrade_client_patience", "upgrade_daytime", "upgrade_translator_uses"), [ExtResource("22_idvqa"), ExtResource("24_u4ehh"), ExtResource("22_hi30p")]]
 
 [node name="ClientOrders" type="ResourcePreloader" parent="." unique_id=506222972]
-resources = [PackedStringArray("1glorpi1", "1glorpi2", "1glorpi3", "1glorpi4", "1glorpi5", "1glorpi6", "2glorpi1", "2glorpi2", "3construct1", "3construct2", "3construct3", "4glorpi1"), [ExtResource("23_wwslj"), ExtResource("23_572oi"), ExtResource("24_8srii"), ExtResource("25_hjvjr"), ExtResource("26_p6li4"), ExtResource("27_04prp"), ExtResource("27_t4ufd"), ExtResource("28_04prp"), ExtResource("22_he1k8"), ExtResource("31_04prp"), ExtResource("32_j81tf"), ExtResource("30_j81tf")]]
+resources = [PackedStringArray("1glorpi1"), [ExtResource("23_wwslj")]]
 
 [node name="ClientProfiles" type="ResourcePreloader" parent="." unique_id=177094820]
-resources = [PackedStringArray("construct_blue", "construct_green", "construct_jade", "construct_orange", "construct_yellow", "glorpi_aval", "glorpi_ploingo", "glorpi_sumol"), [ExtResource("34_bxfm2"), ExtResource("22_opxns"), ExtResource("36_hi30p"), ExtResource("37_idvqa"), ExtResource("38_4h8sl"), ExtResource("26_8srii"), ExtResource("27_hjvjr"), ExtResource("23_he1k8")]]
+resources = [PackedStringArray("glorpi_sumol"), [ExtResource("23_he1k8")]]
 
 [connection signal="client_timeout" from="World/GameTimer" to="." method="_on_game_timer_client_timeout"]
 [connection signal="day_timeout" from="World/GameTimer" to="." method="_on_game_timer_day_timeout"]
+[connection signal="pressed" from="World/Bin/BinButton" to="." method="_on_bin_button_pressed"]
 [connection signal="pressed" from="World/ContinueButton/ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="World/NextDayButton/NextDayButton" to="." method="_on_next_day_button_pressed"]

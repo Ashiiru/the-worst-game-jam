@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://7d41cgdq2i2l"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_n8cuo"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_4axp4"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_tvb8a"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="3_iserm"]
+
+[resource]
+script = ExtResource("2_4axp4")
+species = 1
+dialogue = "It's so silly when people ask for a cheeseburger with no cheese. But what about a cheeseburger with no burger?"
+order = Array[ExtResource("1_n8cuo")]([ExtResource("2_tvb8a"), ExtResource("3_iserm"), ExtResource("2_tvb8a")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

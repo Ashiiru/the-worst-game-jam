@@ -6,6 +6,7 @@
 [node name="OrderBell" type="PanelContainer" unique_id=1559986288]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_dqoms")
 
 [node name="Srpite" type="TextureRect" parent="." unique_id=501307611]
@@ -18,4 +19,6 @@ stretch_mode = 4
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

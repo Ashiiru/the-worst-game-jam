@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://c07rvd1o2rxlr"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_w8das"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_6p3f4"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_fuf74"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_tlug7"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="4_7ui7s"]
+[ext_resource type="Resource" uid="uid://baubeckkuuvos" path="res://Ingredient/Resources/bacon_cooked.tres" id="5_pyeg8"]
+
+[resource]
+script = ExtResource("2_fuf74")
+species = 3
+dialogue = "Ya boss pay u well? Idc bro, cook me a burger with sum pickles n' bacon on top and make it quick lil' bro."
+order = Array[ExtResource("1_w8das")]([ExtResource("2_6p3f4"), ExtResource("3_tlug7"), ExtResource("4_7ui7s"), ExtResource("5_pyeg8"), ExtResource("2_6p3f4")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

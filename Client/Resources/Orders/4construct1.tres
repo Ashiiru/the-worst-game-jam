@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://krnqnlhdlosi"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_eey6q"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_hsvjm"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_kb3vu"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="3_v85er"]
+[ext_resource type="Resource" uid="uid://c23lg5npt5slu" path="res://Ingredient/Resources/onions_cooked.tres" id="4_dqbtq"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="5_2l5fq"]
+
+[resource]
+script = ExtResource("2_kb3vu")
+species = 2
+dialogue = "Salutations. I seek a pizza sandwich: tomato, grilled onions and cheese on top. And none awful meat."
+order = Array[ExtResource("1_eey6q")]([ExtResource("2_hsvjm"), ExtResource("3_v85er"), ExtResource("4_dqbtq"), ExtResource("5_2l5fq"), ExtResource("2_hsvjm")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

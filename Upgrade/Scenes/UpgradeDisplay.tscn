@@ -17,10 +17,6 @@ texture = ExtResource("2_mlhob")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button" type="Button" parent="." unique_id=731351614]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1919795316]
 layout_mode = 2
 theme_override_constants/margin_top = 0
@@ -61,4 +57,10 @@ text = "30.0$"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="." unique_id=731351614]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

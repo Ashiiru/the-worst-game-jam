@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://ck3ped40be1s1"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_uo41p"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_dlge1"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_wx6gb"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_30v0b"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_x53t3"]
+
+[resource]
+script = ExtResource("2_wx6gb")
+species = 1
+dialogue = "Onion makes me cry. I don't like onion. Please I need a burger with a patty and cheese. No onion!"
+order = Array[ExtResource("1_uo41p")]([ExtResource("2_dlge1"), ExtResource("3_30v0b"), ExtResource("4_x53t3"), ExtResource("2_dlge1")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

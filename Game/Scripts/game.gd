@@ -1,6 +1,8 @@
 class_name Game
 extends Node2D
 
+const symbols : String = ",;.'!?:"
+
 @onready var world: CanvasLayer = $World
 @onready var animation_player: AnimationPlayer = $World/AnimationPlayer
 
@@ -18,14 +20,18 @@ extends Node2D
 @onready var order_bell: OrderBell = $World/OrderBell
 @onready var translator: Translator = $World/Translator
 
-@onready var burger: Burger = $World/Burger
+@onready var burger: Burger = $World/PlateContainer/VBoxContainer/Burger
 @onready var grill: Grill = $World/Grill
 
-@onready var ingredient_container: IngredientContainer = $World/IngredientContainer
-@onready var ingredient_container_2: IngredientContainer = $World/IngredientContainer2
-@onready var ingredient_container_3: IngredientContainer = $World/IngredientContainer3
+@onready var ingredient_grid_1: PanelContainer = $World/IngredientGrid1
+@onready var ingredient_grid_2: PanelContainer = $World/IngredientGrid2
+@onready var ingredient_grid_3: PanelContainer = $World/IngredientGrid3
+@onready var ingredient_container_bread: IngredientContainer = $World/IngredientContainerBread
 
+@onready var shop_register: Register = $World/ShopRegister
 @onready var upgrade_displays : Array[UpgradeDisplay] = [$World/UpgradeDisplay1,$World/UpgradeDisplay2, $World/UpgradeDisplay3, $World/UpgradeDisplay4]
+@onready var nana: Client = $World/Nana
+@onready var nana_dialogue_box: DialogueBox = $World/NanaDialogueBox
 
 @onready var receipt: Receipt = $World/Receipt
 
@@ -36,21 +42,22 @@ extends Node2D
 @onready var client_orders: ResourcePreloader = $ClientOrders
 @onready var client_profiles: ResourcePreloader = $ClientProfiles
 
+#run information
 var run_seed : Array[int] = []
-var day : int = 0
+var difficulty_scaling : float = 1.1
 
+#in game trackers
+var day : int = 0
+var day_time : float = 30.0
 var day_quota : float = 0.0
 var day_expenses : float = 0.0
 var day_revenue : float = 0.0
 var day_perfect_orders : int = 0
 var day_missed_orders : int = 0
-
-var cash : float = 0.0
 var selected_ingredient : Ingredient = null
 
-var day_time : float = 70.0
+var cash : float = 0.0
 var client_patience : float = 0.0
-
 var max_errors : int = 2
 
 #upgrade related variables
@@ -66,12 +73,18 @@ func _ready() -> void:
 	
 	burger.selected.connect(_on_burger_selected)
 	grill.selected.connect(_on_grill_selected)
-	ingredient_container.selected.connect(_on_ingredient_selected)
-	ingredient_container_2.selected.connect(_on_ingredient_selected)
-	ingredient_container_3.selected.connect(_on_ingredient_selected)
+	for container : IngredientContainer in ingredient_grid_1.get_child(0).get_children():
+		container.selected.connect(_on_ingredient_selected)
+	for container : IngredientContainer in ingredient_grid_2.get_child(0).get_children():
+		container.selected.connect(_on_ingredient_selected)
+	for container : IngredientContainer in ingredient_grid_3.get_child(0).get_children():
+		container.selected.connect(_on_ingredient_selected)
+	ingredient_container_bread.selected.connect(_on_ingredient_selected)
 	
 	for display in upgrade_displays:
 		display.selected.connect(_on_upgrade_selected)
+		display.hovered.connect(_on_upgrade_hovered)
+		display.unhovered.connect(_on_upgrade_unhovered)
 	
 	begin_run()
 	begin_day()
@@ -80,15 +93,18 @@ func _ready() -> void:
 func begin_run() -> void:
 	for species in Enumerates.Species:
 		run_seed.append(randi())
+	scale_quota()
+
+
+func scale_quota() -> void:
+	day_quota = day_quota * difficulty_scaling
+	register.set_quota(day_quota)
+	shop_register.set_quota(day_quota)
 
 
 func begin_day() -> void:
 	day += 1
 	game_timer.start_day_timer(day_time)
-	
-	#TODO: Calculate day quota
-	register.set_quota(day_quota)
-	
 	animation_player.play("day_start")
 	
 
@@ -102,7 +118,7 @@ func add_client() -> void:
 		if int(o[0]) > day:
 			break
 		i += 1
-	var client_order : ClientOrder = client_orders.get_resource(orders.get(randi_range(0, i)))
+	var client_order : ClientOrder = client_orders.get_resource(orders.get(randi_range(0, i - 1)))
 	i = 0
 	var profiles : PackedStringArray = client_profiles.get_resource_list()
 	var j : int = 0
@@ -143,6 +159,7 @@ func emote_client(emotion : String = "idle") -> void:
 		dialogue_box.stored_translated = dialogue
 		dialogue = encrypt_dialogue(dialogue)
 	dialogue_box.stored_dialogue = dialogue
+	dialogue_box.display_title(client.client_profile.name)
 	dialogue_box.display_stored_dialogue()
 	if animation_player.assigned_animation != "day_end":
 		animation_player.pause()
@@ -154,7 +171,7 @@ func emote_client(emotion : String = "idle") -> void:
 func encrypt_dialogue(dialogue : String) -> String:
 	dialogue = dialogue.capitalize()
 	for c in range(dialogue.length()):
-		if dialogue[c] != " ":
+		if dialogue[c] != " " and not symbols.contains(dialogue[c]):
 			var new_unicode = ord(dialogue[c]) + run_seed[client.client_order.species]
 			new_unicode = 65 + (new_unicode % 25)
 			dialogue[c] = char(new_unicode)
@@ -202,6 +219,7 @@ func add_cash(amount : float) -> void:
 		return
 	cash += amount
 	register.set_cash(cash)
+	shop_register.set_cash(cash)
 	var popup : CashPopUp = preload("res://CashPopUp/Scenes/CashPupUp.tscn").instantiate()
 	popup.value = amount
 	world.add_child(popup)
@@ -269,6 +287,8 @@ func _on_game_timer_client_timeout() -> void:
 
 
 func _on_game_timer_day_timeout() -> void:
+	if selected_ingredient:
+		clear_selected_ingredient()
 	game_timer.client_timer.stop()
 	receipt.set_receipt(day, cash, day_perfect_orders, day_missed_orders, day_revenue, day_expenses, day_quota)
 	animation_player.play("day_end")
@@ -366,6 +386,10 @@ func _on_grill_selected() -> void:
 		select_ingredient(grill.pop_ingredient())
 
 
+func _on_bin_button_pressed() -> void:
+	clear_selected_ingredient()
+
+
 func _on_continue_button_pressed() -> void:
 	animation_player.play("shop_start")
 
@@ -373,13 +397,27 @@ func _on_continue_button_pressed() -> void:
 func add_shop() -> void:
 	var upgrade_names : PackedStringArray = upgrades.get_resource_list()
 	for display in upgrade_displays:
+		if not display.visible:
+			display.visible = true
 		display.update_upgrade(upgrades.get_resource(upgrade_names[randi_range(0, upgrade_names.size() - 1)]))
 
 func _on_upgrade_selected(upgrade_display : UpgradeDisplay) -> void:
 	if cash >= upgrade_display.upgrade.cost:
+		add_cash(-upgrade_display.upgrade.cost)
 		upgrade_display.buy(self)
 	else:
 		pass
+
+func _on_upgrade_hovered(upgrade_display : UpgradeDisplay) -> void:
+	nana.emote("talk")
+	nana_dialogue_box.visible = true
+	nana_dialogue_box.stored_dialogue = upgrade_display.upgrade.descripion
+	nana_dialogue_box.display_title(nana.client_profile.name)
+	nana_dialogue_box.display_dialogue_animated()
+	
+func _on_upgrade_unhovered() -> void:
+	nana.emote("idle")
+	nana_dialogue_box.visible = false
 
 func _on_next_day_button_pressed() -> void:
 	animation_player.play("shop_end")

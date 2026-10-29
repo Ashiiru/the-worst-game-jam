@@ -1,6 +1,6 @@
 class_name Enumerates
 
-enum Species {HUMAN, GLORPI, CONSTRUCT}
+enum Species {HUMAN, GLORPI, CONSTRUCT, VASTER}
 
 static func get_species_font_path(species : Species) -> String:
 	match species:
@@ -8,6 +8,8 @@ static func get_species_font_path(species : Species) -> String:
 			return "res://TextFonts/Alien_lines_1.9.ttf"
 		Species.CONSTRUCT:
 			return "res://TextFonts/Monocracy Cuts and Clips.ttf"
+		Species.VASTER:
+			return "res://TextFonts/Markbats12-Regular.ttf"
 		_:
 			return "res://TextFonts/SplendidN.ttf"
 

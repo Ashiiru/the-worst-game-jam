@@ -1,7 +1,9 @@
 class_name UpgradeDisplay
-extends PanelContainer
+extends Interactible
 
 signal selected
+signal hovered
+signal unhovered
 
 @export var upgrade : Upgrade
 
@@ -13,13 +15,21 @@ signal selected
 
 func update_upgrade(u : Upgrade) -> void:
 	upgrade = u
-	sprite.texture = upgrade.sprite
-	name_label.text = upgrade.name
-	price_label.text = upgrade.name
+	sprite.texture = u.sprite
+	name_label.text = u.name
+	price_label.text = str(u.cost) + "$"
 	
 func _on_button_pressed() -> void:
 	selected.emit(self)
 
+func _on_button_mouse_entered() -> void:
+	hovered.emit(self)
+	focus()
+
+func _on_button_mouse_exited() -> void:
+	unhovered.emit()
+	unfocus()
+
 func buy(run : Game) -> void:
 	upgrade.upgrade(run)
-	queue_free()
+	self.visible = false

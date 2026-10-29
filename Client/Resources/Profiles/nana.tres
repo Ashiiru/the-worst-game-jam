@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://co0vc5urrryf2"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_03iyu"]
+[ext_resource type="Texture2D" uid="uid://c6ucng85mxbnl" path="res://Client/Sprites/nana_stand.png" id="2_nkhvk"]
+
+[resource]
+script = ExtResource("1_03iyu")
+sprite = ExtResource("2_nkhvk")
+name = "Nana"
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

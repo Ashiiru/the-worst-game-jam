@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://d35udbw4o4iw0"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_00hkx"]
+[ext_resource type="Texture2D" uid="uid://cojkdxcnb6nq0" path="res://Client/Sprites/vaster_girly.png" id="2_cxuxb"]
+
+[resource]
+script = ExtResource("1_00hkx")
+sprite = ExtResource("2_cxuxb")
+name = "Vitha"
+species = 3
+dialogue_perfect = "Yoo that's fire lil bro!"
+dialogue_okay = "Yo its kinda mid, but respect, lil bro."
+dialogue_bad = "Nah bro the food in this sector is cooked dawg."
+dialogue_timeout = "Yall even have wifi in here? I'm boreddd..."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

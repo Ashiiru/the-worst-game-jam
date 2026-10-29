@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bncfuf3mogpfn"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_c44f4"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_2t5x7"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="3_iuhym"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="4_t4f2r"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="5_shdt6"]
+
+[resource]
+script = ExtResource("5_shdt6")
+species = 2
+dialogue = "I miss the food in Zurkon Prime. Humans and their odd choices of ingredients have plagued this sector. Make me a traditional Prime sandwich, with two pickles and a lettuce on top."
+order = Array[ExtResource("1_c44f4")]([ExtResource("2_2t5x7"), ExtResource("3_iuhym"), ExtResource("3_iuhym"), ExtResource("4_t4f2r"), ExtResource("2_2t5x7")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

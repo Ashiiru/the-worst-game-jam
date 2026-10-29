@@ -1,12 +1,23 @@
 class_name DialogueBox
 extends PanelContainer
 
-@onready var label: RichTextLabel = $Margin/Label
+@onready var shader: PanelContainer = $Shader
+
+@onready var label: RichTextLabel = $Shader/DialogueContainer/Margin/Label
+@onready var title_label: RichTextLabel = $MarginContainer2/TitleLabel
+
+@export var min_size : Vector2 = Vector2(300, 100)
 
 var stored_dialogue : String
 var stored_translated : String
 
 var text_tween : Tween
+
+func _ready() -> void:
+	shader.custom_minimum_size = min_size
+
+func display_title(title : String) -> void:
+	title_label.text = title
 
 func display_stored_dialogue() -> void:
 	label.text = stored_dialogue
@@ -32,6 +43,6 @@ func display_dialogue_animated() -> void:
 				in_parenthesis = true
 				text_size -= 1
 			text_size += 1
-	text_tween.tween_property(label, "visible_characters", text_size, text_size * .1)
+	text_tween.tween_property(label, "visible_characters", text_size, text_size * .06)
 	await text_tween.finished
 	label.visible_characters = -1

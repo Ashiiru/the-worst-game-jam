@@ -1,5 +1,5 @@
 class_name IngredientContainer
-extends PanelContainer
+extends Interactible
 
 signal selected
 
@@ -7,3 +7,12 @@ signal selected
 
 func _on_button_pressed() -> void:
 	selected.emit(ingredient)
+	wobble()
+
+
+func _on_button_mouse_entered() -> void:
+	focus()
+
+
+func _on_button_mouse_exited() -> void:
+	unfocus()

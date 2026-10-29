@@ -1,18 +1,97 @@
 [gd_scene format=3 uid="uid://bg7w6q3yn2kbo"]
 
 [ext_resource type="Script" uid="uid://b3f7dsv1fxibq" path="res://Grill/Scripts/grill.gd" id="1_mqsd3"]
+[ext_resource type="Texture2D" uid="uid://b8it5iutyi3ny" path="res://Grill/Sprites/grill_off.png" id="1_vhnoc"]
+[ext_resource type="Texture2D" uid="uid://dyagopg2vabrh" path="res://Grill/Sprites/grill_on.png" id="3_rnjme"]
+
+[sub_resource type="Animation" id="Animation_bjo8t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vhnoc")]
+}
+
+[sub_resource type="Animation" id="Animation_cvqee"]
+resource_name = "off"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vhnoc")]
+}
+
+[sub_resource type="Animation" id="Animation_684tl"]
+resource_name = "on"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_rnjme")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y8um0"]
+_data = {
+&"RESET": SubResource("Animation_bjo8t"),
+&"off": SubResource("Animation_cvqee"),
+&"on": SubResource("Animation_684tl")
+}
 
 [node name="Grill" type="PanelContainer" unique_id=1713246566]
-custom_minimum_size = Vector2(50, 50)
-offset_right = 8.0
-offset_bottom = 8.0
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(140, 140)
+offset_right = 140.0
+offset_bottom = 140.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_mqsd3")
 
-[node name="IngredientContainer" type="HBoxContainer" parent="." unique_id=986765524]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=671279423]
+custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_vhnoc")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=278613813]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 33
+
+[node name="IngredientContainer" type="GridContainer" parent="MarginContainer" unique_id=136664032]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 0
+columns = 2
 
 [node name="Button" type="Button" parent="." unique_id=1767152539]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=91099445]
+libraries/ = SubResource("AnimationLibrary_y8um0")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

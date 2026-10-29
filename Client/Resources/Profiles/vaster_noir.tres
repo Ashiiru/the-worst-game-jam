@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientProfile" format=3 uid="uid://c7w4nhii8tbok"]
+
+[ext_resource type="Script" uid="uid://debagl1f5ykg4" path="res://Client/Scripts/client_profile.gd" id="1_w1kyl"]
+[ext_resource type="Texture2D" uid="uid://35tbu5ncdg6b" path="res://Client/Sprites/vaster_noir.png" id="2_cp5vy"]
+
+[resource]
+script = ExtResource("1_w1kyl")
+sprite = ExtResource("2_cp5vy")
+name = "Godel"
+species = 3
+dialogue_perfect = "Aura."
+dialogue_okay = "Mid."
+dialogue_bad = "Buns."
+dialogue_timeout = "Quit bumming around."
+metadata/_custom_type_script = "uid://debagl1f5ykg4"

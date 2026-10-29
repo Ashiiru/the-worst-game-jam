@@ -4,18 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://dv5lsd13h22jk" path="res://Translator/Sprites/translator.png" id="2_qwqvm"]
 [ext_resource type="FontFile" uid="uid://dwu238kren3w1" path="res://TextFonts/W95FA.otf" id="3_66eu0"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_66eu0"]
+texture = ExtResource("2_qwqvm")
+
 [node name="Translator" type="PanelContainer" unique_id=1866283832]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(130, 130)
+custom_minimum_size = Vector2(130, 170)
 offset_right = 40.0
 offset_bottom = 40.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_66eu0")
 script = ExtResource("1_cydqm")
-
-[node name="Sprite" type="TextureRect" parent="." unique_id=823986036]
-layout_mode = 2
-texture = ExtResource("2_qwqvm")
-expand_mode = 1
-stretch_mode = 5
 
 [node name="Button" type="Button" parent="." unique_id=202481412]
 modulate = Color(1, 1, 1, 0)
@@ -38,4 +36,6 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

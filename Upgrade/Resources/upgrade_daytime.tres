@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeDaytime" format=3 uid="uid://bebggwg23brah"]
+
+[ext_resource type="Script" uid="uid://prf3xdwumrtx" path="res://Upgrade/Scripts/upgrade_daytime.gd" id="1_8inmt"]
+[ext_resource type="Texture2D" uid="uid://dw5bxcrfkhar4" path="res://Upgrade/Sprites/sunnyside_waffle.png" id="2_2st18"]
+
+[resource]
+script = ExtResource("1_8inmt")
+sprite = ExtResource("2_2st18")
+name = "Sunnyside Waffle"
+descripion = "Waffles are a perfect way to start the day, dear! They get you sunnyside up and shining for longer!"
+cost = 10.0
+metadata/_custom_type_script = "uid://prf3xdwumrtx"

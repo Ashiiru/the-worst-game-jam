@@ -1,19 +1,27 @@
 [gd_scene format=3 uid="uid://kiifyhjtyhnv"]
 
-[ext_resource type="Texture2D" uid="uid://bkaisaovyo2jy" path="res://icon.svg" id="1_kxdkg"]
 [ext_resource type="Script" uid="uid://cv112d34d3jac" path="res://Ingredient/Scripts/ingredient_container.gd" id="1_v5tdq"]
 
-[node name="IngredientContainer" type="PanelContainer" unique_id=642096802]
-offset_right = 128.0
-offset_bottom = 128.0
-script = ExtResource("1_v5tdq")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kxdkg"]
+load_path = "res://.godot/imported/food_box_lettuce.png-95993cfe58f385ffbb6eac2d9927f132.ctex"
 
-[node name="Sprite" type="TextureRect" parent="." unique_id=1883770254]
-layout_mode = 2
-texture = ExtResource("1_kxdkg")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aufhu"]
+resource_local_to_scene = true
+texture = SubResource("CompressedTexture2D_kxdkg")
+
+[node name="IngredientContainer" type="PanelContainer" unique_id=642096802]
+custom_minimum_size = Vector2(30, 30)
+anchors_preset = -1
+offset_right = 20.0
+offset_bottom = 20.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_aufhu")
+script = ExtResource("1_v5tdq")
 
 [node name="Button" type="Button" parent="." unique_id=1344540147]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

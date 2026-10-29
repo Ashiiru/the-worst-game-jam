@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://oh82umoxjtrr"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_w82ng"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_nch45"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_ycp5y"]
+[ext_resource type="Resource" uid="uid://baubeckkuuvos" path="res://Ingredient/Resources/bacon_cooked.tres" id="3_fdycj"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="4_okk6s"]
+
+[resource]
+script = ExtResource("2_nch45")
+species = 1
+dialogue = "Barbecue bacon burger. Wait, you don't have barbeque sauce? Well, just bacon under a burger then."
+order = Array[ExtResource("1_w82ng")]([ExtResource("2_ycp5y"), ExtResource("3_fdycj"), ExtResource("4_okk6s"), ExtResource("2_ycp5y")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

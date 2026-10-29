@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bp0qyqixyud8k"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_mco01"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_o7cl1"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_vlnti"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="3_d26io"]
+[ext_resource type="Resource" uid="uid://c23lg5npt5slu" path="res://Ingredient/Resources/onions_cooked.tres" id="4_qa2ne"]
+
+[resource]
+script = ExtResource("2_o7cl1")
+species = 2
+dialogue = "Greetings. No cheese, no pickles, no meat. Lettuce and grilled onion. Quick, preferably."
+order = Array[ExtResource("1_mco01")]([ExtResource("2_vlnti"), ExtResource("3_d26io"), ExtResource("4_qa2ne"), ExtResource("2_vlnti")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

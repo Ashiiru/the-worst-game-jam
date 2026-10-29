@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://ci8kat5ab3opa"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_yts7q"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_6v3q7"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_viuu6"]
+[ext_resource type="Resource" uid="uid://baubeckkuuvos" path="res://Ingredient/Resources/bacon_cooked.tres" id="3_clcnr"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="4_tvb7o"]
+
+[resource]
+script = ExtResource("2_viuu6")
+species = 3
+dialogue = "Ayo chief pass me sum bacon n tomatoes wrapped in sum buns if ya catch my drift!"
+order = Array[ExtResource("1_yts7q")]([ExtResource("2_6v3q7"), ExtResource("3_clcnr"), ExtResource("4_tvb7o"), ExtResource("2_6v3q7")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

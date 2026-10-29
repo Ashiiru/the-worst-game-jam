@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://dgliolvys03hn"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_5bl0b"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_eu3ck"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_wdj8u"]
+[ext_resource type="Resource" uid="uid://baubeckkuuvos" path="res://Ingredient/Resources/bacon_cooked.tres" id="3_q36jt"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="4_5o3bd"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="5_nokda"]
+[ext_resource type="Resource" uid="uid://d0x1wu0t0nfe4" path="res://Ingredient/Resources/ketchup.tres" id="6_gvx1g"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="7_qn0ye"]
+[ext_resource type="Resource" uid="uid://dtipnmpb3ptt" path="res://Ingredient/Resources/mayo.tres" id="8_64chh"]
+[ext_resource type="Resource" uid="uid://6d114kjvbt63" path="res://Ingredient/Resources/mustard.tres" id="9_r7b6s"]
+[ext_resource type="Resource" uid="uid://cno474sdj7kd7" path="res://Ingredient/Resources/onions.tres" id="10_noiwk"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="11_o00qm"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="12_867ty"]
+
+[resource]
+script = ExtResource("2_wdj8u")
+species = 1
+dialogue = "I want a CmDonld... Oh its Nanas... Well... I'll have a burguer with everything in it. Make the stack alphabetically ordered, and don't cook the onions."
+order = Array[ExtResource("1_5bl0b")]([ExtResource("2_eu3ck"), ExtResource("3_q36jt"), ExtResource("4_5o3bd"), ExtResource("5_nokda"), ExtResource("6_gvx1g"), ExtResource("7_qn0ye"), ExtResource("8_64chh"), ExtResource("9_r7b6s"), ExtResource("10_noiwk"), ExtResource("11_o00qm"), ExtResource("12_867ty")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

@@ -8,5 +8,5 @@ script = ExtResource("1_iyygk")
 sprite = ExtResource("2_oqmp7")
 name = "Traveller Cookie"
 descripion = "A well worn traveller gave me this one. Said it had crossed the world, and some extra language barriers too!"
-cost = 15.0
+cost = 18.0
 metadata/_custom_type_script = "uid://cpuya8rgsaa42"

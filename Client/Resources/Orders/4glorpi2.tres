@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://dwu0fh06dt37y"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_6fnvt"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_gf4tj"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="3_4hpna"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="4_qi6cm"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="5_h5enh"]
+
+[resource]
+script = ExtResource("5_h5enh")
+species = 1
+dialogue = "You have a funny face. Make me a burguer with pickles, and a patty and than pickles again, please funny face!"
+order = Array[ExtResource("1_6fnvt")]([ExtResource("2_gf4tj"), ExtResource("3_4hpna"), ExtResource("4_qi6cm"), ExtResource("3_4hpna"), ExtResource("2_gf4tj")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

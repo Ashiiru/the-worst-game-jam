@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bsmj6ccikojgu"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_175wr"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_38tk7"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_82q6k"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="3_2io1s"]
+
+[resource]
+script = ExtResource("2_82q6k")
+species = 2
+dialogue = "Greetings, human. Your species is so interesting, I've always relished in staring at the faces you make. Anyways, I'd like a sandwitch with three stacks of lettuce."
+order = Array[ExtResource("1_175wr")]([ExtResource("2_38tk7"), ExtResource("3_2io1s"), ExtResource("3_2io1s"), ExtResource("3_2io1s"), ExtResource("2_38tk7")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

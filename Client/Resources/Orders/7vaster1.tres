@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bqsrgfd1ekrtf"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_b4puv"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_vec74"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_ma0r0"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_kkkoc"]
+[ext_resource type="Resource" uid="uid://baubeckkuuvos" path="res://Ingredient/Resources/bacon_cooked.tres" id="5_2ewqt"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="6_kt78h"]
+
+[resource]
+script = ExtResource("6_kt78h")
+species = 3
+dialogue = "I want two number nines, lil bro! Stacked! Yall ain't got that here? Fine, the number nine's just cheese n' bacon on a burger, ya feel me?"
+order = Array[ExtResource("1_b4puv")]([ExtResource("2_vec74"), ExtResource("3_ma0r0"), ExtResource("4_kkkoc"), ExtResource("5_2ewqt"), ExtResource("2_vec74"), ExtResource("3_ma0r0"), ExtResource("4_kkkoc"), ExtResource("5_2ewqt"), ExtResource("2_vec74")])
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

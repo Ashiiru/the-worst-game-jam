@@ -8,6 +8,6 @@
 [resource]
 script = ExtResource("2_7dlve")
 species = 2
-dialogue = "Inferior lifeforms ask for no pickles. I ask for a sandwich pickles only."
+dialogue = "Inferior lifeforms ask for no pickles. I ask for a sandwich with pickles only."
 order = Array[ExtResource("1_7x6sw")]([ExtResource("2_ax08w"), ExtResource("3_qdd3u"), ExtResource("2_ax08w")])
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

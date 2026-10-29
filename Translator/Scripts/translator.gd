@@ -1,5 +1,5 @@
 class_name Translator
-extends PanelContainer
+extends Interactible
 
 signal selected
 
@@ -27,7 +27,7 @@ func reset_charges() -> void:
 
 func _on_button_pressed() -> void:
 	selected.emit()
-
+	wobble()
 
 func update_display_charges() -> void:
 	if charges == 0:
@@ -39,3 +39,10 @@ func update_display_charges() -> void:
 func display_on() -> void:
 	label.set("theme_override_colors/default_color", Color("0ca8a4"))
 	label.text = ":)"
+
+
+func _on_button_mouse_entered() -> void:
+	focus()
+
+func _on_button_mouse_exited() -> void:
+	unfocus()
