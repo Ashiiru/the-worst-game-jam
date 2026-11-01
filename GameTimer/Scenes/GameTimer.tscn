@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3uufokukf3lw" path="res://GameTimer/Sprites/clock.png" id="2_3nr6y"]
 [ext_resource type="Texture2D" uid="uid://b1ffqrshctfeq" path="res://GameTimer/Sprites/faces.png" id="3_mh8jq"]
 [ext_resource type="Texture2D" uid="uid://denqib0w1qe5q" path="res://GameTimer/Sprites/ufo.png" id="4_xpah0"]
-[ext_resource type="FontFile" uid="uid://dbh74i8xwex6l" path="res://TextFonts/SplendidN.ttf" id="5_3nr6y"]
+[ext_resource type="FontFile" uid="uid://bh1aryiq7hf1h" path="res://TextFonts/veteran typewriter.ttf" id="5_3nr6y"]
 
 [sub_resource type="Animation" id="Animation_4nn05"]
 length = 0.001

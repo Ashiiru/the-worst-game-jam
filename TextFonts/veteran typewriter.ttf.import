@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dbh74i8xwex6l"
-path="res://.godot/imported/SplendidN.ttf-2a780e2ca6636fe70b981feea0603564.fontdata"
+uid="uid://bh1aryiq7hf1h"
+path="res://.godot/imported/veteran typewriter.ttf-fa899ade0b294206beeea9a7bbaa6d8d.fontdata"
 
 [deps]
 
-source_file="res://TextFonts/SplendidN.ttf"
-dest_files=["res://.godot/imported/SplendidN.ttf-2a780e2ca6636fe70b981feea0603564.fontdata"]
+source_file="res://TextFonts/veteran typewriter.ttf"
+dest_files=["res://.godot/imported/veteran typewriter.ttf-fa899ade0b294206beeea9a7bbaa6d8d.fontdata"]
 
 [params]
 

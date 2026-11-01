@@ -46,9 +46,7 @@ func fade_in(sound : AudioStreamPlayer, duration : float, from : float) -> void:
 
 
 func swap_music(music : AudioStreamPlayer) -> void:
-	var pos : float = 0.0
 	if current_music:
-		pos = current_music.get_playback_position()
 		fade_out(current_music, 2)
-	fade_in(music, 2, pos)
+	fade_in(music, 1, 0)
 	current_music = music

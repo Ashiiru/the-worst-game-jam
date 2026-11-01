@@ -350,4 +350,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_saro1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_s3ale")
 text = "Done"
 
+[connection signal="value_changed" from="MarginContainer2/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/SliderGroupMaster/MasterVol/MarginContainer2/PanelContainer/MarginContainer2/MasterVolSlider" to="." method="_on_master_vol_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer2/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/SliderGroupMusic/MasterVol/MarginContainer2/PanelContainer/MarginContainer2/MusicVolSlider" to="." method="_on_music_vol_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer2/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/SliderGroupSfx/MasterVol/MarginContainer2/PanelContainer/MarginContainer2/SfxVolSlider" to="." method="_on_sfx_vol_slider_value_changed"]
 [connection signal="pressed" from="MarginContainer2/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/DoneContainer/Done/MarginContainer/ButtonDone" to="." method="_on_button_done_pressed"]

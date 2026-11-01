@@ -11,6 +11,6 @@ static func get_species_font_path(species : Species) -> String:
 		Species.VASTER:
 			return "res://TextFonts/Markbats12-Regular.ttf"
 		_:
-			return "res://TextFonts/SplendidN.ttf"
+			return "res://TextFonts/veteran typewriter.ttf"
 
 enum Locations {MAIN, ASSEMBLY, HOUSE, SHOP}

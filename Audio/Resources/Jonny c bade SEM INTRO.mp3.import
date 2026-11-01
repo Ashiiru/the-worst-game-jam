@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyono6o1doi4o"
+path="res://.godot/imported/Jonny c bade SEM INTRO.mp3-a2102f3aa38a783f8c1cdb40513a7000.mp3str"
+
+[deps]
+
+source_file="res://Audio/Resources/Jonny c bade SEM INTRO.mp3"
+dest_files=["res://.godot/imported/Jonny c bade SEM INTRO.mp3-a2102f3aa38a783f8c1cdb40513a7000.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

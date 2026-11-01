@@ -54,8 +54,7 @@ func display_dialogue_animated(language : Enumerates.Species) -> void:
 				in_parenthesis = true
 				text_size -= 1
 			text_size += 1
-	text_tween.tween_method(text_step, 0, text_size, text_size * .06)
-	#text_tween.tween_property(label, "visible_characters", text_size, text_size * .06)
+	text_tween.tween_method(text_step, 0, text_size, text_size * .03)
 	await text_tween.finished
 	label.visible_characters = -1
 	

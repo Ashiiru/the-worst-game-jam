@@ -9,7 +9,7 @@ extends Node2D
 @onready var options_button: PanelContainer = $HUD/MainMenu/ButtonsMargin/ButtonsContainer/OptionsButton
 @onready var credits_button: PanelContainer = $HUD/MainMenu/ButtonsMargin/ButtonsContainer/CreditsButton
 @onready var menu_tutorial_box: TutorialBox = $HUD/MainMenu/TutorialBox
-@onready var menu_options_box: OptionsBox = $HUD/MainMenu/OptionsBox
+@onready var options_box: OptionsBox = $HUD/OptionsBox
 @onready var menu_credits_box: CreditsBox = $HUD/MainMenu/CreditsBox
 @onready var menu_blocker: ColorRect = $HUD/MainMenu/MenuBlocker
 
@@ -19,6 +19,7 @@ extends Node2D
 @onready var screen_swapper_main: ScreenSwapper = $HUD/ScreenSwapperMain
 @onready var screen_swapper_assembly: ScreenSwapper = $HUD/ScreenSwapperAssembly
 @onready var input_blocker: ColorRect = $HUD/InputBlocker
+@onready var pause_button: PanelContainer = $HUD/PauseButton
 
 @onready var client: Client = $World/Client
 @onready var dialogue_box: DialogueBox = $World/DialogueBox
@@ -65,7 +66,6 @@ var selected_ingredient : Ingredient = null
 
 var cash : float = 0.0
 var client_patience : float = 0.0
-var max_errors : int = 2
 
 #upgrade related variables
 var upgrade_patience_multiplier : float = 1.0
@@ -80,8 +80,8 @@ func _ready() -> void:
 	options_button.selected.connect(_on_menu_options_button_selected)
 	credits_button.selected.connect(_on_menu_credits_button_selected)
 	menu_tutorial_box.selected.connect(close_submenu)
-	menu_options_box.selected.connect(close_submenu)
 	menu_credits_box.selected.connect(close_submenu)
+	options_box.selected.connect(close_pause)
 	
 	screen_swapper_main.selected.connect(_on_screen_swapper_selected)
 	screen_swapper_assembly.selected.connect(_on_screen_swapper_selected)
@@ -108,8 +108,7 @@ func _ready() -> void:
 
 func boot_menu() -> void:
 	animation_player.play("menu_boot")
-	#TODO: Add menu music when it is finished
-	#AudioManager.swap_music(AudioManager.instance.menu_music)
+	AudioManager.swap_music(AudioManager.instance.menu_music)
 
 func _on_menu_start_button_selected() -> void:
 	animation_player.play("run_start")
@@ -121,7 +120,7 @@ func _on_menu_tutorial_button_selected() -> void:
 
 func _on_menu_options_button_selected() -> void:
 	menu_blocker.visible = true
-	menu_options_box.visible = true
+	options_box.visible = true
 
 func _on_menu_credits_button_selected() -> void:
 	menu_blocker.visible = true
@@ -142,12 +141,11 @@ func begin_run() -> void:
 	#reset variables for multiple runs
 	run_seed = []
 	day = 0
-	day_time = 420.0
+	day_time = 300.0
 	day_quota = 9.09
 	cash = 0.0
 	register.set_cash(cash)
 	shop_register.set_cash(cash)
-	max_errors = 2
 	#reset upgrades
 	translator.max_charges = 2
 	upgrade_patience_multiplier = 1.0
@@ -198,7 +196,9 @@ func begin_day() -> void:
 	game_timer.start_day_timer(day_time)
 	game_timer.text.visible = false
 	animation_player.play("day_start")
-	
+
+func speed_up_day() -> void:
+	game_timer.day_timer.start(max(game_timer.day_timer.time_left - 30., 5.0))
 
 func add_client() -> void:
 	if translator.online:
@@ -384,9 +384,14 @@ func rate_order() -> Vector2:
 		var difference : float = abs(remaining_objective.get(k) - remaining_construction.get(k, 0))
 		score += min(remaining_objective.get(k), remaining_construction.get(k, 0))
 		errors += int(difference)
+		
+	
+	for k in remaining_construction.keys():
+		if not remaining_objective.has(k):
+			errors += remaining_construction.get(k)
 	
 	#too many missed or extra ingredients results in instant fail
-	if errors > max_errors:
+	if errors > objective.size() - 2:
 		return Vector2(0.0,perfect_score)
 	
 	#rate time, if more than half the time is taken the score is penalized
@@ -429,14 +434,14 @@ func submit_order() -> void:
 	var score : float = scores.x
 	var perfect_score : float = scores.y
 	
-	pay_order(score)
-	
 	var correctness : float = score / perfect_score
 	if correctness == 1.0:
 		emote_client("happy")
 		day_perfect_orders += 1
+		pay_order(score)
 	elif correctness > 0.0:
 		emote_client("neutral")
+		pay_order(score * .5)
 	elif correctness == 0.0:
 		emote_client("angry")
 		day_missed_orders += 1
@@ -500,7 +505,7 @@ func _on_burger_selected() -> void:
 
 
 func _on_grill_selected() -> void:
-	if selected_ingredient and grill.ingredient_container.get_child_count() < 1:
+	if selected_ingredient and grill.ingredient_container.get_child_count() < 4:
 		grill.add_ingredient(selected_ingredient)
 		clear_selected_ingredient()
 	elif selected_ingredient:
@@ -554,3 +559,19 @@ func _on_upgrade_unhovered() -> void:
 
 func _on_next_day_button_pressed() -> void:
 	animation_player.play("shop_end")
+
+
+func _on_pause_button_pressed() -> void:
+	world.process_mode = Node.PROCESS_MODE_DISABLED
+	input_blocker.visible = true
+	pause_button.visible = false
+	options_box.visible = true
+
+func close_pause(_box) -> void:
+	if menu_blocker.visible:
+		close_submenu(options_box)
+	else:
+		world.process_mode = Node.PROCESS_MODE_INHERIT
+		input_blocker.visible = false
+		options_box.visible = false
+		pause_button.visible = true
