@@ -11,4 +11,5 @@ script = ExtResource("2_wx6gb")
 species = 1
 dialogue = "Onion makes me cry. I don't like onion. Please I need a burger with a patty and cheese. No onion!"
 order = Array[ExtResource("1_uo41p")]([ExtResource("2_dlge1"), ExtResource("3_30v0b"), ExtResource("4_x53t3"), ExtResource("2_dlge1")])
+patience = 110.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

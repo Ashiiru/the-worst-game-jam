@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://ct6hwetqhey1"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_orikv"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_h71l4"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_lxxqy"]
+[ext_resource type="Resource" uid="uid://baubeckkuuvos" path="res://Ingredient/Resources/bacon_cooked.tres" id="3_agigf"]
+[ext_resource type="Resource" uid="uid://cjxm43bcd47jx" path="res://Ingredient/Resources/ashes.tres" id="4_rfj6q"]
+
+[resource]
+script = ExtResource("2_lxxqy")
+species = 1
+dialogue = "Sup! I feel like tasting something new and special, could you gimme a double bacon burger without the burger? Ah, and ashes sprinkled on top please!"
+order = Array[ExtResource("1_orikv")]([ExtResource("2_h71l4"), ExtResource("3_agigf"), ExtResource("3_agigf"), ExtResource("2_h71l4"), ExtResource("4_rfj6q")])
+patience = 150.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

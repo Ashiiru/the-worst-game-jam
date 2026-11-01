@@ -12,6 +12,7 @@ var stored_dialogue : String
 var stored_translated : String
 
 var text_tween : Tween
+var prev : int
 
 func _ready() -> void:
 	shader.custom_minimum_size = min_size
@@ -26,7 +27,17 @@ func display_translated_dialogue() -> void:
 	if stored_translated:
 		label.text = stored_translated
 
-func display_dialogue_animated() -> void:
+func display_dialogue_animated(language : Enumerates.Species) -> void:
+	match language:
+		Enumerates.Species.HUMAN:
+			AudioManager.instance.dialogue_sound.stream.set_stream(0, preload("uid://m8qjc6hk4245"))
+		Enumerates.Species.GLORPI:
+			AudioManager.instance.dialogue_sound.stream.set_stream(0, preload("uid://dixleppir6t15"))
+		Enumerates.Species.CONSTRUCT:
+			AudioManager.instance.dialogue_sound.stream.set_stream(0, preload("uid://cskryskkp6j6e"))
+		Enumerates.Species.VASTER:
+			AudioManager.instance.dialogue_sound.stream.set_stream(0, preload("uid://miwosq1gl7vj"))
+	
 	label.visible_characters = 0
 	label.text = stored_dialogue
 	if text_tween:
@@ -43,6 +54,13 @@ func display_dialogue_animated() -> void:
 				in_parenthesis = true
 				text_size -= 1
 			text_size += 1
-	text_tween.tween_property(label, "visible_characters", text_size, text_size * .06)
+	text_tween.tween_method(text_step, 0, text_size, text_size * .06)
+	#text_tween.tween_property(label, "visible_characters", text_size, text_size * .06)
 	await text_tween.finished
 	label.visible_characters = -1
+	
+func text_step(idx) -> void:
+	if idx != prev:
+		prev = idx
+		AudioManager.instance.dialogue_sound.play()
+		label.visible_characters = idx

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bekhhjkp2wa5o"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_jp220"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_gg8vn"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_o8i00"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="3_rpj12"]
+
+[resource]
+script = ExtResource("2_gg8vn")
+species = 2
+dialogue = "Salutations, organic. I covet a portion as follows: bread, lettuce, lettuce, lettuce, lettuce, bread."
+order = Array[ExtResource("1_jp220")]([ExtResource("2_o8i00"), ExtResource("3_rpj12"), ExtResource("3_rpj12"), ExtResource("3_rpj12"), ExtResource("3_rpj12"), ExtResource("2_o8i00")])
+patience = 110.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

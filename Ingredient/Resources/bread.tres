@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://bxa7pgnn66vym"]
 
 [ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_d3e2y"]
+[ext_resource type="AudioStream" uid="uid://dy55y37sqkg6c" path="res://Audio/Resources/bread.mp3" id="2_nbta4"]
 [ext_resource type="Texture2D" uid="uid://c86h8apg1tilp" path="res://Ingredient/Sprites/bun_bottom.png" id="2_v0iqw"]
 
 [resource]
@@ -8,4 +9,5 @@ script = ExtResource("1_d3e2y")
 sprite = ExtResource("2_v0iqw")
 name = "Bread"
 cost = 0.1
+sound = ExtResource("2_nbta4")
 metadata/_custom_type_script = "uid://dmrp27rksh8s1"

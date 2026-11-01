@@ -12,4 +12,5 @@ script = ExtResource("2_fuf74")
 species = 3
 dialogue = "Ya boss pay u well? Idc bro, cook me a burger with sum pickles n' bacon on top and make it quick lil' bro."
 order = Array[ExtResource("1_w8das")]([ExtResource("2_6p3f4"), ExtResource("3_tlug7"), ExtResource("4_7ui7s"), ExtResource("5_pyeg8"), ExtResource("2_6p3f4")])
+patience = 140.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

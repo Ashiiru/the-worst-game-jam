@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("5_h5enh")
 species = 1
-dialogue = "You have a funny face. Make me a burguer with pickles, and a patty and than pickles again, please funny face!"
+dialogue = "You have a funny face. Make me a burguer with pickles, and a patty and then pickles again, please funny face!"
 order = Array[ExtResource("1_6fnvt")]([ExtResource("2_gf4tj"), ExtResource("3_4hpna"), ExtResource("4_qi6cm"), ExtResource("3_4hpna"), ExtResource("2_gf4tj")])
+patience = 120.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

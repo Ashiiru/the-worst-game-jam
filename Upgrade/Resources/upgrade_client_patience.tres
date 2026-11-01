@@ -8,5 +8,5 @@ script = ExtResource("1_qgifp")
 sprite = ExtResource("2_nkiyl")
 name = "Jammy Dodger"
 descripion = "With a cookie this sweet, you'll be on your way to conquer all the clients' hearts! Maybe they'll even wait around a little longer just to watch you cook!"
-cost = 14.0
+cost = 10.0
 metadata/_custom_type_script = "uid://cwqb2750yrm2q"

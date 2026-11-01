@@ -14,19 +14,19 @@ extends PanelContainer
 @onready var result: RichTextLabel = $MarginContainer/VBoxContainer2/MarginContainer/Result
 
 const good_result_messages : Array[String] = ["GOOD JOB! :)", "NICE! :)", "WELL DONE! :)", "NANA IS PROUD! :)"]
-const okay_result_messages : Array[String] = ["HANG IN THERE!", "LIVING ON THE EDGE!", "SCRAPING BY!"]
-const bad_result_messages : Array[String] = ["IT'S SO OVER.", "GAME OVER.", "YOU'RE COOKED."]
+const okay_result_messages : Array[String] = ["HANG IN THERE!", "SCRAPING BY!"]
+const bad_result_messages : Array[String] = ["IT'S SO OVER.", "YOU'RE COOKED."]
 
 func set_receipt(day : int, cash : float, perfect_orders : int, missed_orders : int, revenue : float, expenses : float, quota : float) -> void:
 	var remainder : float = cash - quota
 	title.text = "Day " + str(day) + " Results"
-	starting_cash_value.text = str(cash) + "$"
+	starting_cash_value.text = str(snappedf(cash, 0.01)) + "$"
 	perfect_orders_value.text = str(perfect_orders)
 	missed_orders_value.text = str(missed_orders)
-	revenue_value.text = "+" + str(revenue) + "$"
-	expenses_value.text = "-" + str(expenses) + "$"
-	quota_value.text = "-" + str(quota) + "$"
-	remaining_value.text = str(remainder) + "$"
+	revenue_value.text = "+" + str(snappedf(revenue, 0.01)) + "$"
+	expenses_value.text = "-" + str(snappedf(expenses, 0.01)) + "$"
+	quota_value.text = "-" + str(snappedf(quota, 0.01)) + "$"
+	remaining_value.text = str(snappedf(remainder, 0.01)) + "$"
 	
 	if remainder < 0.0:
 		remaining_value.set("theme_override_colors/default_color", Color(0.788, 0.196, 0.404, 1.0))
@@ -42,6 +42,7 @@ func set_receipt(day : int, cash : float, perfect_orders : int, missed_orders : 
 		result.text = good_result_messages.pick_random()
 
 func appear() -> void:
+	AudioManager.instance.receipt_sound.play()
 	animation_player.play("appear")
 	
 func disappear() -> void:

@@ -11,4 +11,5 @@ script = ExtResource("2_viuu6")
 species = 3
 dialogue = "Ayo chief pass me sum bacon n tomatoes wrapped in sum buns if ya catch my drift!"
 order = Array[ExtResource("1_yts7q")]([ExtResource("2_6v3q7"), ExtResource("3_clcnr"), ExtResource("4_tvb7o"), ExtResource("2_6v3q7")])
+patience = 140.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

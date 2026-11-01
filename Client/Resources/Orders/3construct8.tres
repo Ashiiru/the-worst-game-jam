@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://b7vlk8jyxx6n2"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_arq3v"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_jgrqr"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_wd6wn"]
+[ext_resource type="Resource" uid="uid://cno474sdj7kd7" path="res://Ingredient/Resources/onions.tres" id="3_r3upk"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="4_6bjvl"]
+
+[resource]
+script = ExtResource("2_jgrqr")
+species = 2
+dialogue = "Greetings, cashier. I would like a sandwich, no meat, with onion and pickles"
+order = Array[ExtResource("1_arq3v")]([ExtResource("2_wd6wn"), ExtResource("3_r3upk"), ExtResource("4_6bjvl"), ExtResource("2_wd6wn")])
+patience = 130.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

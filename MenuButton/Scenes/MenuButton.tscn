@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://biqep6uc0untj"]
+
+[ext_resource type="Script" uid="uid://iqnvclg6fdfk" path="res://MenuButton/Scripts/menu_button.gd" id="1_387qh"]
+
+[node name="MenuButton" type="PanelContainer" unique_id=394969793]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_387qh")
+
+[node name="Button" type="Button" parent="." unique_id=1858272289]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

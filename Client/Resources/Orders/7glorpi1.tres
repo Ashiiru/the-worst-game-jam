@@ -17,6 +17,7 @@
 [resource]
 script = ExtResource("2_wdj8u")
 species = 1
-dialogue = "I want a CmDonld... Oh its Nanas... Well... I'll have a burguer with everything in it. Make the stack alphabetically ordered, and don't cook the onions."
-order = Array[ExtResource("1_5bl0b")]([ExtResource("2_eu3ck"), ExtResource("3_q36jt"), ExtResource("4_5o3bd"), ExtResource("5_nokda"), ExtResource("6_gvx1g"), ExtResource("7_qn0ye"), ExtResource("8_64chh"), ExtResource("9_r7b6s"), ExtResource("10_noiwk"), ExtResource("11_o00qm"), ExtResource("12_867ty")])
+dialogue = "I want a McMa... Oh, it's Nana's... Well... I'll have a burger with everything on top of the patty. Make the stack alphabetically ordered, and don't cook the onions."
+order = Array[ExtResource("1_5bl0b")]([ExtResource("2_eu3ck"), ExtResource("4_5o3bd"), ExtResource("3_q36jt"), ExtResource("5_nokda"), ExtResource("6_gvx1g"), ExtResource("7_qn0ye"), ExtResource("8_64chh"), ExtResource("9_r7b6s"), ExtResource("10_noiwk"), ExtResource("11_o00qm"), ExtResource("12_867ty")])
+patience = 180.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

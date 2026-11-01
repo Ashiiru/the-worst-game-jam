@@ -9,5 +9,6 @@
 script = ExtResource("2_mtmsi")
 species = 2
 dialogue = "My heightened senses demand for no less than two floors of onions in any sandwich."
-order = Array[ExtResource("1_p3w6s")]([ExtResource("2_pcqco"), ExtResource("3_rymny"), ExtResource("2_pcqco"), ExtResource("3_rymny")])
+order = Array[ExtResource("1_p3w6s")]([ExtResource("2_pcqco"), ExtResource("3_rymny"), ExtResource("2_pcqco"), ExtResource("3_rymny"), ExtResource("2_pcqco")])
+patience = 140.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

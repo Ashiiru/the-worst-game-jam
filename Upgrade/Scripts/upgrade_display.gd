@@ -31,5 +31,6 @@ func _on_button_mouse_exited() -> void:
 	unfocus()
 
 func buy(run : Game) -> void:
+	AudioManager.instance.cookie_sound.play()
 	upgrade.upgrade(run)
 	self.visible = false

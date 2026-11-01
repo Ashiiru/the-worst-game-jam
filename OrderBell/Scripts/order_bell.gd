@@ -6,6 +6,7 @@ signal selected
 
 func _on_button_pressed() -> void:
 	selected.emit()
+	AudioManager.instance.bell_sound.play()
 	wobble()
 
 

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeGlorpiTransChance" format=3 uid="uid://bwmesyobie1mo"]
+
+[ext_resource type="Script" uid="uid://b2l1a3v3bqncp" path="res://Upgrade/Scripts/upgrade_glorpi_trans_chance.gd" id="1_cvhno"]
+[ext_resource type="Texture2D" uid="uid://dpbrlppvctm4s" path="res://Upgrade/Sprites/glorpi_cookie.png" id="2_m6sxo"]
+
+[resource]
+script = ExtResource("1_cvhno")
+sprite = ExtResource("2_m6sxo")
+name = "Glorpi Cookie"
+descripion = "The Glorpi really love their jelly filled cookies, dear! I hear they use a polyglot agent in their baking formula!"
+cost = 15.0
+metadata/_custom_type_script = "uid://b2l1a3v3bqncp"

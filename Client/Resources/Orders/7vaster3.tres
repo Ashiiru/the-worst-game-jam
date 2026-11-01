@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://dvwsx2fs1idfy"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_ane6g"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_6y844"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_310u0"]
+[ext_resource type="Resource" uid="uid://d0x1wu0t0nfe4" path="res://Ingredient/Resources/ketchup.tres" id="3_peibb"]
+[ext_resource type="Resource" uid="uid://6d114kjvbt63" path="res://Ingredient/Resources/mustard.tres" id="4_1kyh4"]
+[ext_resource type="Resource" uid="uid://dtipnmpb3ptt" path="res://Ingredient/Resources/mayo.tres" id="5_kkajm"]
+
+[resource]
+script = ExtResource("2_310u0")
+species = 3
+dialogue = "Nnnghhh, last cycle's function left me straight donked brody. Hmu w that sauce storm, 2 pumps of each maybe? ketchup first and mayo last Ah and on top of a bun, no top one tho, gotta keep my throat wet."
+order = Array[ExtResource("1_ane6g")]([ExtResource("2_6y844"), ExtResource("3_peibb"), ExtResource("3_peibb"), ExtResource("4_1kyh4"), ExtResource("4_1kyh4"), ExtResource("5_kkajm"), ExtResource("5_kkajm")])
+patience = 180.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

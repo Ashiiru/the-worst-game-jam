@@ -11,5 +11,5 @@ script = ExtResource("2_0t4p2")
 species = 1
 dialogue = "I'd like a beef burger with lettuce on top please!"
 order = Array[ExtResource("1_hgp8b")]([ExtResource("2_05wr3"), ExtResource("3_y628y"), ExtResource("4_dah4f"), ExtResource("2_05wr3")])
-patience = 60.0
+patience = 120.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

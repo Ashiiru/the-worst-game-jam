@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3 uid="uid://df0at1ntjvhym"]
+
+[ext_resource type="Script" uid="uid://ddg5lvjh78x1k" path="res://Upgrade/Scripts/upgrade.gd" id="1_02bu6"]
+[ext_resource type="Texture2D" uid="uid://doc0u304so7" path="res://Upgrade/Sprites/vaster_cookie.png" id="2_8o3oq"]
+
+[resource]
+script = ExtResource("1_02bu6")
+sprite = ExtResource("2_8o3oq")
+name = "Vaster Cookie"
+descripion = "Turns out pistachios are just a Vaster invention. They spread them throughout the galaxy to seduce people into their... Peculiar ways..."
+cost = 15.0
+metadata/_custom_type_script = "uid://ddg5lvjh78x1k"

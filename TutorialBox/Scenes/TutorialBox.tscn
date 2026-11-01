@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://c304q3s14n4lq"]
+
+[ext_resource type="Texture2D" uid="uid://c0ufsw62d3xin" path="res://TutorialBox/Sprites/tutorial_1_2.png" id="1_e4xil"]
+[ext_resource type="Script" uid="uid://c4618wlv8bnsb" path="res://TutorialBox/Scripts/tutorial_box.gd" id="1_obhlj"]
+[ext_resource type="FontFile" uid="uid://dwu238kren3w1" path="res://TextFonts/W95FA.otf" id="2_obhlj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sddc7"]
+bg_color = Color(0.77254903, 1, 0.7882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqnbw"]
+bg_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2n0i"]
+bg_color = Color(0.6313726, 0.8745098, 0.16470589, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3awsf"]
+bg_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_og2gj"]
+bg_color = Color(0.047058824, 0.65882355, 0.6431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1r7u"]
+bg_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1j815"]
+bg_color = Color(0, 0, 0, 0.50980395)
+
+[node name="TutorialBox" type="PanelContainer" unique_id=453996233]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sddc7")
+script = ExtResource("1_obhlj")
+
+[node name="MarginContainer3" type="MarginContainer" parent="." unique_id=1245102308]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer3" unique_id=864298393]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qqnbw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer3/PanelContainer" unique_id=349037535]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer3/PanelContainer/MarginContainer" unique_id=1355006552]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u2n0i")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer" unique_id=801397527]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=108802169]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3awsf")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer" unique_id=251248775]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="pop_up_wrapper" type="VBoxContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=1329023668]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper" unique_id=1062596375]
+custom_minimum_size = Vector2(0, 310)
+layout_mode = 2
+texture = ExtResource("1_e4xil")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper" unique_id=1967474120]
+layout_mode = 2
+alignment = 1
+
+[node name="DoneContainer" type="MarginContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer" unique_id=4444196]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
+
+[node name="Done" type="PanelContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer" unique_id=804749178]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_og2gj")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer/Done" unique_id=2074558005]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ButtonPrev" type="Button" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer/Done/MarginContainer" unique_id=2096108508]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.047058824, 0.65882355, 0.6431373, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_obhlj")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_n1r7u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1j815")
+text = "Previous"
+
+[node name="DoneContainer2" type="MarginContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer" unique_id=61635665]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
+
+[node name="Done" type="PanelContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer2" unique_id=875889409]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_og2gj")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer2/Done" unique_id=663476773]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ButtonNext" type="Button" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer2/Done/MarginContainer" unique_id=1917479744]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.047058824, 0.65882355, 0.6431373, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_obhlj")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_n1r7u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1j815")
+text = "Next"
+
+[connection signal="pressed" from="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer/Done/MarginContainer/ButtonPrev" to="." method="_on_button_prev_pressed"]
+[connection signal="pressed" from="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/HBoxContainer/DoneContainer2/Done/MarginContainer/ButtonNext" to="." method="_on_button_next_pressed"]

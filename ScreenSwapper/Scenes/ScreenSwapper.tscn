@@ -7,13 +7,8 @@ offset_right = 33.0
 offset_bottom = 23.0
 script = ExtResource("1_3x65k")
 
-[node name="Label" type="Label" parent="." unique_id=1932314748]
-layout_mode = 2
-text = "Test"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Button" type="Button" parent="." unique_id=1767801115]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

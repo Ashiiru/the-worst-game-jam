@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://c620k7b5bm6r8"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_sh1ks"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="2_3qtbd"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_e2q5e"]
+[ext_resource type="Resource" uid="uid://c23lg5npt5slu" path="res://Ingredient/Resources/onions_cooked.tres" id="3_rmtnl"]
+
+[resource]
+script = ExtResource("2_e2q5e")
+species = 2
+dialogue = "Hello puny mortal. I demand grilled onions wrapped in lettuce, and none of that bread you enjoy hiding the nutrients within."
+order = Array[ExtResource("1_sh1ks")]([ExtResource("2_3qtbd"), ExtResource("3_rmtnl"), ExtResource("2_3qtbd")])
+patience = 140.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://djyvjlj1hxwi7"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_pwtgv"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_lij2p"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_tl6we"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="3_dbqgk"]
+
+[resource]
+script = ExtResource("2_lij2p")
+species = 1
+dialogue = "Hi! Tomatoes! I love tomatoes! Two! And don't forget the bread!"
+order = Array[ExtResource("1_pwtgv")]([ExtResource("2_tl6we"), ExtResource("3_dbqgk"), ExtResource("3_dbqgk"), ExtResource("2_tl6we")])
+patience = 100.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

@@ -54,6 +54,86 @@
 [ext_resource type="Texture2D" uid="uid://dx174wyt3blfc" path="res://Game/Sprites/bin.png" id="40_qtirl"]
 [ext_resource type="Texture2D" uid="uid://dd1dsugu3y4te" path="res://Game/Sprites/shop_background.png" id="41_rbkfh"]
 [ext_resource type="Texture2D" uid="uid://cfc6xkatff71f" path="res://Game/Sprites/table_shop.png" id="44_06yal"]
+[ext_resource type="Texture2D" uid="uid://bjn7yh2ns062d" path="res://Game/Sprites/shop_button.png" id="45_2i8j5"]
+[ext_resource type="Texture2D" uid="uid://cek2oad3xoha2" path="res://Game/Sprites/restart_button.png" id="45_48ff0"]
+[ext_resource type="Texture2D" uid="uid://brcutxom6g3aa" path="res://Game/Sprites/back_to_menu_button.png" id="46_2i8j5"]
+[ext_resource type="Texture2D" uid="uid://bqt6c5th1js0a" path="res://Game/Sprites/next_day_button.png" id="49_ja53t"]
+[ext_resource type="Texture2D" uid="uid://c0t1hhv22y5q6" path="res://Game/Sprites/openning_sign.png" id="50_qtirl"]
+[ext_resource type="PackedScene" uid="uid://biqep6uc0untj" path="res://MenuButton/Scenes/MenuButton.tscn" id="52_6ihbm"]
+[ext_resource type="Texture2D" uid="uid://gsxqy562r8vs" path="res://MenuButton/Sprites/menu_button_start_game.png" id="53_1jydm"]
+[ext_resource type="Texture2D" uid="uid://dfdgxwrj04ell" path="res://ScreenSwapper/Sprites/counter_screen_swapper.png" id="53_nx85f"]
+[ext_resource type="Texture2D" uid="uid://cwcy5urwctlqe" path="res://MenuButton/Sprites/menu_button_how_to_play.png" id="54_jralb"]
+[ext_resource type="Texture2D" uid="uid://btnt8ny03tsi4" path="res://ScreenSwapper/Sprites/kitchen_screen_swapper.png" id="54_o1pwe"]
+[ext_resource type="Texture2D" uid="uid://6cje75opwlrc" path="res://MenuButton/Sprites/menu_button_options.png" id="55_ja53t"]
+[ext_resource type="Texture2D" uid="uid://b66784yyql8ch" path="res://MenuButton/Sprites/menu_button_credits.png" id="56_bxo41"]
+[ext_resource type="PackedScene" uid="uid://cwp15waoar7ru" path="res://OptionsBox/options_box.tscn" id="57_6ihbm"]
+[ext_resource type="PackedScene" uid="uid://c304q3s14n4lq" path="res://TutorialBox/Scenes/TutorialBox.tscn" id="57_jralb"]
+[ext_resource type="PackedScene" uid="uid://7abf2d2381en" path="res://CreditsBox/credits_box.tscn" id="58_1jydm"]
+[ext_resource type="Resource" uid="uid://b3bf6t3dtlwll" path="res://Client/Resources/Orders/1glorpi2.tres" id="67_wnpge"]
+[ext_resource type="Resource" uid="uid://brunhvbtgv1n4" path="res://Client/Resources/Orders/1glorpi3.tres" id="68_8ra4c"]
+[ext_resource type="Resource" uid="uid://tkug75jsla8l" path="res://Upgrade/Resources/upgrade_construct_trans_chance.tres" id="68_eleg7"]
+[ext_resource type="Resource" uid="uid://dmpglw5dq8xvk" path="res://Client/Resources/Orders/1glorpi4.tres" id="69_xf6ka"]
+[ext_resource type="Resource" uid="uid://bwmesyobie1mo" path="res://Upgrade/Resources/upgrade_glorpi_trans_chance.tres" id="70_a8nwh"]
+[ext_resource type="Resource" uid="uid://doo6uilrv38sy" path="res://Client/Resources/Orders/1glorpi5.tres" id="70_doivh"]
+[ext_resource type="Resource" uid="uid://dclgyc1nuprhw" path="res://Client/Resources/Orders/1glorpi6.tres" id="71_y4ovh"]
+[ext_resource type="Resource" uid="uid://dx7kpqp0l8ib6" path="res://Client/Resources/Orders/1glorpi7.tres" id="72_75nwk"]
+[ext_resource type="Resource" uid="uid://df0at1ntjvhym" path="res://Upgrade/Resources/upgrade_vaster_trans_chance.tres" id="72_nhqhn"]
+[ext_resource type="Resource" uid="uid://d3g2h2r6l8a6b" path="res://Client/Resources/Orders/2glorpi1.tres" id="73_eleg7"]
+[ext_resource type="Resource" uid="uid://3vdqwxhpxx7" path="res://Client/Resources/Orders/2glorpi2.tres" id="74_a8nwh"]
+[ext_resource type="Resource" uid="uid://7d41cgdq2i2l" path="res://Client/Resources/Orders/2glorpi3.tres" id="75_nhqhn"]
+[ext_resource type="Resource" uid="uid://bysubeavvnstp" path="res://Client/Resources/Orders/2glorpi4.tres" id="76_b1rxa"]
+[ext_resource type="Resource" uid="uid://d0qmor0ujvmjt" path="res://Client/Resources/Orders/2glorpi5.tres" id="77_1njgx"]
+[ext_resource type="Resource" uid="uid://cxt7dojmdk3kt" path="res://Client/Resources/Orders/3construct1.tres" id="78_y211a"]
+[ext_resource type="Resource" uid="uid://bvtee12j5i177" path="res://Client/Resources/Orders/3construct2.tres" id="79_q2x5f"]
+[ext_resource type="Resource" uid="uid://cq2rx1p8hq2w0" path="res://Client/Resources/Orders/3construct3.tres" id="80_rensl"]
+[ext_resource type="Resource" uid="uid://bp0qyqixyud8k" path="res://Client/Resources/Orders/3construct5.tres" id="81_j3uup"]
+[ext_resource type="Resource" uid="uid://b13qcov1jvb8l" path="res://Client/Resources/Orders/3construct6.tres" id="82_rej37"]
+[ext_resource type="Resource" uid="uid://bekhhjkp2wa5o" path="res://Client/Resources/Orders/3construct7.tres" id="83_gurm3"]
+[ext_resource type="Resource" uid="uid://b7vlk8jyxx6n2" path="res://Client/Resources/Orders/3construct8.tres" id="84_2nc0m"]
+[ext_resource type="Resource" uid="uid://krnqnlhdlosi" path="res://Client/Resources/Orders/4construct1.tres" id="85_dw336"]
+[ext_resource type="Resource" uid="uid://bxbsegnm4yqcc" path="res://Client/Resources/Orders/4construct2.tres" id="86_lhqgs"]
+[ext_resource type="Resource" uid="uid://bsmj6ccikojgu" path="res://Client/Resources/Orders/4construct3.tres" id="87_0ebec"]
+[ext_resource type="Resource" uid="uid://b01iltslyoba5" path="res://Client/Resources/Orders/4construct4.tres" id="88_1trmc"]
+[ext_resource type="Resource" uid="uid://c8jwkxn4f7bdd" path="res://Client/Resources/Orders/4construct5.tres" id="89_8wokr"]
+[ext_resource type="Resource" uid="uid://y1ilmkfonwmn" path="res://Client/Resources/Orders/4glorpi1.tres" id="90_lf3tm"]
+[ext_resource type="Resource" uid="uid://dwu0fh06dt37y" path="res://Client/Resources/Orders/4glorpi2.tres" id="91_m33o2"]
+[ext_resource type="Resource" uid="uid://ck3ped40be1s1" path="res://Client/Resources/Orders/4glorpi3.tres" id="92_3sbp4"]
+[ext_resource type="Resource" uid="uid://dd3244ofmq4sm" path="res://Client/Resources/Orders/4glorpi4.tres" id="93_t4xnh"]
+[ext_resource type="Resource" uid="uid://djyvjlj1hxwi7" path="res://Client/Resources/Orders/4glorpi5.tres" id="94_gtrvv"]
+[ext_resource type="Resource" uid="uid://bncfuf3mogpfn" path="res://Client/Resources/Orders/5construct1.tres" id="95_0c8v6"]
+[ext_resource type="Resource" uid="uid://c620k7b5bm6r8" path="res://Client/Resources/Orders/5construct2.tres" id="96_cm8ll"]
+[ext_resource type="Resource" uid="uid://oh82umoxjtrr" path="res://Client/Resources/Orders/5glorpi1.tres" id="97_yeptf"]
+[ext_resource type="Resource" uid="uid://dact5do2hsh7o" path="res://Client/Resources/Orders/5glorpi2.tres" id="98_ks4yk"]
+[ext_resource type="Resource" uid="uid://dsmmo2p262md2" path="res://Client/Resources/Orders/5glorpi3.tres" id="99_5pogw"]
+[ext_resource type="Resource" uid="uid://c07rvd1o2rxlr" path="res://Client/Resources/Orders/6vaster1.tres" id="100_kv40m"]
+[ext_resource type="Resource" uid="uid://ci8kat5ab3opa" path="res://Client/Resources/Orders/6vaster2.tres" id="101_gbeot"]
+[ext_resource type="Resource" uid="uid://bbmlk0lwuvniy" path="res://Client/Resources/Orders/6vaster3.tres" id="102_m4hdt"]
+[ext_resource type="Resource" uid="uid://bqh17swtnvt7c" path="res://Client/Resources/Orders/6vaster4.tres" id="103_qi1e3"]
+[ext_resource type="Resource" uid="uid://dy57qpfcyl523" path="res://Client/Resources/Orders/6vaster5.tres" id="104_o57ms"]
+[ext_resource type="Resource" uid="uid://deo6ey8fmfnut" path="res://Client/Resources/Orders/6vaster6.tres" id="105_qbfr6"]
+[ext_resource type="Resource" uid="uid://dfx8ws1q0uitj" path="res://Client/Resources/Orders/6vaster7.tres" id="106_uo3dv"]
+[ext_resource type="Resource" uid="uid://c03hia2t8biej" path="res://Client/Resources/Orders/6vaster8.tres" id="107_vyucr"]
+[ext_resource type="Resource" uid="uid://bpihk3qvh07tf" path="res://Client/Resources/Orders/6vaster9.tres" id="108_c6f5b"]
+[ext_resource type="Resource" uid="uid://cxto0e52i6o2y" path="res://Client/Resources/Orders/7construct1.tres" id="109_t11rj"]
+[ext_resource type="Resource" uid="uid://dgliolvys03hn" path="res://Client/Resources/Orders/7glorpi1.tres" id="110_ynpdk"]
+[ext_resource type="Resource" uid="uid://ct6hwetqhey1" path="res://Client/Resources/Orders/7glorpi2.tres" id="111_cw13y"]
+[ext_resource type="Resource" uid="uid://cvh2c7jc3x173" path="res://Client/Resources/Orders/7glorpi3.tres" id="112_emeyq"]
+[ext_resource type="Resource" uid="uid://p1v25td0bl35" path="res://Client/Resources/Orders/7glorpi4.tres" id="113_fpkg1"]
+[ext_resource type="Resource" uid="uid://bqsrgfd1ekrtf" path="res://Client/Resources/Orders/7vaster1.tres" id="114_08th8"]
+[ext_resource type="Resource" uid="uid://dfljoxv0roh05" path="res://Client/Resources/Orders/7vaster2.tres" id="115_vvl8n"]
+[ext_resource type="Resource" uid="uid://dvwsx2fs1idfy" path="res://Client/Resources/Orders/7vaster3.tres" id="116_vvexq"]
+[ext_resource type="Resource" uid="uid://lvdex7dgf55g" path="res://Client/Resources/Orders/7vaster4.tres" id="117_ia10l"]
+[ext_resource type="Resource" uid="uid://4b1r852if4sr" path="res://Client/Resources/Orders/7vaster5.tres" id="118_4a6ka"]
+[ext_resource type="Resource" uid="uid://bbf6eqlxpufiy" path="res://Client/Resources/Profiles/construct_blue.tres" id="119_nr581"]
+[ext_resource type="Resource" uid="uid://152vouks80kk" path="res://Client/Resources/Profiles/construct_cyan.tres" id="120_rbg8g"]
+[ext_resource type="Resource" uid="uid://cajrppbgyh80w" path="res://Client/Resources/Profiles/construct_green.tres" id="121_1qaox"]
+[ext_resource type="Resource" uid="uid://beh33yfp5xm32" path="res://Client/Resources/Profiles/construct_jade.tres" id="122_yo6j4"]
+[ext_resource type="Resource" uid="uid://bbsa8sduh2mlm" path="res://Client/Resources/Profiles/construct_orange.tres" id="123_6ddbf"]
+[ext_resource type="Resource" uid="uid://p7v8l757easg" path="res://Client/Resources/Profiles/construct_yellow.tres" id="124_k4sqg"]
+[ext_resource type="Resource" uid="uid://8vqqgulgxpmg" path="res://Client/Resources/Profiles/glorpi_aval.tres" id="125_df527"]
+[ext_resource type="Resource" uid="uid://cjyaex8bnqc10" path="res://Client/Resources/Profiles/glorpi_ploingo.tres" id="126_8lky6"]
+[ext_resource type="Resource" uid="uid://d35udbw4o4iw0" path="res://Client/Resources/Profiles/vaster_girly.tres" id="127_ndycn"]
+[ext_resource type="Resource" uid="uid://c7w4nhii8tbok" path="res://Client/Resources/Profiles/vaster_noir.tres" id="128_6pvfv"]
 
 [sub_resource type="Animation" id="Animation_7c4of"]
 length = 0.001
@@ -213,6 +293,54 @@ tracks/12/keys = {
 "update": 1,
 "values": [ExtResource("2_hi30p")]
 }
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("HUD/MainMenu:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("HUD/MainMenu/MarginContainer:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("HUD/MainMenu/ButtonsMargin:position:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("HUD/Door:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_seuk0"]
 resource_name = "day_end"
@@ -366,6 +494,42 @@ tracks/10/keys = {
 "update": 1,
 "values": [ExtResource("2_hi30p")]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("World/ContinueButton:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("World/GameOverRestartButton:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("World/GameOverMenuButton:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_k6nfy"]
 resource_name = "day_start"
@@ -467,6 +631,82 @@ tracks/7/path = NodePath("World/Client:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_6ihbm"]
+resource_name = "game_boot"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/MainMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/MainMenu/MenuBackground:position:y")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1.9),
+"update": 0,
+"values": [350.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HUD/MainMenu/MarginContainer:position:y")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1.8999999),
+"update": 0,
+"values": [350.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HUD/MainMenu/ButtonsMargin:position:x")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1.9),
+"update": 0,
+"values": [-500.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HUD/InputBlocker:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HUD/Door:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -618,6 +858,65 @@ tracks/4/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_1jydm"]
+resource_name = "return_to_menu"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/InputBlocker:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/InputBlocker:color")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.13333334, 0.019607844, 0.13333334, 0), Color(0.13335153, 0.025840001, 0.13335153, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HUD/Door")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"appear"
+}, {
+"args": [],
+"method": &"dissappear"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"boot_menu"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_gsb0v"]
 resource_name = "run_day_pass"
 tracks/0/type = "value"
@@ -671,6 +970,88 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("3_idvqa"), ExtResource("2_hi30p"), ExtResource("3_idvqa"), ExtResource("2_hi30p"), ExtResource("3_idvqa"), ExtResource("2_hi30p"), ExtResource("3_idvqa")]
+}
+
+[sub_resource type="Animation" id="Animation_qtirl"]
+resource_name = "run_start"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/InputBlocker:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/InputBlocker:color")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0.13333334, 0.019607844, 0.13333334, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HUD/MainMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HUD/Door")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"appear"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"begin_run"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0],
+"method": &"move_camera_to"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_ofkml"]
@@ -865,10 +1246,13 @@ _data = {
 &"RESET": SubResource("Animation_7c4of"),
 &"day_end": SubResource("Animation_seuk0"),
 &"day_start": SubResource("Animation_k6nfy"),
+&"menu_boot": SubResource("Animation_6ihbm"),
 &"order_end": SubResource("Animation_qjmp7"),
 &"order_start": SubResource("Animation_bal17"),
+&"return_to_menu": SubResource("Animation_1jydm"),
 &"run_day_pass": SubResource("Animation_gsb0v"),
 &"run_game_over": SubResource("Animation_tyrie"),
+&"run_start": SubResource("Animation_qtirl"),
 &"shop_end": SubResource("Animation_ofkml"),
 &"shop_start": SubResource("Animation_opxns")
 }
@@ -882,50 +1266,50 @@ shader_parameter/repeat_y = 1.0
 shader_parameter/row_offset = 1.0
 shader_parameter/texture_to_scroll = ExtResource("4_gsb0v")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48uvx"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eleg7"]
 resource_local_to_scene = true
 texture = ExtResource("18_te4p3")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_56wl4"]
 load_path = "res://.godot/imported/food_box_lettuce.png-95993cfe58f385ffbb6eac2d9927f132.ctex"
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mryf4"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8nwh"]
 resource_local_to_scene = true
 texture = SubResource("CompressedTexture2D_56wl4")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k8f6"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nhqhn"]
 resource_local_to_scene = true
 texture = ExtResource("21_06yal")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_te4p3"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1rxa"]
 resource_local_to_scene = true
 texture = ExtResource("23_6ihbm")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbkfh"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1njgx"]
 resource_local_to_scene = true
 texture = ExtResource("25_jralb")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06yal"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y211a"]
 resource_local_to_scene = true
 texture = ExtResource("27_bxo41")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtirl"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2x5f"]
 resource_local_to_scene = true
 texture = ExtResource("29_luu1a")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ja53t"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rensl"]
 resource_local_to_scene = true
 texture = ExtResource("31_2i8j5")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxo41"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3uup"]
 resource_local_to_scene = true
 texture = ExtResource("33_o1pwe")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_waags"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rej37"]
 resource_local_to_scene = true
 texture = ExtResource("35_o83k3")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_luu1a"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gurm3"]
 resource_local_to_scene = true
 texture = ExtResource("38_1jydm")
 
@@ -934,6 +1318,15 @@ texture = ExtResource("38_06yal")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30t1u"]
 texture = ExtResource("40_qtirl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_euxx3"]
+texture = ExtResource("45_2i8j5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dg14e"]
+texture = ExtResource("45_48ff0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ypu2p"]
+texture = ExtResource("46_2i8j5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ihbm"]
 texture = ExtResource("44_06yal")
@@ -944,11 +1337,32 @@ load_path = "res://.godot/imported/pda.png-8e6584184fb3972bc4e6cac20c50a16f.ctex
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1jydm"]
 texture = SubResource("CompressedTexture2D_qtirl")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvf11"]
+texture = ExtResource("49_ja53t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw8tl"]
+texture = ExtResource("53_nx85f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ny432"]
+texture = ExtResource("54_o1pwe")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4h8sl"]
 texture = ExtResource("4_gsb0v")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hi30p"]
 texture = ExtResource("27_idvqa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48ff0"]
+texture = ExtResource("53_1jydm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2i8j5"]
+texture = ExtResource("54_jralb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nx85f"]
+texture = ExtResource("55_ja53t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1pwe"]
+texture = ExtResource("56_bxo41")
 
 [node name="Game" type="Node2D" unique_id=1152207749]
 script = ExtResource("1_hn7vc")
@@ -1037,31 +1451,31 @@ theme_override_constants/separation = 4
 [node name="IngredientContainerOnion" parent="World/IngredientGrid1/HBoxContainer" unique_id=642096802 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_48uvx")
+theme_override_styles/panel = SubResource("StyleBoxTexture_eleg7")
 ingredient = ExtResource("19_rbkfh")
 
 [node name="IngredientContainerLettuce" parent="World/IngredientGrid1/HBoxContainer" unique_id=529592985 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_mryf4")
+theme_override_styles/panel = SubResource("StyleBoxTexture_a8nwh")
 ingredient = ExtResource("4_xa23u")
 
 [node name="IngredientContainerCheese" parent="World/IngredientGrid1/HBoxContainer" unique_id=1992550632 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_1k8f6")
+theme_override_styles/panel = SubResource("StyleBoxTexture_nhqhn")
 ingredient = ExtResource("22_qtirl")
 
 [node name="IngredientContainerTomato" parent="World/IngredientGrid1/HBoxContainer" unique_id=1246679934 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_te4p3")
+theme_override_styles/panel = SubResource("StyleBoxTexture_b1rxa")
 ingredient = ExtResource("24_1jydm")
 
 [node name="IngredientContainerPickles" parent="World/IngredientGrid1/HBoxContainer" unique_id=1677002960 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_rbkfh")
+theme_override_styles/panel = SubResource("StyleBoxTexture_1njgx")
 ingredient = ExtResource("26_ja53t")
 
 [node name="IngredientGrid2" type="PanelContainer" parent="World" unique_id=2147454348]
@@ -1078,19 +1492,19 @@ theme_override_constants/separation = -20
 [node name="IngredientContainerKetchup" parent="World/IngredientGrid2/HBoxContainer" unique_id=653962837 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(30, 60)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_06yal")
+theme_override_styles/panel = SubResource("StyleBoxTexture_y211a")
 ingredient = ExtResource("28_waags")
 
 [node name="IngredientContainerMustard" parent="World/IngredientGrid2/HBoxContainer" unique_id=92609192 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(30, 60)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_qtirl")
+theme_override_styles/panel = SubResource("StyleBoxTexture_q2x5f")
 ingredient = ExtResource("30_48ff0")
 
 [node name="IngredientContainerMayo" parent="World/IngredientGrid2/HBoxContainer" unique_id=578369276 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(30, 60)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ja53t")
+theme_override_styles/panel = SubResource("StyleBoxTexture_rensl")
 ingredient = ExtResource("32_nx85f")
 
 [node name="IngredientGrid3" type="PanelContainer" parent="World" unique_id=1656407332]
@@ -1109,13 +1523,13 @@ theme_override_constants/separation = 4
 [node name="IngredientContainerPatty" parent="World/IngredientGrid3/HBoxContainer" unique_id=722422692 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bxo41")
+theme_override_styles/panel = SubResource("StyleBoxTexture_j3uup")
 ingredient = ExtResource("4_7uvsw")
 
 [node name="IngredientContainerBacon" parent="World/IngredientGrid3/HBoxContainer" unique_id=953223088 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_waags")
+theme_override_styles/panel = SubResource("StyleBoxTexture_rej37")
 ingredient = ExtResource("36_2po3c")
 
 [node name="IngredientContainerBread" parent="World" unique_id=1804355321 instance=ExtResource("3_0648w")]
@@ -1124,7 +1538,7 @@ offset_left = 308.0
 offset_top = 604.0
 offset_right = 398.0
 offset_bottom = 704.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_luu1a")
+theme_override_styles/panel = SubResource("StyleBoxTexture_gurm3")
 ingredient = ExtResource("39_1jydm")
 
 [node name="Grill" parent="World" unique_id=1713246566 instance=ExtResource("12_mr6as")]
@@ -1185,44 +1599,37 @@ offset_right = -455.0
 visible = false
 offset_left = -126.0
 offset_top = 298.0
-offset_right = -38.0
+offset_right = -22.044998
 offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_euxx3")
 
 [node name="ContinueButton" type="Button" parent="World/ContinueButton" unique_id=1591457353]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-
-[node name="Label" type="Label" parent="World/ContinueButton" unique_id=1089629426]
-layout_mode = 2
-text = "Continue"
-horizontal_alignment = 1
 
 [node name="GameOverRestartButton" type="PanelContainer" parent="World" unique_id=273417886]
 visible = false
-offset_left = -194.0
-offset_top = 298.0
-offset_right = -137.0
-offset_bottom = 338.0
+offset_left = -248.0
+offset_top = 301.0
+offset_right = -131.28
+offset_bottom = 341.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dg14e")
 
 [node name="GameOverRestartButton" type="Button" parent="World/GameOverRestartButton" unique_id=358067415]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-
-[node name="Label" type="Label" parent="World/GameOverRestartButton" unique_id=1830930556]
-layout_mode = 2
-text = "Restart"
 
 [node name="GameOverMenuButton" type="PanelContainer" parent="World" unique_id=1367374533]
 visible = false
-offset_left = -126.0
-offset_top = 298.0
-offset_right = -38.0
-offset_bottom = 338.0
+offset_left = -123.0
+offset_top = 301.0
+offset_right = -14.445
+offset_bottom = 341.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ypu2p")
 
 [node name="GameOverMenuButton" type="Button" parent="World/GameOverMenuButton" unique_id=1771003918]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-
-[node name="Label" type="Label" parent="World/GameOverMenuButton" unique_id=1005346700]
-layout_mode = 2
-text = "Main Menu"
 
 [node name="ShopBackground" type="Sprite2D" parent="World" unique_id=292907242]
 position = Vector2(960, 180)
@@ -1289,17 +1696,14 @@ scale = Vector2(0.6, 0.6)
 
 [node name="NextDayButton" type="PanelContainer" parent="World" unique_id=550308248]
 offset_left = 1146.0
-offset_top = 300.0
-offset_right = 1234.0
-offset_bottom = 340.0
+offset_top = 289.0
+offset_right = 1258.61
+offset_bottom = 343.055
+theme_override_styles/panel = SubResource("StyleBoxTexture_lvf11")
 
 [node name="NextDayButton" type="Button" parent="World/NextDayButton" unique_id=1187063273]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-
-[node name="Label" type="Label" parent="World/NextDayButton" unique_id=1675531632]
-layout_mode = 2
-text = "Next Day"
-horizontal_alignment = 1
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=5070933]
 
@@ -1313,6 +1717,7 @@ offset_top = 10.0
 offset_right = 16.5
 offset_bottom = 33.0
 grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw8tl")
 
 [node name="ScreenSwapperAssembly" parent="HUD" unique_id=1738721261 instance=ExtResource("8_f7b1t")]
 anchors_preset = 7
@@ -1326,10 +1731,10 @@ offset_right = 16.5
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ny432")
 location = 1
 
 [node name="MainMenu" type="PanelContainer" parent="HUD" unique_id=555996375]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1340,65 +1745,81 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_4h8sl")
 
+[node name="MarginContainer" type="MarginContainer" parent="HUD/MainMenu" unique_id=1197129260]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 26
+
+[node name="Logo" type="TextureRect" parent="HUD/MainMenu/MarginContainer" unique_id=450612531]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("50_qtirl")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="MenuBackground" type="PanelContainer" parent="HUD/MainMenu" unique_id=1843259405]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_hi30p")
 
 [node name="ButtonsMargin" type="MarginContainer" parent="HUD/MainMenu" unique_id=1825289274]
 layout_mode = 2
-theme_override_constants/margin_left = 58
+theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 395
-theme_override_constants/margin_bottom = 0
+theme_override_constants/margin_right = 360
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="HUD/MainMenu/ButtonsMargin" unique_id=876447737]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 12
 alignment = 1
 
-[node name="StartGameButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=661774290]
+[node name="StartButton" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=394969793 instance=ExtResource("52_6ihbm")]
+custom_minimum_size = Vector2(220, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_48ff0")
+
+[node name="TutorialButton" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=939298075 instance=ExtResource("52_6ihbm")]
+custom_minimum_size = Vector2(170, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_2i8j5")
+
+[node name="OptionsButton" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=988270349 instance=ExtResource("52_6ihbm")]
+custom_minimum_size = Vector2(170, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_nx85f")
+
+[node name="CreditsButton" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=2018446304 instance=ExtResource("52_6ihbm")]
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_o1pwe")
+
+[node name="MenuBlocker" type="ColorRect" parent="HUD/MainMenu" unique_id=942971235]
+visible = false
+layout_mode = 2
+color = Color(0.13335153, 0.025840001, 0.13335153, 0.70000005)
+
+[node name="TutorialBox" parent="HUD/MainMenu" unique_id=453996233 instance=ExtResource("57_jralb")]
+visible = false
 layout_mode = 2
 
-[node name="StartGameButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/StartGameButton" unique_id=526225437]
+[node name="OptionsBox" parent="HUD/MainMenu" unique_id=311209726 instance=ExtResource("57_6ihbm")]
+visible = false
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/StartGameButton" unique_id=625693190]
+[node name="CreditsBox" parent="HUD/MainMenu" unique_id=405689552 instance=ExtResource("58_1jydm")]
+visible = false
 layout_mode = 2
-text = "Play"
-horizontal_alignment = 1
-
-[node name="TutorialButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=1986647812]
-layout_mode = 2
-
-[node name="StartGameButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/TutorialButton" unique_id=878184149]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/TutorialButton" unique_id=1894276024]
-layout_mode = 2
-text = "Tutorial"
-horizontal_alignment = 1
-
-[node name="OptionsButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=1494846111]
-layout_mode = 2
-
-[node name="OptionsButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/OptionsButton" unique_id=317737141]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/OptionsButton" unique_id=1308936344]
-layout_mode = 2
-text = "Options"
-horizontal_alignment = 1
-
-[node name="CreditsButton" type="PanelContainer" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer" unique_id=374912778]
-layout_mode = 2
-
-[node name="CreditsButton" type="Button" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/CreditsButton" unique_id=1324344233]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="HUD/MainMenu/ButtonsMargin/ButtonsContainer/CreditsButton" unique_id=533309791]
-layout_mode = 2
-text = "Credits"
-horizontal_alignment = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="InputBlocker" type="ColorRect" parent="HUD" unique_id=474389153]
 visible = false
@@ -1409,16 +1830,18 @@ color = Color(0, 0, 0, 0)
 [node name="Door" parent="HUD" unique_id=476817178 instance=ExtResource("17_k6nfy")]
 
 [node name="Upgrades" type="ResourcePreloader" parent="." unique_id=1685719351]
-resources = [PackedStringArray("upgrade_client_patience", "upgrade_daytime", "upgrade_translator_uses"), [ExtResource("22_idvqa"), ExtResource("24_u4ehh"), ExtResource("22_hi30p")]]
+resources = [PackedStringArray("upgrade_client_patience", "upgrade_construct_trans_chance", "upgrade_daytime", "upgrade_glorpi_trans_chance", "upgrade_translator_uses", "upgrade_vaster_trans_chance"), [ExtResource("22_idvqa"), ExtResource("68_eleg7"), ExtResource("24_u4ehh"), ExtResource("70_a8nwh"), ExtResource("22_hi30p"), ExtResource("72_nhqhn")]]
 
 [node name="ClientOrders" type="ResourcePreloader" parent="." unique_id=506222972]
-resources = [PackedStringArray("1glorpi1"), [ExtResource("23_wwslj")]]
+resources = [PackedStringArray("1glorpi1", "1glorpi2", "1glorpi3", "1glorpi4", "1glorpi5", "1glorpi6", "1glorpi7", "2glorpi1", "2glorpi2", "2glorpi3", "2glorpi4", "2glorpi5", "3construct1", "3construct2", "3construct3", "3construct5", "3construct6", "3construct7", "3construct8", "4construct1", "4construct2", "4construct3", "4construct4", "4construct5", "4glorpi1", "4glorpi2", "4glorpi3", "4glorpi4", "4glorpi5", "5construct1", "5construct2", "5glorpi1", "5glorpi2", "5glorpi3", "6vaster1", "6vaster2", "6vaster3", "6vaster4", "6vaster5", "6vaster6", "6vaster7", "6vaster8", "6vaster9", "7construct1", "7glorpi1", "7glorpi2", "7glorpi3", "7glorpi4", "7vaster1", "7vaster2", "7vaster3", "7vaster4", "7vaster5"), [ExtResource("23_wwslj"), ExtResource("67_wnpge"), ExtResource("68_8ra4c"), ExtResource("69_xf6ka"), ExtResource("70_doivh"), ExtResource("71_y4ovh"), ExtResource("72_75nwk"), ExtResource("73_eleg7"), ExtResource("74_a8nwh"), ExtResource("75_nhqhn"), ExtResource("76_b1rxa"), ExtResource("77_1njgx"), ExtResource("78_y211a"), ExtResource("79_q2x5f"), ExtResource("80_rensl"), ExtResource("81_j3uup"), ExtResource("82_rej37"), ExtResource("83_gurm3"), ExtResource("84_2nc0m"), ExtResource("85_dw336"), ExtResource("86_lhqgs"), ExtResource("87_0ebec"), ExtResource("88_1trmc"), ExtResource("89_8wokr"), ExtResource("90_lf3tm"), ExtResource("91_m33o2"), ExtResource("92_3sbp4"), ExtResource("93_t4xnh"), ExtResource("94_gtrvv"), ExtResource("95_0c8v6"), ExtResource("96_cm8ll"), ExtResource("97_yeptf"), ExtResource("98_ks4yk"), ExtResource("99_5pogw"), ExtResource("100_kv40m"), ExtResource("101_gbeot"), ExtResource("102_m4hdt"), ExtResource("103_qi1e3"), ExtResource("104_o57ms"), ExtResource("105_qbfr6"), ExtResource("106_uo3dv"), ExtResource("107_vyucr"), ExtResource("108_c6f5b"), ExtResource("109_t11rj"), ExtResource("110_ynpdk"), ExtResource("111_cw13y"), ExtResource("112_emeyq"), ExtResource("113_fpkg1"), ExtResource("114_08th8"), ExtResource("115_vvl8n"), ExtResource("116_vvexq"), ExtResource("117_ia10l"), ExtResource("118_4a6ka")]]
 
 [node name="ClientProfiles" type="ResourcePreloader" parent="." unique_id=177094820]
-resources = [PackedStringArray("glorpi_sumol"), [ExtResource("23_he1k8")]]
+resources = [PackedStringArray("construct_blue", "construct_cyan", "construct_green", "construct_jade", "construct_orange", "construct_yellow", "glorpi_aval", "glorpi_ploingo", "glorpi_sumol", "nana", "vaster_girly", "vaster_noir"), [ExtResource("119_nr581"), ExtResource("120_rbg8g"), ExtResource("121_1qaox"), ExtResource("122_yo6j4"), ExtResource("123_6ddbf"), ExtResource("124_k4sqg"), ExtResource("125_df527"), ExtResource("126_8lky6"), ExtResource("23_he1k8"), ExtResource("21_vw07w"), ExtResource("127_ndycn"), ExtResource("128_6pvfv")]]
 
 [connection signal="client_timeout" from="World/GameTimer" to="." method="_on_game_timer_client_timeout"]
 [connection signal="day_timeout" from="World/GameTimer" to="." method="_on_game_timer_day_timeout"]
 [connection signal="pressed" from="World/Bin/BinButton" to="." method="_on_bin_button_pressed"]
 [connection signal="pressed" from="World/ContinueButton/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="World/GameOverRestartButton/GameOverRestartButton" to="." method="_on_game_over_restart_button_pressed"]
+[connection signal="pressed" from="World/GameOverMenuButton/GameOverMenuButton" to="." method="_on_game_over_menu_button_pressed"]
 [connection signal="pressed" from="World/NextDayButton/NextDayButton" to="." method="_on_next_day_button_pressed"]

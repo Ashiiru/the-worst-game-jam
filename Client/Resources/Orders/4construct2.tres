@@ -10,4 +10,5 @@ script = ExtResource("2_rotix")
 species = 2
 dialogue = "I'm not like other, lesser, lifeforms who like sandwiches with everything on them. I eat burgers with tomato only, no meat."
 order = Array[ExtResource("1_n21gq")]([ExtResource("2_opmri"), ExtResource("3_al5ry"), ExtResource("2_opmri")])
+patience = 110.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

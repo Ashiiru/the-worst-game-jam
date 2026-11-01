@@ -9,4 +9,5 @@ script = ExtResource("2_yp5o0")
 species = 1
 dialogue = "Waiter! Give me a bun with nothing on it!"
 order = Array[ExtResource("1_5iwv0")]([ExtResource("2_uspeq"), ExtResource("2_uspeq")])
+patience = 70.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://4b1r852if4sr"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_sj0u2"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_128py"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="2_iolx4"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="3_8cqw3"]
+[ext_resource type="Resource" uid="uid://6d114kjvbt63" path="res://Ingredient/Resources/mustard.tres" id="4_e3fym"]
+
+[resource]
+script = ExtResource("2_128py")
+species = 3
+dialogue = "Sup, my homeboy said to get him a dumpling, but the local asteroid is closed due to a Flendie infestation. So cook me up a wrap of cheese and pickles, w/ sum mustard in the middle."
+order = Array[ExtResource("1_sj0u2")]([ExtResource("2_iolx4"), ExtResource("3_8cqw3"), ExtResource("4_e3fym"), ExtResource("3_8cqw3"), ExtResource("2_iolx4")])
+patience = 180.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

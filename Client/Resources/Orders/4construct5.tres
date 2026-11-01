@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://c8jwkxn4f7bdd"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_g0xxa"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_ss2ni"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_yhy4c"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="3_008yj"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="4_33q8w"]
+
+[resource]
+script = ExtResource("2_ss2ni")
+species = 2
+dialogue = "Greetings, human. I demand tomato surrounded by cheese, and bread of course."
+order = Array[ExtResource("1_g0xxa")]([ExtResource("2_yhy4c"), ExtResource("3_008yj"), ExtResource("4_33q8w"), ExtResource("3_008yj"), ExtResource("2_yhy4c")])
+patience = 130.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

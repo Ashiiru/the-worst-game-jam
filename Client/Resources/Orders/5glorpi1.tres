@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("2_nch45")
 species = 1
-dialogue = "Barbecue bacon burger. Wait, you don't have barbeque sauce? Well, just bacon under a burger then."
+dialogue = "Barbecue bacon burger. Wait, you don't have barbecue sauce? Well, just bacon under a burger then."
 order = Array[ExtResource("1_w82ng")]([ExtResource("2_ycp5y"), ExtResource("3_fdycj"), ExtResource("4_okk6s"), ExtResource("2_ycp5y")])
+patience = 120.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

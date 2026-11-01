@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://cvh2c7jc3x173"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_ik7l0"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_d2hcr"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_svcl0"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_n06uv"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_gyou8"]
+[ext_resource type="Resource" uid="uid://d0x1wu0t0nfe4" path="res://Ingredient/Resources/ketchup.tres" id="5_faeub"]
+
+[resource]
+script = ExtResource("2_d2hcr")
+species = 1
+dialogue = "Double cheeseburger, ketchup on top the bread."
+order = Array[ExtResource("1_ik7l0")]([ExtResource("2_svcl0"), ExtResource("3_n06uv"), ExtResource("4_gyou8"), ExtResource("2_svcl0"), ExtResource("3_n06uv"), ExtResource("4_gyou8"), ExtResource("2_svcl0"), ExtResource("5_faeub")])
+patience = 100.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

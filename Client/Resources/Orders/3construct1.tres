@@ -11,5 +11,5 @@ script = ExtResource("5_gniw0")
 species = 2
 dialogue = "Constructs are beyond violence, I want all the green vegetables in my burger, pickles first. And none of that horrid meat."
 order = Array[ExtResource("1_wdnx6")]([ExtResource("2_7ahu6"), ExtResource("3_u5cct"), ExtResource("4_h6mmn"), ExtResource("2_7ahu6")])
-patience = 60.0
+patience = 160.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

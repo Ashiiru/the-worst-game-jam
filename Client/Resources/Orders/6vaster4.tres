@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bqh17swtnvt7c"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_2hi8c"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_14sy8"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_jscyv"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="3_0c6l2"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_8wivv"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="5_a1hkw"]
+
+[resource]
+script = ExtResource("2_jscyv")
+species = 3
+dialogue = "Ayo waiter! can ya cook me sum cheese n' lettuce on top of my meat? And matter of fact, make that upside down!"
+order = Array[ExtResource("1_2hi8c")]([ExtResource("2_14sy8"), ExtResource("3_0c6l2"), ExtResource("4_8wivv"), ExtResource("5_a1hkw"), ExtResource("2_14sy8")])
+patience = 140.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

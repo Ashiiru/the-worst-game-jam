@@ -12,4 +12,5 @@ script = ExtResource("2_l6ay0")
 species = 1
 dialogue = "Good morning or afternoon! I'd like a cheeseburger with onions, thank you!"
 order = Array[ExtResource("1_wp4lx")]([ExtResource("2_m8sd1"), ExtResource("3_ewrrr"), ExtResource("4_4j46i"), ExtResource("5_2ajo7"), ExtResource("2_m8sd1")])
+patience = 140.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

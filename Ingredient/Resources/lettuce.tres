@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="IngredientRes" format=3 uid="uid://eiiy8osg4lxs"]
 
 [ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_uoe3c"]
+[ext_resource type="AudioStream" uid="uid://balmr6n4h66v1" path="res://Audio/Resources/lettuce.mp3" id="2_nn0m4"]
 [ext_resource type="Texture2D" uid="uid://btr2nijs8toqk" path="res://Ingredient/Sprites/lettuce.png" id="2_phtlb"]
 
 [resource]
@@ -8,4 +9,5 @@ script = ExtResource("1_uoe3c")
 sprite = ExtResource("2_phtlb")
 name = "Lettuce"
 cost = 0.1
+sound = ExtResource("2_nn0m4")
 metadata/_custom_type_script = "uid://dmrp27rksh8s1"

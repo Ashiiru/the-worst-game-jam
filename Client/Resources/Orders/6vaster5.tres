@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://dy57qpfcyl523"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_daxww"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_bnbrh"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_jasum"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_fp2c7"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="4_ix8ue"]
+
+[resource]
+script = ExtResource("2_jasum")
+species = 3
+dialogue = "Yo lil' fry, give a homie a classic, but make it based and red pilled! What do I mean? Do you have eyes, lil' bro? Tomatoes are red, bruh!"
+order = Array[ExtResource("1_daxww")]([ExtResource("2_bnbrh"), ExtResource("3_fp2c7"), ExtResource("4_ix8ue"), ExtResource("2_bnbrh")])
+patience = 150.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

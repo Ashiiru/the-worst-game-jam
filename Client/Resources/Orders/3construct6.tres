@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://b13qcov1jvb8l"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_p5ebc"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_5jnsv"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_lx61g"]
+[ext_resource type="Resource" uid="uid://c23lg5npt5slu" path="res://Ingredient/Resources/onions_cooked.tres" id="3_v7uwy"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="4_l86yk"]
+
+[resource]
+script = ExtResource("2_5jnsv")
+species = 2
+dialogue = "Ah, I see Nana's hired another human flesh sack. Displeasing. Prepare me a vegetarian sandwich with grilled onions and cheese. Be quick."
+order = Array[ExtResource("1_p5ebc")]([ExtResource("2_lx61g"), ExtResource("3_v7uwy"), ExtResource("4_l86yk"), ExtResource("2_lx61g")])
+patience = 120.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

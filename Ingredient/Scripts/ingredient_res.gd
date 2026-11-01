@@ -7,3 +7,5 @@ extends Resource
 @export var cost : float
 @export var cooks_into : IngredientRes
 @export var cook_time : float = 10
+
+@export var sound : AudioStream

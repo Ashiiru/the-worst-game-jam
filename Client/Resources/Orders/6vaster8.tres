@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://c03hia2t8biej"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_5ruhi"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_llic7"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_lwaj1"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="3_8evn7"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="4_e26ke"]
+
+[resource]
+script = ExtResource("2_lwaj1")
+species = 3
+dialogue = "Wsp gang. Feelin' spicy today, so build me up a Tomatonator burger, aight? So like, 2 tomatoes on each side of the patty. Thx."
+order = Array[ExtResource("1_5ruhi")]([ExtResource("2_llic7"), ExtResource("3_8evn7"), ExtResource("3_8evn7"), ExtResource("4_e26ke"), ExtResource("3_8evn7"), ExtResource("3_8evn7"), ExtResource("2_llic7")])
+patience = 150.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

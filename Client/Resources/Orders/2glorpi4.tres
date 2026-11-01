@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bysubeavvnstp"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_12d2a"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_18rdy"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_411ps"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_lv138"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="4_33qxr"]
+
+[resource]
+script = ExtResource("2_411ps")
+species = 1
+dialogue = "Pickles! Pickles on a patty in by burger!"
+order = Array[ExtResource("1_12d2a")]([ExtResource("2_18rdy"), ExtResource("3_lv138"), ExtResource("4_33qxr"), ExtResource("2_18rdy")])
+patience = 100.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

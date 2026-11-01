@@ -6,7 +6,7 @@ extends PanelContainer
 
 
 func set_cash(amount : float) -> void:
-	cash_label.text = str(amount) + "$"
+	cash_label.text = str(snappedf(amount, 0.01)) + "$"
 
 func set_quota(amount : float) -> void:
-	quota_label.text = "Quota: " + str(amount) + "$"
+	quota_label.text = "Quota: " + str(snappedf(amount, 0.01)) + "$"

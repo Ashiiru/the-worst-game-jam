@@ -1,7 +1,6 @@
 class_name Ingredient
 extends TextureRect
 
-
 @export var ingredient_resource : IngredientRes
 @onready var cook_timer: Timer = $CookTimer
 

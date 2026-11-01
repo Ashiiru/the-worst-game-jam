@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("2_ifj8b")
 species = 1
-dialogue = "I want a SSGB: Super Special Gaspacho Burger it's a trio of tomatos on top of the patty.  FAST!"
+dialogue = "I want an SSGB: Super Special Gaspacho Burger! It's a trio of tomatoes on top of the patty. Quick!!"
 order = Array[ExtResource("1_f3npj")]([ExtResource("2_c6028"), ExtResource("3_fhvf8"), ExtResource("4_r3uhh"), ExtResource("4_r3uhh"), ExtResource("4_r3uhh"), ExtResource("2_c6028")])
+patience = 110.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

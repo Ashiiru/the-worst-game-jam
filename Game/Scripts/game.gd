@@ -1,10 +1,17 @@
 class_name Game
 extends Node2D
 
-const symbols : String = ",;.'!?:"
-
 @onready var world: CanvasLayer = $World
 @onready var animation_player: AnimationPlayer = $World/AnimationPlayer
+
+@onready var start_button: PanelContainer = $HUD/MainMenu/ButtonsMargin/ButtonsContainer/StartButton
+@onready var tutorial_button: PanelContainer = $HUD/MainMenu/ButtonsMargin/ButtonsContainer/TutorialButton
+@onready var options_button: PanelContainer = $HUD/MainMenu/ButtonsMargin/ButtonsContainer/OptionsButton
+@onready var credits_button: PanelContainer = $HUD/MainMenu/ButtonsMargin/ButtonsContainer/CreditsButton
+@onready var menu_tutorial_box: TutorialBox = $HUD/MainMenu/TutorialBox
+@onready var menu_options_box: OptionsBox = $HUD/MainMenu/OptionsBox
+@onready var menu_credits_box: CreditsBox = $HUD/MainMenu/CreditsBox
+@onready var menu_blocker: ColorRect = $HUD/MainMenu/MenuBlocker
 
 @onready var game_camera: GameCamera = $World/GameCamera
 @onready var game_timer: GameTimer = $World/GameTimer
@@ -48,7 +55,7 @@ var difficulty_scaling : float = 1.1
 
 #in game trackers
 var day : int = 0
-var day_time : float = 30.0
+var day_time : float = 480.0
 var day_quota : float = 0.0
 var day_expenses : float = 0.0
 var day_revenue : float = 0.0
@@ -62,9 +69,20 @@ var max_errors : int = 2
 
 #upgrade related variables
 var upgrade_patience_multiplier : float = 1.0
+var upgrade_glorpi_trans_chance : float = 0.00
+var upgrade_construct_trans_chance : float = 0.00
+var upgrade_vaster_trans_chance : float = 0.00
 
 
 func _ready() -> void:
+	start_button.selected.connect(_on_menu_start_button_selected)
+	tutorial_button.selected.connect(_on_menu_tutorial_button_selected)
+	options_button.selected.connect(_on_menu_options_button_selected)
+	credits_button.selected.connect(_on_menu_credits_button_selected)
+	menu_tutorial_box.selected.connect(close_submenu)
+	menu_options_box.selected.connect(close_submenu)
+	menu_credits_box.selected.connect(close_submenu)
+	
 	screen_swapper_main.selected.connect(_on_screen_swapper_selected)
 	screen_swapper_assembly.selected.connect(_on_screen_swapper_selected)
 	
@@ -85,15 +103,62 @@ func _ready() -> void:
 		display.selected.connect(_on_upgrade_selected)
 		display.hovered.connect(_on_upgrade_hovered)
 		display.unhovered.connect(_on_upgrade_unhovered)
-	
-	begin_run()
-	begin_day()
+		
+	boot_menu()
 
+func boot_menu() -> void:
+	animation_player.play("menu_boot")
+	#TODO: Add menu music when it is finished
+	#AudioManager.swap_music(AudioManager.instance.menu_music)
+
+func _on_menu_start_button_selected() -> void:
+	animation_player.play("run_start")
+	AudioManager.swap_music(AudioManager.instance.game_music)
+
+func _on_menu_tutorial_button_selected() -> void:
+	menu_blocker.visible = true
+	menu_tutorial_box.visible = true
+
+func _on_menu_options_button_selected() -> void:
+	menu_blocker.visible = true
+	menu_options_box.visible = true
+
+func _on_menu_credits_button_selected() -> void:
+	menu_blocker.visible = true
+	menu_credits_box.visible = true
+
+func close_submenu(submenu : PanelContainer) -> void:
+	menu_blocker.visible = false
+	submenu.visible = false
 
 func begin_run() -> void:
+	#lock ingredients
+	for i in ingredient_grid_1.get_child(0).get_children():
+		i.visible = false
+	for i in ingredient_grid_2.get_child(0).get_children():
+		i.visible = false
+	for i in ingredient_grid_3.get_child(0).get_children():
+		i.visible = false
+	#reset variables for multiple runs
+	run_seed = []
+	day = 0
+	day_time = 420.0
+	day_quota = 9.09
+	cash = 0.0
+	register.set_cash(cash)
+	shop_register.set_cash(cash)
+	max_errors = 2
+	#reset upgrades
+	translator.max_charges = 2
+	upgrade_patience_multiplier = 1.0
+	upgrade_glorpi_trans_chance = 0.00
+	upgrade_construct_trans_chance = 0.00
+	upgrade_vaster_trans_chance = 0.00
+	
 	for species in Enumerates.Species:
 		run_seed.append(randi())
 	scale_quota()
+	begin_day()
 
 
 func scale_quota() -> void:
@@ -102,9 +167,36 @@ func scale_quota() -> void:
 	shop_register.set_quota(day_quota)
 
 
+func unlock_ingredients() -> void:
+	match day:
+		1:
+			ingredient_grid_1.get_child(0).get_child(0).visible = true
+			ingredient_grid_1.get_child(0).get_child(1).visible = true
+			ingredient_grid_1.get_child(0).get_child(2).visible = true
+			ingredient_grid_3.get_child(0).get_child(0).visible = true
+		2:
+			ingredient_grid_1.get_child(0).get_child(4).visible = true
+		4:
+			ingredient_grid_1.get_child(0).get_child(3).visible = true
+		5:
+			ingredient_grid_3.get_child(0).get_child(1).visible = true
+		7:
+			for i in ingredient_grid_2.get_child(0).get_children():
+				i.visible = true
+		_:
+			pass
+
+
 func begin_day() -> void:
 	day += 1
+	day_expenses = 0.0
+	day_revenue = 0.0
+	day_perfect_orders = 0
+	day_missed_orders = 0
+	unlock_ingredients()
+	translator.reset_charges()
 	game_timer.start_day_timer(day_time)
+	game_timer.text.visible = false
 	animation_player.play("day_start")
 	
 
@@ -163,31 +255,63 @@ func emote_client(emotion : String = "idle") -> void:
 	dialogue_box.display_stored_dialogue()
 	if animation_player.assigned_animation != "day_end":
 		animation_player.pause()
-	await dialogue_box.display_dialogue_animated()
+	await dialogue_box.display_dialogue_animated(client.client_profile.species)
+	await get_tree().create_timer(1.0).timeout
 	if animation_player.assigned_animation != "day_end":
 		animation_player.play()
 
 
 func encrypt_dialogue(dialogue : String) -> String:
-	dialogue = dialogue.capitalize()
+	var new_dialogue : String = ""
+	var alien_font : String = "[font=" + Enumerates.get_species_font_path(client.client_order.species) + "]"
+	var in_word : bool = false
+	dialogue = dialogue.to_upper()
 	for c in range(dialogue.length()):
-		if dialogue[c] != " " and not symbols.contains(dialogue[c]):
-			var new_unicode = ord(dialogue[c]) + run_seed[client.client_order.species]
-			new_unicode = 65 + (new_unicode % 25)
-			dialogue[c] = char(new_unicode)
-	dialogue = "[font=" + Enumerates.get_species_font_path(client.client_order.species) + "]" + dialogue + "[/font]"
-	return dialogue
+		if in_word:
+			if dialogue[min(c + 1, dialogue.length() - 1)] == " ":
+				new_dialogue += dialogue[c] + alien_font
+				in_word = false
+			else:
+				new_dialogue += dialogue[c]
+		else:
+			if dialogue[c] == " ":
+				var success : float
+				match client.client_order.species:
+					Enumerates.Species.GLORPI:
+						success = upgrade_glorpi_trans_chance
+					Enumerates.Species.CONSTRUCT:
+						success = upgrade_construct_trans_chance
+					Enumerates.Species.VASTER:
+						success = upgrade_vaster_trans_chance
+				if randf_range(0, 1) <= success:
+					in_word = true
+					new_dialogue += "[/font]" + dialogue[c]
+				else:
+					new_dialogue += "[/font]" + dialogue[c] + alien_font
+			elif not ",;.'!?:".contains(dialogue[c]):
+				var new_unicode = ord(dialogue[c]) + run_seed[client.client_order.species]
+				new_unicode = 65 + (new_unicode % 25)
+				new_dialogue += char(new_unicode)
+			else:
+				new_dialogue += "[/font]" + dialogue[c] + alien_font
+	if in_word:
+		new_dialogue = alien_font + new_dialogue
+	else:
+		new_dialogue = alien_font + new_dialogue + "[/font]"
+	return new_dialogue
 
 
 func _on_translator_selected() -> void:
 	if game_timer.client_timer.time_left > 0 and client.client_order.species != Enumerates.Species.HUMAN:
 		if translator.online:
+			AudioManager.instance.translator_sound.play()
 			if translator.translating:
 				dialogue_box.display_stored_dialogue()
 			else:
 				dialogue_box.display_translated_dialogue()
 			translator.translating = !translator.translating
 		elif translator.charges > 0:
+			AudioManager.instance.translator_sound.play()
 			translator.turn_on()
 			dialogue_box.display_translated_dialogue()
 		else:
@@ -195,13 +319,14 @@ func _on_translator_selected() -> void:
 
 
 func start_client_timer() -> void:
-	#TODO: calculate initial client patience and start timer with that value
-	client_patience = client.client_order.patience
+	client_patience = client.client_order.patience * upgrade_patience_multiplier
 	game_timer.start_client_timer(client_patience)
+	game_timer.text.visible = true
 
 
 func _on_screen_swapper_selected(location : Enumerates.Locations) -> void:
 	move_camera_to(location)
+
 
 func move_camera_to(location : Enumerates.Locations) -> void:
 	match location:
@@ -260,18 +385,13 @@ func rate_order() -> Vector2:
 		score += min(remaining_objective.get(k), remaining_construction.get(k, 0))
 		errors += int(difference)
 	
-	print("score is " + str(score))
-	print("perfect score is: " + str(perfect_score))
-	
 	#too many missed or extra ingredients results in instant fail
 	if errors > max_errors:
-		print("too many errors, socre is 0")
 		return Vector2(0.0,perfect_score)
 	
 	#rate time, if more than half the time is taken the score is penalized
 	if curr_time < client_patience / 2.0:
-		score = score * curr_time / client_patience
-		print("time penalty " + str(curr_time/client_patience))
+		score = score * (curr_time / client_patience)
 	
 	return Vector2(score, perfect_score)
 
@@ -289,12 +409,15 @@ func _on_game_timer_client_timeout() -> void:
 func _on_game_timer_day_timeout() -> void:
 	if selected_ingredient:
 		clear_selected_ingredient()
+	if translator.online:
+		translator.turn_off()
 	game_timer.client_timer.stop()
+	game_timer.text.visible = false
 	receipt.set_receipt(day, cash, day_perfect_orders, day_missed_orders, day_revenue, day_expenses, day_quota)
+	add_cash(-day_quota)
 	animation_player.play("day_end")
 
 func submit_quota() -> void:
-	cash -= day_quota
 	if cash < 0.0:
 		animation_player.play("run_game_over")
 	else:
@@ -305,7 +428,6 @@ func submit_order() -> void:
 	var scores : Vector2 = rate_order()
 	var score : float = scores.x
 	var perfect_score : float = scores.y
-	print("final score " + str(score))
 	
 	pay_order(score)
 	
@@ -323,11 +445,11 @@ func submit_order() -> void:
 		day_missed_orders += 1
 	
 	game_timer.client_timer.stop()
+	game_timer.text.visible = false
 	burger.clear_ingredients()
 
 
 func pay_order(score : float) -> void:
-	#TODO money calculation from score
 	var pay : float = max(0.0, snapped(score, .1))
 	day_revenue += pay
 	add_cash(pay)
@@ -337,11 +459,15 @@ func select_ingredient(ingredientres : IngredientRes) -> void:
 	var new_ingredient : Ingredient = preload("res://Ingredient/Scenes/Ingredient.tscn").instantiate()
 	new_ingredient.ingredient_resource = ingredientres
 	selected_ingredient = new_ingredient
+	AudioManager.instance.food_sound.stream.set_stream(0, selected_ingredient.ingredient_resource.sound)
+	AudioManager.instance.food_sound.play()
 	world.add_child(selected_ingredient)
 	selected_ingredient.hold()
 
 
 func clear_selected_ingredient() -> void:
+	AudioManager.instance.food_sound.stream.set_stream(0, selected_ingredient.ingredient_resource.sound)
+	AudioManager.instance.food_sound.play()
 	selected_ingredient.queue_free()
 	selected_ingredient = null
 
@@ -393,6 +519,11 @@ func _on_bin_button_pressed() -> void:
 func _on_continue_button_pressed() -> void:
 	animation_player.play("shop_start")
 
+func _on_game_over_menu_button_pressed() -> void:
+	animation_player.play("return_to_menu")
+
+func _on_game_over_restart_button_pressed() -> void:
+	animation_player.play("run_start")
 
 func add_shop() -> void:
 	var upgrade_names : PackedStringArray = upgrades.get_resource_list()
@@ -413,11 +544,13 @@ func _on_upgrade_hovered(upgrade_display : UpgradeDisplay) -> void:
 	nana_dialogue_box.visible = true
 	nana_dialogue_box.stored_dialogue = upgrade_display.upgrade.descripion
 	nana_dialogue_box.display_title(nana.client_profile.name)
-	nana_dialogue_box.display_dialogue_animated()
+	nana_dialogue_box.display_dialogue_animated(nana.client_profile.species)
 	
 func _on_upgrade_unhovered() -> void:
 	nana.emote("idle")
 	nana_dialogue_box.visible = false
+	if nana_dialogue_box.text_tween:
+		nana_dialogue_box.text_tween.kill()
 
 func _on_next_day_button_pressed() -> void:
 	animation_player.play("shop_end")

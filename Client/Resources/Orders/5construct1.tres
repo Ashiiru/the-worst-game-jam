@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("5_shdt6")
 species = 2
-dialogue = "I miss the food in Zurkon Prime. Humans and their odd choices of ingredients have plagued this sector. Make me a traditional Prime sandwich, with two pickles and a lettuce on top."
+dialogue = "I miss the food in Zurkon Prime. Humans and their odd choices of ingredients have plagued this sector. Prepare me a traditional Prime sandwich, with two pickles and a lettuce on top."
 order = Array[ExtResource("1_c44f4")]([ExtResource("2_2t5x7"), ExtResource("3_iuhym"), ExtResource("3_iuhym"), ExtResource("4_t4f2r"), ExtResource("2_2t5x7")])
+patience = 140.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

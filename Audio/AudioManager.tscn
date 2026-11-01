@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dvr5nnfs8ie0n"]
+
+[ext_resource type="Script" uid="uid://riug7qissglb" path="res://Audio/audio_manager.gd" id="1_2l8vh"]
+[ext_resource type="AudioStream" uid="uid://bdunnnnglsq1" path="res://Audio/Resources/bell_ring.mp3" id="2_4apyq"]
+[ext_resource type="AudioStream" uid="uid://dinv1ssf0ux22" path="res://Audio/Resources/msuica1 aliennonna fMajor FINAL.mp3" id="2_nmk5h"]
+[ext_resource type="AudioStream" uid="uid://b1a4dvbotij06" path="res://Audio/Resources/receipt.mp3" id="3_5m6nf"]
+[ext_resource type="AudioStream" uid="uid://bvskladmmjail" path="res://Audio/Resources/cookie.mp3" id="4_2l8vh"]
+[ext_resource type="AudioStream" uid="uid://dcmmrdj10xlk1" path="res://Audio/Resources/garage.mp3" id="6_emx7l"]
+[ext_resource type="AudioStream" uid="uid://c633pi12g0x24" path="res://Audio/Resources/translator.mp3" id="7_o44l8"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5m6nf"]
+random_pitch = 1.0717734
+streams_count = 1
+stream_0/stream = ExtResource("2_4apyq")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4apyq"]
+random_pitch = 1.0905077
+streams_count = 1
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2l8vh"]
+streams_count = 1
+stream_0/stream = ExtResource("3_5m6nf")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nmk5h"]
+random_pitch = 1.0717734
+streams_count = 1
+stream_0/stream = ExtResource("4_2l8vh")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_o44l8"]
+random_pitch = 1.0717734
+streams_count = 1
+stream_0/stream = ExtResource("6_emx7l")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_i3n6d"]
+random_pitch = 1.0717734
+streams_count = 1
+stream_0/stream = ExtResource("7_o44l8")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ss443"]
+random_pitch = 1.0717734
+streams_count = 1
+
+[node name="AudioManager" type="Node2D" unique_id=1281398501]
+script = ExtResource("1_2l8vh")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=2071065600]
+bus = &"Music"
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="." unique_id=164758675]
+stream = ExtResource("2_nmk5h")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="BellSound" type="AudioStreamPlayer" parent="." unique_id=1193922203]
+stream = SubResource("AudioStreamRandomizer_5m6nf")
+volume_db = -10.0
+
+[node name="FoodSound" type="AudioStreamPlayer" parent="." unique_id=964369950]
+stream = SubResource("AudioStreamRandomizer_4apyq")
+volume_db = -20.0
+
+[node name="ReceiptSound" type="AudioStreamPlayer" parent="." unique_id=1094730546]
+stream = SubResource("AudioStreamRandomizer_2l8vh")
+volume_db = -20.0
+
+[node name="CookieSound" type="AudioStreamPlayer" parent="." unique_id=1674419660]
+stream = SubResource("AudioStreamRandomizer_nmk5h")
+
+[node name="GarageSound" type="AudioStreamPlayer" parent="." unique_id=11019113]
+stream = SubResource("AudioStreamRandomizer_o44l8")
+volume_db = -30.0
+
+[node name="TranslatorSound" type="AudioStreamPlayer" parent="." unique_id=2059867913]
+stream = SubResource("AudioStreamRandomizer_i3n6d")
+volume_db = -15.0
+
+[node name="DialogueSound" type="AudioStreamPlayer" parent="." unique_id=2073111144]
+stream = SubResource("AudioStreamRandomizer_ss443")
+volume_db = -15.0

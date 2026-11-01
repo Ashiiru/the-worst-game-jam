@@ -12,4 +12,5 @@ script = ExtResource("6_g5e1a")
 species = 1
 dialogue = "Hello, I'd like a cheeseburger with pickles!"
 order = Array[ExtResource("1_dfyxh")]([ExtResource("2_ms4j0"), ExtResource("3_wj5ki"), ExtResource("4_frq7i"), ExtResource("5_qfcv1"), ExtResource("2_ms4j0")])
+patience = 130.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

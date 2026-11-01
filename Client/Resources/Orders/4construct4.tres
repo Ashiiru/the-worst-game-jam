@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://b01iltslyoba5"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_mnetv"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_jmtqg"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_waaok"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="3_7b1wt"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="4_127bf"]
+
+[resource]
+script = ExtResource("2_jmtqg")
+species = 2
+dialogue = "Greetings weakling. Today I'm interested in a sandwich with your newfangled ingredients, lettuce with tomato atop."
+order = Array[ExtResource("1_mnetv")]([ExtResource("2_waaok"), ExtResource("3_7b1wt"), ExtResource("4_127bf"), ExtResource("2_waaok")])
+patience = 110.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

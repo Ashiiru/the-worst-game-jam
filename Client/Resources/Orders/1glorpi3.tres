@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("2_uc1gw")
 species = 1
-dialogue = "I want the iconic Saturn burger! Three onion rings on top of my patty! Raw!"
+dialogue = "I want the iconic Saturn burger! Three raw onion rings on top of my patty!"
 order = Array[ExtResource("1_6i8vm")]([ExtResource("2_wu25w"), ExtResource("3_e82bl"), ExtResource("4_t1f04"), ExtResource("4_t1f04"), ExtResource("4_t1f04"), ExtResource("2_wu25w")])
+patience = 120.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

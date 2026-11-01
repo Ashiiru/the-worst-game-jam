@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("4_brrrl")
 species = 1
-dialogue = "I've got this crazy idea for a burger: three floors and its all just beef! You gotta make it!"
+dialogue = "I've got this crazy idea for a burger: three floors and its all just burger! You gotta make it!"
 order = Array[ExtResource("1_w04ni")]([ExtResource("2_sjybv"), ExtResource("3_migbd"), ExtResource("2_sjybv"), ExtResource("3_migbd"), ExtResource("2_sjybv"), ExtResource("3_migbd"), ExtResource("2_sjybv")])
+patience = 140.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

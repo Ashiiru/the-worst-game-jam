@@ -10,4 +10,5 @@ script = ExtResource("4_r5pe0")
 species = 1
 dialogue = "I want a double decker burger. Make it simple, just meat and buns!"
 order = Array[ExtResource("1_cdihn")]([ExtResource("2_qm2gh"), ExtResource("3_yklt3"), ExtResource("2_qm2gh"), ExtResource("3_yklt3"), ExtResource("2_qm2gh")])
+patience = 140.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

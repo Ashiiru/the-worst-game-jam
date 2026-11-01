@@ -11,4 +11,5 @@ script = ExtResource("2_o7cl1")
 species = 2
 dialogue = "Greetings. No cheese, no pickles, no meat. Lettuce and grilled onion. Quick, preferably."
 order = Array[ExtResource("1_mco01")]([ExtResource("2_vlnti"), ExtResource("3_d26io"), ExtResource("4_qa2ne"), ExtResource("2_vlnti")])
+patience = 120.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

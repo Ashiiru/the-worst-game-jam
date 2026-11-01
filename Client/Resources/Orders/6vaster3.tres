@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://bbmlk0lwuvniy"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_dha03"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_1t1ha"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_cv171"]
+[ext_resource type="Resource" uid="uid://l30mj7v8h2hh" path="res://Ingredient/Resources/meat_patty.tres" id="3_ugwix"]
+
+[resource]
+script = ExtResource("2_1t1ha")
+species = 3
+dialogue = "Sup yo! Triple burger, RAW! RAW BURGER, I WANT IT ALL RAWWW! LET ME COOK LIL' BRO! TRUST!"
+order = Array[ExtResource("1_dha03")]([ExtResource("2_cv171"), ExtResource("3_ugwix"), ExtResource("3_ugwix"), ExtResource("3_ugwix"), ExtResource("2_cv171")])
+patience = 110.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

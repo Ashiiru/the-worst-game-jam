@@ -10,5 +10,5 @@ script = ExtResource("2_snhhx")
 species = 1
 dialogue = "I want a cheeseburger, but with no cheese."
 order = Array[ExtResource("1_c8d7k")]([ExtResource("2_c3jbr"), ExtResource("3_3ldop"), ExtResource("2_c3jbr")])
-patience = 60.0
+patience = 90.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

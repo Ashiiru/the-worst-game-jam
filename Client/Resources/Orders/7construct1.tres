@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://cxto0e52i6o2y"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_xbcgq"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="2_727i0"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="2_n82nr"]
+[ext_resource type="Resource" uid="uid://bhjin5fwfic0w" path="res://Ingredient/Resources/cheese.tres" id="3_6013v"]
+[ext_resource type="Resource" uid="uid://d0x1wu0t0nfe4" path="res://Ingredient/Resources/ketchup.tres" id="4_7rgbl"]
+[ext_resource type="Resource" uid="uid://eiiy8osg4lxs" path="res://Ingredient/Resources/lettuce.tres" id="5_6ncpt"]
+[ext_resource type="Resource" uid="uid://dtipnmpb3ptt" path="res://Ingredient/Resources/mayo.tres" id="6_1c3ia"]
+[ext_resource type="Resource" uid="uid://6d114kjvbt63" path="res://Ingredient/Resources/mustard.tres" id="7_euun2"]
+[ext_resource type="Resource" uid="uid://cno474sdj7kd7" path="res://Ingredient/Resources/onions.tres" id="8_rycjw"]
+[ext_resource type="Resource" uid="uid://dafl51q4k3k78" path="res://Ingredient/Resources/pickles.tres" id="9_5crbc"]
+[ext_resource type="Resource" uid="uid://c645hh275csfx" path="res://Ingredient/Resources/tomato.tres" id="10_6mia1"]
+
+[resource]
+script = ExtResource("2_n82nr")
+species = 2
+dialogue = "As a master of gourmet cuisine beyond your puny existance, I require a balanced meal with every single one of your raw ingredients, in alphabetical order. Except for meat, I'm no cannibal."
+order = Array[ExtResource("1_xbcgq")]([ExtResource("2_727i0"), ExtResource("3_6013v"), ExtResource("4_7rgbl"), ExtResource("5_6ncpt"), ExtResource("6_1c3ia"), ExtResource("7_euun2"), ExtResource("8_rycjw"), ExtResource("9_5crbc"), ExtResource("10_6mia1"), ExtResource("2_727i0")])
+patience = 180.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

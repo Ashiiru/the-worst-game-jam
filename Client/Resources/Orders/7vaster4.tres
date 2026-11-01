@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClientOrder" format=3 uid="uid://lvdex7dgf55g"]
+
+[ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_p8oau"]
+[ext_resource type="Resource" uid="uid://dtipnmpb3ptt" path="res://Ingredient/Resources/mayo.tres" id="2_ewlqs"]
+[ext_resource type="Resource" uid="uid://3mn6rsf0v3ly" path="res://Ingredient/Resources/meat_patty_cooked.tres" id="3_rpmjm"]
+[ext_resource type="Resource" uid="uid://bxa7pgnn66vym" path="res://Ingredient/Resources/bread.tres" id="4_qgdhk"]
+[ext_resource type="Script" uid="uid://coil2gln6wkbt" path="res://Client/Scripts/client_order.gd" id="5_vd2f1"]
+
+[resource]
+script = ExtResource("5_vd2f1")
+species = 3
+dialogue = "Ayy, heard this joint is build-a-burger? Crank me up an inverted burger bro, bun between the meat! Keep it slinky, lube it up all around with some mayo."
+order = Array[ExtResource("1_p8oau")]([ExtResource("2_ewlqs"), ExtResource("3_rpmjm"), ExtResource("4_qgdhk"), ExtResource("3_rpmjm"), ExtResource("2_ewlqs")])
+patience = 170.0
+metadata/_custom_type_script = "uid://coil2gln6wkbt"

@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dmrp27rksh8s1" path="res://Ingredient/Scripts/ingredient_res.gd" id="1_buej8"]
 [ext_resource type="Texture2D" uid="uid://dvujrde1klpl8" path="res://Ingredient/Sprites/burger_cooked.png" id="2_7rc0h"]
+[ext_resource type="AudioStream" uid="uid://d338l7ei4gnw6" path="res://Audio/Resources/meat.mp3" id="2_nwokc"]
 
 [resource]
 script = ExtResource("1_buej8")
 sprite = ExtResource("2_7rc0h")
 name = "Grilled Burger"
 cook_time = 5.0
+sound = ExtResource("2_nwokc")
 metadata/_custom_type_script = "uid://dmrp27rksh8s1"
