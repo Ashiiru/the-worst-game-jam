@@ -124,16 +124,16 @@
 [ext_resource type="Resource" uid="uid://dvwsx2fs1idfy" path="res://Client/Resources/Orders/7vaster3.tres" id="116_vvexq"]
 [ext_resource type="Resource" uid="uid://lvdex7dgf55g" path="res://Client/Resources/Orders/7vaster4.tres" id="117_ia10l"]
 [ext_resource type="Resource" uid="uid://4b1r852if4sr" path="res://Client/Resources/Orders/7vaster5.tres" id="118_4a6ka"]
-[ext_resource type="Resource" uid="uid://bbf6eqlxpufiy" path="res://Client/Resources/Profiles/construct_blue.tres" id="119_nr581"]
-[ext_resource type="Resource" uid="uid://152vouks80kk" path="res://Client/Resources/Profiles/construct_cyan.tres" id="120_rbg8g"]
-[ext_resource type="Resource" uid="uid://cajrppbgyh80w" path="res://Client/Resources/Profiles/construct_green.tres" id="121_1qaox"]
-[ext_resource type="Resource" uid="uid://beh33yfp5xm32" path="res://Client/Resources/Profiles/construct_jade.tres" id="122_yo6j4"]
-[ext_resource type="Resource" uid="uid://bbsa8sduh2mlm" path="res://Client/Resources/Profiles/construct_orange.tres" id="123_6ddbf"]
-[ext_resource type="Resource" uid="uid://p7v8l757easg" path="res://Client/Resources/Profiles/construct_yellow.tres" id="124_k4sqg"]
-[ext_resource type="Resource" uid="uid://8vqqgulgxpmg" path="res://Client/Resources/Profiles/glorpi_aval.tres" id="125_df527"]
-[ext_resource type="Resource" uid="uid://cjyaex8bnqc10" path="res://Client/Resources/Profiles/glorpi_ploingo.tres" id="126_8lky6"]
-[ext_resource type="Resource" uid="uid://d35udbw4o4iw0" path="res://Client/Resources/Profiles/vaster_girly.tres" id="127_ndycn"]
-[ext_resource type="Resource" uid="uid://c7w4nhii8tbok" path="res://Client/Resources/Profiles/vaster_noir.tres" id="128_6pvfv"]
+[ext_resource type="Resource" uid="uid://bbf6eqlxpufiy" path="res://Client/Resources/Profiles/construct_blue.tres" id="125_eleg7"]
+[ext_resource type="Resource" uid="uid://152vouks80kk" path="res://Client/Resources/Profiles/construct_cyan.tres" id="126_a8nwh"]
+[ext_resource type="Resource" uid="uid://cajrppbgyh80w" path="res://Client/Resources/Profiles/construct_green.tres" id="127_nhqhn"]
+[ext_resource type="Resource" uid="uid://beh33yfp5xm32" path="res://Client/Resources/Profiles/construct_jade.tres" id="128_b1rxa"]
+[ext_resource type="Resource" uid="uid://bbsa8sduh2mlm" path="res://Client/Resources/Profiles/construct_orange.tres" id="129_1njgx"]
+[ext_resource type="Resource" uid="uid://p7v8l757easg" path="res://Client/Resources/Profiles/construct_yellow.tres" id="130_y211a"]
+[ext_resource type="Resource" uid="uid://8vqqgulgxpmg" path="res://Client/Resources/Profiles/glorpi_aval.tres" id="131_q2x5f"]
+[ext_resource type="Resource" uid="uid://cjyaex8bnqc10" path="res://Client/Resources/Profiles/glorpi_ploingo.tres" id="132_rensl"]
+[ext_resource type="Resource" uid="uid://d35udbw4o4iw0" path="res://Client/Resources/Profiles/vaster_girly.tres" id="133_j3uup"]
+[ext_resource type="Resource" uid="uid://c7w4nhii8tbok" path="res://Client/Resources/Profiles/vaster_noir.tres" id="134_rej37"]
 
 [sub_resource type="Animation" id="Animation_7c4of"]
 length = 0.001
@@ -1266,50 +1266,50 @@ shader_parameter/repeat_y = 1.0
 shader_parameter/row_offset = 1.0
 shader_parameter/texture_to_scroll = ExtResource("4_gsb0v")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eleg7"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ddbof"]
 resource_local_to_scene = true
 texture = ExtResource("18_te4p3")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_56wl4"]
 load_path = "res://.godot/imported/food_box_lettuce.png-95993cfe58f385ffbb6eac2d9927f132.ctex"
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8nwh"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oqdbe"]
 resource_local_to_scene = true
 texture = SubResource("CompressedTexture2D_56wl4")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nhqhn"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3q1l"]
 resource_local_to_scene = true
 texture = ExtResource("21_06yal")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1rxa"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y6dwi"]
 resource_local_to_scene = true
 texture = ExtResource("23_6ihbm")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1njgx"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnpge"]
 resource_local_to_scene = true
 texture = ExtResource("25_jralb")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y211a"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ra4c"]
 resource_local_to_scene = true
 texture = ExtResource("27_bxo41")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2x5f"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xf6ka"]
 resource_local_to_scene = true
 texture = ExtResource("29_luu1a")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rensl"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_doivh"]
 resource_local_to_scene = true
 texture = ExtResource("31_2i8j5")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3uup"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y4ovh"]
 resource_local_to_scene = true
 texture = ExtResource("33_o1pwe")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rej37"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75nwk"]
 resource_local_to_scene = true
 texture = ExtResource("35_o83k3")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gurm3"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eleg7"]
 resource_local_to_scene = true
 texture = ExtResource("38_1jydm")
 
@@ -1387,17 +1387,17 @@ texture = ExtResource("4_gsb0v")
 position = Vector2(320, 180)
 texture = ExtResource("5_tyrie")
 
+[node name="Client" parent="World" unique_id=1362351619 instance=ExtResource("5_6vecx")]
+position = Vector2(118, 360)
+client_profile = ExtResource("23_he1k8")
+client_order = ExtResource("23_wwslj")
+
 [node name="DialogueBox" parent="World" unique_id=1237435382 instance=ExtResource("4_s1wwj")]
 offset_left = 178.0
 offset_top = 42.0
 offset_right = 478.0
 offset_bottom = 142.0
 min_size = Vector2(350, 150)
-
-[node name="Client" parent="World" unique_id=1362351619 instance=ExtResource("5_6vecx")]
-position = Vector2(118, 360)
-client_profile = ExtResource("23_he1k8")
-client_order = ExtResource("23_wwslj")
 
 [node name="Counter" type="Sprite2D" parent="World" unique_id=149324698]
 texture = ExtResource("8_4h8sl")
@@ -1451,31 +1451,31 @@ theme_override_constants/separation = 4
 [node name="IngredientContainerOnion" parent="World/IngredientGrid1/HBoxContainer" unique_id=642096802 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_eleg7")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ddbof")
 ingredient = ExtResource("19_rbkfh")
 
 [node name="IngredientContainerLettuce" parent="World/IngredientGrid1/HBoxContainer" unique_id=529592985 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_a8nwh")
+theme_override_styles/panel = SubResource("StyleBoxTexture_oqdbe")
 ingredient = ExtResource("4_xa23u")
 
 [node name="IngredientContainerCheese" parent="World/IngredientGrid1/HBoxContainer" unique_id=1992550632 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_nhqhn")
+theme_override_styles/panel = SubResource("StyleBoxTexture_f3q1l")
 ingredient = ExtResource("22_qtirl")
 
 [node name="IngredientContainerTomato" parent="World/IngredientGrid1/HBoxContainer" unique_id=1246679934 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_b1rxa")
+theme_override_styles/panel = SubResource("StyleBoxTexture_y6dwi")
 ingredient = ExtResource("24_1jydm")
 
 [node name="IngredientContainerPickles" parent="World/IngredientGrid1/HBoxContainer" unique_id=1677002960 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_1njgx")
+theme_override_styles/panel = SubResource("StyleBoxTexture_wnpge")
 ingredient = ExtResource("26_ja53t")
 
 [node name="IngredientGrid2" type="PanelContainer" parent="World" unique_id=2147454348]
@@ -1492,19 +1492,19 @@ theme_override_constants/separation = -20
 [node name="IngredientContainerKetchup" parent="World/IngredientGrid2/HBoxContainer" unique_id=653962837 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(30, 60)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_y211a")
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ra4c")
 ingredient = ExtResource("28_waags")
 
 [node name="IngredientContainerMustard" parent="World/IngredientGrid2/HBoxContainer" unique_id=92609192 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(30, 60)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q2x5f")
+theme_override_styles/panel = SubResource("StyleBoxTexture_xf6ka")
 ingredient = ExtResource("30_48ff0")
 
 [node name="IngredientContainerMayo" parent="World/IngredientGrid2/HBoxContainer" unique_id=578369276 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(30, 60)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_rensl")
+theme_override_styles/panel = SubResource("StyleBoxTexture_doivh")
 ingredient = ExtResource("32_nx85f")
 
 [node name="IngredientGrid3" type="PanelContainer" parent="World" unique_id=1656407332]
@@ -1523,22 +1523,23 @@ theme_override_constants/separation = 4
 [node name="IngredientContainerPatty" parent="World/IngredientGrid3/HBoxContainer" unique_id=722422692 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_j3uup")
+theme_override_styles/panel = SubResource("StyleBoxTexture_y4ovh")
 ingredient = ExtResource("4_7uvsw")
 
 [node name="IngredientContainerBacon" parent="World/IngredientGrid3/HBoxContainer" unique_id=953223088 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(110, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_rej37")
+theme_override_styles/panel = SubResource("StyleBoxTexture_75nwk")
 ingredient = ExtResource("36_2po3c")
 
 [node name="IngredientContainerBread" parent="World" unique_id=1804355321 instance=ExtResource("3_0648w")]
 custom_minimum_size = Vector2(90, 100)
+anchors_preset = 0
 offset_left = 308.0
 offset_top = 604.0
 offset_right = 398.0
 offset_bottom = 704.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_gurm3")
+theme_override_styles/panel = SubResource("StyleBoxTexture_eleg7")
 ingredient = ExtResource("39_1jydm")
 
 [node name="Grill" parent="World" unique_id=1713246566 instance=ExtResource("12_mr6as")]
@@ -1550,7 +1551,6 @@ offset_bottom = 686.0
 [node name="PlateContainer" type="PanelContainer" parent="World" unique_id=1119321164]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(110, 110)
-anchors_preset = -1
 offset_left = 416.0
 offset_top = 528.0
 offset_right = 556.0
@@ -1836,7 +1836,7 @@ resources = [PackedStringArray("upgrade_client_patience", "upgrade_construct_tra
 resources = [PackedStringArray("1glorpi1", "1glorpi2", "1glorpi3", "1glorpi4", "1glorpi5", "1glorpi6", "1glorpi7", "2glorpi1", "2glorpi2", "2glorpi3", "2glorpi4", "2glorpi5", "3construct1", "3construct2", "3construct3", "3construct5", "3construct6", "3construct7", "3construct8", "4construct1", "4construct2", "4construct3", "4construct4", "4construct5", "4glorpi1", "4glorpi2", "4glorpi3", "4glorpi4", "4glorpi5", "5construct1", "5construct2", "5glorpi1", "5glorpi2", "5glorpi3", "6vaster1", "6vaster2", "6vaster3", "6vaster4", "6vaster5", "6vaster6", "6vaster7", "6vaster8", "6vaster9", "7construct1", "7glorpi1", "7glorpi2", "7glorpi3", "7glorpi4", "7vaster1", "7vaster2", "7vaster3", "7vaster4", "7vaster5"), [ExtResource("23_wwslj"), ExtResource("67_wnpge"), ExtResource("68_8ra4c"), ExtResource("69_xf6ka"), ExtResource("70_doivh"), ExtResource("71_y4ovh"), ExtResource("72_75nwk"), ExtResource("73_eleg7"), ExtResource("74_a8nwh"), ExtResource("75_nhqhn"), ExtResource("76_b1rxa"), ExtResource("77_1njgx"), ExtResource("78_y211a"), ExtResource("79_q2x5f"), ExtResource("80_rensl"), ExtResource("81_j3uup"), ExtResource("82_rej37"), ExtResource("83_gurm3"), ExtResource("84_2nc0m"), ExtResource("85_dw336"), ExtResource("86_lhqgs"), ExtResource("87_0ebec"), ExtResource("88_1trmc"), ExtResource("89_8wokr"), ExtResource("90_lf3tm"), ExtResource("91_m33o2"), ExtResource("92_3sbp4"), ExtResource("93_t4xnh"), ExtResource("94_gtrvv"), ExtResource("95_0c8v6"), ExtResource("96_cm8ll"), ExtResource("97_yeptf"), ExtResource("98_ks4yk"), ExtResource("99_5pogw"), ExtResource("100_kv40m"), ExtResource("101_gbeot"), ExtResource("102_m4hdt"), ExtResource("103_qi1e3"), ExtResource("104_o57ms"), ExtResource("105_qbfr6"), ExtResource("106_uo3dv"), ExtResource("107_vyucr"), ExtResource("108_c6f5b"), ExtResource("109_t11rj"), ExtResource("110_ynpdk"), ExtResource("111_cw13y"), ExtResource("112_emeyq"), ExtResource("113_fpkg1"), ExtResource("114_08th8"), ExtResource("115_vvl8n"), ExtResource("116_vvexq"), ExtResource("117_ia10l"), ExtResource("118_4a6ka")]]
 
 [node name="ClientProfiles" type="ResourcePreloader" parent="." unique_id=177094820]
-resources = [PackedStringArray("construct_blue", "construct_cyan", "construct_green", "construct_jade", "construct_orange", "construct_yellow", "glorpi_aval", "glorpi_ploingo", "glorpi_sumol", "nana", "vaster_girly", "vaster_noir"), [ExtResource("119_nr581"), ExtResource("120_rbg8g"), ExtResource("121_1qaox"), ExtResource("122_yo6j4"), ExtResource("123_6ddbf"), ExtResource("124_k4sqg"), ExtResource("125_df527"), ExtResource("126_8lky6"), ExtResource("23_he1k8"), ExtResource("21_vw07w"), ExtResource("127_ndycn"), ExtResource("128_6pvfv")]]
+resources = [PackedStringArray("construct_blue", "construct_cyan", "construct_green", "construct_jade", "construct_orange", "construct_yellow", "glorpi_aval", "glorpi_ploingo", "glorpi_sumol", "nana", "vaster_girly", "vaster_noir"), [ExtResource("125_eleg7"), ExtResource("126_a8nwh"), ExtResource("127_nhqhn"), ExtResource("128_b1rxa"), ExtResource("129_1njgx"), ExtResource("130_y211a"), ExtResource("131_q2x5f"), ExtResource("132_rensl"), ExtResource("23_he1k8"), ExtResource("21_vw07w"), ExtResource("133_j3uup"), ExtResource("134_rej37")]]
 
 [connection signal="client_timeout" from="World/GameTimer" to="." method="_on_game_timer_client_timeout"]
 [connection signal="day_timeout" from="World/GameTimer" to="." method="_on_game_timer_day_timeout"]
