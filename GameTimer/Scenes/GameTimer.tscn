@@ -41,7 +41,6 @@ _data = {
 }
 
 [node name="GameTimer" type="PanelContainer" unique_id=315946774]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(125, 100)
 offset_right = 130.0
@@ -60,10 +59,9 @@ texture = ExtResource("3_mh8jq")
 hframes = 3
 
 [node name="Ship" type="Sprite2D" parent="." unique_id=27714281]
-position = Vector2(30, 45.195)
+position = Vector2(38, 50)
 scale = Vector2(0.025, 0.025)
 texture = ExtResource("4_xpah0")
-centered = false
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1338131222]
 layout_mode = 2

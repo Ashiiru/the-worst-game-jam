@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_4b1rt")
 sprite = ExtResource("2_78ht1")
+name = "Big Jade"
 species = 2
 dialogue_perfect = "Oh darling, now this is fine dining."
 dialogue_okay = "Fine, this will do."

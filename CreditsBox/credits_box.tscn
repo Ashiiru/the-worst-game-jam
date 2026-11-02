@@ -142,7 +142,7 @@ alignment = 1
 [node name="Name" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Programming/Names" unique_id=1796568712]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
-theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_colors/font_outline_color = Color(0.6745098, 0.29803923, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_tft7x")
 theme_override_font_sizes/font_size = 8
@@ -170,7 +170,7 @@ alignment = 1
 [node name="Name" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Music/Names" unique_id=479785074]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
-theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.76862746, 0.9098039, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_tft7x")
 theme_override_font_sizes/font_size = 8
@@ -198,7 +198,7 @@ alignment = 1
 [node name="Name" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Various/Names" unique_id=1934786849]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
-theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_colors/font_outline_color = Color(0.8980392, 0.8, 0.12941177, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_tft7x")
 theme_override_font_sizes/font_size = 8
@@ -222,16 +222,56 @@ horizontal_alignment = 1
 [node name="Names" type="GridContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Dialogue" unique_id=188678951]
 layout_mode = 2
 size_flags_horizontal = 4
-columns = 4
+columns = 5
 
 [node name="Name" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Dialogue/Names" unique_id=201637247]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
-theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_colors/font_outline_color = Color(0.6745098, 0.29803923, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_tft7x")
 theme_override_font_sizes/font_size = 8
-text = "voyagerltaj, Asuri, raekellie, Cap, Pillar Guy"
+text = "voyagerltaj"
+horizontal_alignment = 1
+
+[node name="Name2" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Dialogue/Names" unique_id=199314316]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.8980392, 0.8, 0.12941177, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "Asuri"
+horizontal_alignment = 1
+
+[node name="Name3" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Dialogue/Names" unique_id=1493562316]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.88235295, 0.5137255, 0.8117647, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "raekellie"
+horizontal_alignment = 1
+
+[node name="Name4" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Dialogue/Names" unique_id=1728764824]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.047058824, 0.65882355, 0.6431373, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "Cap"
+horizontal_alignment = 1
+
+[node name="Name5" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Dialogue/Names" unique_id=312288588]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.9882353, 0.46666667, 0.3372549, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "PillarGuy"
 horizontal_alignment = 1
 
 [node name="Testing" type="VBoxContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper" unique_id=806067185]
@@ -253,14 +293,84 @@ layout_mode = 2
 size_flags_horizontal = 4
 columns = 4
 
-[node name="Title" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=1807679386]
+[node name="Name" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=1807679386]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
 theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_tft7x")
 theme_override_font_sizes/font_size = 8
-text = "You!"
+text = "BridgeForTheBlind"
+horizontal_alignment = 1
+
+[node name="Name2" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=1345109487]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "danideer"
+horizontal_alignment = 1
+
+[node name="Name3" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=828743849]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "n00dlez"
+horizontal_alignment = 1
+
+[node name="Name4" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=798956098]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "coldsketches"
+horizontal_alignment = 1
+
+[node name="Name5" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=570981489]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "scum._.bag"
+horizontal_alignment = 1
+
+[node name="Name6" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=1617915875]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "phenomklopsd"
+horizontal_alignment = 1
+
+[node name="Name7" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=1301101987]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "Sofilicious"
+horizontal_alignment = 1
+
+[node name="Name8" type="Label" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper/Testing/Names" unique_id=234364155]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.019607844, 0.13333334, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.19607843, 0.40392157, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_tft7x")
+theme_override_font_sizes/font_size = 8
+text = "Dilobo"
 horizontal_alignment = 1
 
 [node name="DoneContainer" type="MarginContainer" parent="MarginContainer3/PanelContainer/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/pop_up_wrapper" unique_id=847756995]

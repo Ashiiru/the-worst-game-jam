@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_veted")
 sprite = ExtResource("2_wsmwb")
+name = "Big Cyan"
 species = 2
 dialogue_perfect = "Your kitchen is a canvas, and this meal is a masterpiece."
 dialogue_okay = "An honest attempt at artistry."

@@ -7,7 +7,7 @@ var modulate_tween : Tween
 func _ready() -> void:
 	if value >= 0.0:
 		set("theme_override_colors/font_color", Color(0.623, 0.87, 0.164, 1.0))
-		text = "+" + str(value) + "$"
+		text = "+" + str(snappedf(value, 0.01)) + "$"
 	else:
 		set("theme_override_colors/font_color", Color(0.788, 0.196, 0.404, 1.0))
 		text = str(value) + "$"

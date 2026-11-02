@@ -9,7 +9,7 @@
 [resource]
 script = ExtResource("2_411ps")
 species = 1
-dialogue = "Pickles! Pickles on a patty in by burger!"
+dialogue = "Pickles! Pickles on a patty in my burger!"
 order = Array[ExtResource("1_12d2a")]([ExtResource("2_18rdy"), ExtResource("3_lv138"), ExtResource("4_33qxr"), ExtResource("2_18rdy")])
 patience = 100.0
 metadata/_custom_type_script = "uid://coil2gln6wkbt"

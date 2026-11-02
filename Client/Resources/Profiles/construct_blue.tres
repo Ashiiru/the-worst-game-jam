@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_jerrx")
 sprite = ExtResource("2_l6qqr")
+name = "Big Blue"
 species = 2
 dialogue_perfect = "Praised be this day."
 dialogue_okay = "I shall tolerate this offering."

@@ -20,6 +20,11 @@ func pop_ingredient() -> IngredientRes:
 		animation_player.play("off")
 	return popped
 
+func clear_ingredients() -> void:
+	for child in ingredient_container.get_children():
+		child.queue_free()
+	animation_player.play("off")
+
 func _on_button_pressed() -> void:
 	selected.emit()
 	wobble()

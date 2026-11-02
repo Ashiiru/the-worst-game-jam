@@ -64,6 +64,8 @@ var day_perfect_orders : int = 0
 var day_missed_orders : int = 0
 var selected_ingredient : Ingredient = null
 
+var is_perfect : bool = false
+
 var cash : float = 0.0
 var client_patience : float = 0.0
 
@@ -139,9 +141,11 @@ func begin_run() -> void:
 	for i in ingredient_grid_3.get_child(0).get_children():
 		i.visible = false
 	#reset variables for multiple runs
+	burger.clear_ingredients()
+	grill.clear_ingredients()
 	run_seed = []
 	day = 0
-	day_time = 300.0
+	day_time = 360.0
 	day_quota = 9.09
 	cash = 0.0
 	register.set_cash(cash)
@@ -198,7 +202,10 @@ func begin_day() -> void:
 	animation_player.play("day_start")
 
 func speed_up_day() -> void:
-	game_timer.day_timer.start(max(game_timer.day_timer.time_left - 30., 5.0))
+	if is_perfect:
+		game_timer.day_timer.start(max(game_timer.day_timer.time_left - 15., 5.0))
+	else:
+		game_timer.day_timer.start(max(game_timer.day_timer.time_left - 30., 5.0))
 
 func add_client() -> void:
 	if translator.online:
@@ -275,7 +282,7 @@ func encrypt_dialogue(dialogue : String) -> String:
 				new_dialogue += dialogue[c]
 		else:
 			if dialogue[c] == " ":
-				var success : float
+				var success : float = 0.0
 				match client.client_order.species:
 					Enumerates.Species.GLORPI:
 						success = upgrade_glorpi_trans_chance
@@ -438,15 +445,19 @@ func submit_order() -> void:
 	if correctness == 1.0:
 		emote_client("happy")
 		day_perfect_orders += 1
+		is_perfect = true
 		pay_order(score)
 	elif correctness > 0.0:
 		emote_client("neutral")
+		is_perfect = false
 		pay_order(score * .5)
 	elif correctness == 0.0:
 		emote_client("angry")
+		is_perfect = false
 		day_missed_orders += 1
 	else:
 		emote_client("timeout")
+		is_perfect = false
 		day_missed_orders += 1
 	
 	game_timer.client_timer.stop()
